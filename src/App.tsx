@@ -1,0 +1,190 @@
+import { Badge } from './Badge/Badge'
+
+function App() {
+  return (
+    <>
+      <h1 className="text-3xl uppercase">uieh</h1>
+
+      <section className="flex flex-col gap-2 p-2">
+        {/* Size large */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>Size large</h2>
+          <div className="flex gap-2 ">
+            <Badge color="gray" size="large">
+              Gray
+            </Badge>
+            <Badge color="blue" size="large">
+              Blue
+            </Badge>
+            <Badge color="purple" size="large">
+              Purple
+            </Badge>
+            <Badge color="green" size="large">
+              Green
+            </Badge>
+            <Badge color="orange" size="large">
+              Orange
+            </Badge>
+            <Badge color="red" size="large">
+              Red
+            </Badge>
+            <Badge color="yellow" size="large">
+              Yellow
+            </Badge>
+          </div>
+        </div>
+
+        {/* Size medium */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>Size medium (default)</h2>
+          <div className="flex gap-2 py-2">
+            <Badge color="gray">Gray</Badge>
+            <Badge color="blue">Blue</Badge>
+            <Badge color="purple">Purple</Badge>
+            <Badge color="green">Green</Badge>
+            <Badge color="orange">Orange</Badge>
+            <Badge color="red">Red</Badge>
+            <Badge color="yellow">Yellow</Badge>
+          </div>
+        </div>
+
+        {/* Size small */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>Size small</h2>
+          <div className="flex gap-2 py-2">
+            <Badge color="gray" size="small">
+              Gray
+            </Badge>
+            <Badge color="blue" size="small">
+              Blue
+            </Badge>
+            <Badge color="purple" size="small">
+              Purple
+            </Badge>
+            <Badge color="green" size="small">
+              Green
+            </Badge>
+            <Badge color="orange" size="small">
+              Orange
+            </Badge>
+            <Badge color="red" size="small">
+              Red
+            </Badge>
+            <Badge color="yellow" size="small">
+              Yellow
+            </Badge>
+          </div>
+        </div>
+
+        {/* Variant dotted */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>Variant dotted</h2>
+          <div className="flex gap-2 py-2">
+            <Badge variant="dotted" color="gray">
+              Gray
+            </Badge>
+            <Badge variant="dotted" color="blue">
+              Blue
+            </Badge>
+            <Badge variant="dotted" color="purple">
+              Purple
+            </Badge>
+            <Badge variant="dotted" color="green">
+              Green
+            </Badge>
+            <Badge variant="dotted" color="orange">
+              Orange
+            </Badge>
+            <Badge variant="dotted" color="red">
+              Red
+            </Badge>
+            <Badge variant="dotted" color="yellow">
+              Yellow
+            </Badge>
+          </div>
+        </div>
+
+        {/* Dissmissable */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>Dissmissable</h2>
+          <div className="flex gap-2 py-2">
+            <Badge variant="dotted" color="gray" dissmissable>
+              Gray
+            </Badge>
+            <Badge variant="dotted" color="blue" dissmissable>
+              Blue
+            </Badge>
+            <Badge variant="dotted" color="purple" dissmissable>
+              Purple
+            </Badge>
+            <Badge variant="dotted" color="green" dissmissable>
+              Green
+            </Badge>
+            <Badge variant="dotted" color="orange" dissmissable>
+              Orange
+            </Badge>
+            <Badge variant="dotted" color="red" dissmissable>
+              Red
+            </Badge>
+            <Badge variant="dotted" color="yellow" dissmissable>
+              Yellow
+            </Badge>
+          </div>
+        </div>
+
+        {/* asChild */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>asChild</h2>
+          <div className="flex gap-2 py-2">
+            <Badge color="blue" asChild dissmissable>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="gray" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="purple" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="green" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="orange" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="red" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="yellow" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+          </div>
+          <div className="flex gap-2 py-2">
+            <Badge variant="dotted" color="blue" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge variant="dotted" color="gray" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge variant="dotted" color="purple" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge variant="dotted" color="green" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge variant="dotted" color="orange" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge variant="dotted" color="red" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge variant="dotted" color="yellow" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default App
