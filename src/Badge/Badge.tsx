@@ -118,6 +118,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
     ref
   ) => {
     const Component = asChild && !dissmissable ? Slot : 'span'
+    const closeIconSize = size === 'small' ? 12 : size === 'large' ? 18 : 16
     const clickable =
       typeof onClick !== 'undefined' ||
       (isValidElement(children) && children.type === 'a')
@@ -137,7 +138,8 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
             {children}
             <CloseIcon
               onClick={onDissmissClick}
-              className="ml-1.5 cursor-pointer"
+              className="ml-1.5 cursor-pointer hover:fill-gray-900"
+              size={closeIconSize}
             />
           </>
         ) : (

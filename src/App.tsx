@@ -107,7 +107,31 @@ function App() {
         {/* Dissmissable */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Dissmissable</h2>
-          <div className="flex gap-2 py-2">
+          <div className="flex gap-2 py-1">
+            <Badge variant="dotted" color="gray" size="large" dissmissable>
+              Gray
+            </Badge>
+            <Badge variant="dotted" color="blue" size="large" dissmissable>
+              Blue
+            </Badge>
+            <Badge variant="dotted" color="purple" size="large" dissmissable>
+              Purple
+            </Badge>
+            <Badge variant="dotted" color="green" size="large" dissmissable>
+              Green
+            </Badge>
+            <Badge variant="dotted" color="orange" size="large" dissmissable>
+              Orange
+            </Badge>
+            <Badge variant="dotted" color="red" size="large" dissmissable>
+              Red
+            </Badge>
+            <Badge variant="dotted" color="yellow" size="large" dissmissable>
+              Yellow
+            </Badge>
+          </div>
+
+          <div className="flex gap-2 py-1">
             <Badge variant="dotted" color="gray" dissmissable>
               Gray
             </Badge>
@@ -130,13 +154,37 @@ function App() {
               Yellow
             </Badge>
           </div>
+
+          <div className="flex gap-2 py-1">
+            <Badge variant="dotted" color="gray" size="small" dissmissable>
+              Gray
+            </Badge>
+            <Badge variant="dotted" color="blue" size="small" dissmissable>
+              Blue
+            </Badge>
+            <Badge variant="dotted" color="purple" size="small" dissmissable>
+              Purple
+            </Badge>
+            <Badge variant="dotted" color="green" size="small" dissmissable>
+              Green
+            </Badge>
+            <Badge variant="dotted" color="orange" size="small" dissmissable>
+              Orange
+            </Badge>
+            <Badge variant="dotted" color="red" size="small" dissmissable>
+              Red
+            </Badge>
+            <Badge variant="dotted" color="yellow" size="small" dissmissable>
+              Yellow
+            </Badge>
+          </div>
         </div>
 
         {/* asChild */}
         <div className="flex flex-col gap-2 py-2">
           <h2>asChild</h2>
           <div className="flex gap-2 py-2">
-            <Badge color="blue" asChild dissmissable>
+            <Badge color="blue" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
             <Badge color="gray" asChild>
