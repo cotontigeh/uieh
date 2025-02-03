@@ -1,4 +1,6 @@
+import { BiAlarm } from 'react-icons/bi'
 import { Badge } from './Badge/Badge'
+import { Button } from './Button'
 
 function App() {
   return (
@@ -228,6 +230,128 @@ function App() {
             <Badge variant="dotted" color="yellow" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        {/* Size large */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>Size large</h2>
+          <div className="flex gap-2 py-2">
+            <Button color="gray" size="large">
+              Gray
+            </Button>
+            <Button color="blue" size="large">
+              Blue
+            </Button>
+            <Button color="purple" size="large">
+              Purple
+            </Button>
+            <Button color="green" size="large">
+              Green
+            </Button>
+            <Button color="orange" size="large">
+              Orange
+            </Button>
+            <Button color="red" size="large">
+              Red
+            </Button>
+            <Button color="yellow" size="large">
+              Yellow
+            </Button>
+          </div>
+        </div>
+
+        {/* Size medium */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>Size medium (default)</h2>
+          <div className="flex gap-2 py-2">
+            <Button color="gray">Gray</Button>
+            <Button color="blue">Blue</Button>
+            <Button color="purple">Purple</Button>
+            <Button color="green">Green</Button>
+            <Button color="orange">Orange</Button>
+            <Button color="red">Red</Button>
+            <Button color="yellow">Yellow</Button>
+          </div>
+        </div>
+
+        {/* Size small */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>Size small</h2>
+          <div className="flex gap-2 py-2">
+            <Button color="gray" size="small">
+              Gray
+            </Button>
+            <Button color="blue" size="small">
+              Blue
+            </Button>
+            <Button color="purple" size="small">
+              Purple
+            </Button>
+            <Button color="green" size="small">
+              Green
+            </Button>
+            <Button color="orange" size="small">
+              Orange
+            </Button>
+            <Button color="red" size="small">
+              Red
+            </Button>
+            <Button color="yellow" size="small">
+              Yellow
+            </Button>
+          </div>
+        </div>
+
+        {/* Ghost variant */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>Ghost variant</h2>
+          <div className="flex gap-2 py-2">
+            <Button color="gray" variant="ghost">
+              Gray
+            </Button>
+            <Button color="blue" variant="ghost">
+              Blue
+            </Button>
+            <Button color="purple" variant="ghost">
+              Purple
+            </Button>
+            <Button color="green" variant="ghost">
+              Green
+            </Button>
+            <Button color="orange" variant="ghost">
+              Orange
+            </Button>
+            <Button color="red" variant="ghost">
+              Red
+            </Button>
+            <Button color="yellow" variant="ghost">
+              Yellow
+            </Button>
+          </div>
+        </div>
+
+        {/* AsChild */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>AsChild</h2>
+          <div className="flex gap-2 py-2">
+            <Button color="blue" asChild>
+              <a href="#">
+                <BiAlarm /> AsChild
+              </a>
+            </Button>
+          </div>
+        </div>
+
+        {/* Disable */}
+        <div className="flex flex-col gap-2 py-2">
+          <h2>Size medium (default)</h2>
+          <div className="flex gap-2 py-2">
+            <Button color="green" disable>
+              Disable
+            </Button>
           </div>
         </div>
       </section>
