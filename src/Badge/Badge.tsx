@@ -54,36 +54,43 @@ const badgeVariants = cva({
   compoundVariants: [
     // Variant default
     {
+      variant: 'default',
       color: 'gray',
       clickable: true,
       className: 'hover:bg-gray-100 hover:ring-gray-500/30'
     },
     {
+      variant: 'default',
       color: 'blue',
       clickable: true,
       className: 'hover:bg-blue-100 hover:ring-blue-500/30'
     },
     {
+      variant: 'default',
       color: 'purple',
       clickable: true,
       className: 'hover:bg-purple-100 hover:ring-purle-900'
     },
     {
+      variant: 'default',
       color: 'orange',
       clickable: true,
       className: 'hover:bg-orange-100 hover:ring-orange-500/30'
     },
     {
+      variant: 'default',
       color: 'green',
       clickable: true,
       className: 'hover:bg-green-100 hover:ring-green-500/30'
     },
     {
+      variant: 'default',
       color: 'red',
       clickable: true,
       className: 'hover:bg-red-100 hover:ring-red-500/30'
     },
     {
+      variant: 'default',
       color: 'yellow',
       clickable: true,
       className: 'hover:bg-yellow-100 hover:ring-yellow-500'
@@ -92,6 +99,48 @@ const badgeVariants = cva({
     {
       variant: 'dotted',
       className: 'bg-transparent ring-gray-300 text-gray-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'gray',
+      clickable: true,
+      className: 'hover:ring-gray-500/30'
+    },
+    {
+      variant: 'dotted',
+      color: 'blue',
+      clickable: true,
+      className: 'hover:ring-blue-500/30'
+    },
+    {
+      variant: 'dotted',
+      color: 'purple',
+      clickable: true,
+      className: 'hover:ring-purle-900'
+    },
+    {
+      variant: 'dotted',
+      color: 'orange',
+      clickable: true,
+      className: 'hover:ring-orange-500/30'
+    },
+    {
+      variant: 'dotted',
+      color: 'green',
+      clickable: true,
+      className: 'hover:ring-green-500/30'
+    },
+    {
+      variant: 'dotted',
+      color: 'red',
+      clickable: true,
+      className: 'hover:ring-red-500/30'
+    },
+    {
+      variant: 'dotted',
+      color: 'yellow',
+      clickable: true,
+      className: 'hover:ring-yellow-500'
     }
   ],
   defaultVariants: {
