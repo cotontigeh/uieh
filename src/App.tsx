@@ -56,6 +56,30 @@ function App() {
             <Badge color="zinc" size="large">
               zinc
             </Badge>
+            <Badge color="amber" size="large">
+              amber
+            </Badge>
+            <Badge color="cyan" size="large">
+              cyan
+            </Badge>
+            <Badge color="teal" size="large">
+              teal
+            </Badge>
+            <Badge color="emerald" size="large">
+              emerald
+            </Badge>
+            <Badge color="sky" size="large">
+              sky
+            </Badge>
+            <Badge color="fuchsia" size="large">
+              fuchsia
+            </Badge>
+            <Badge color="neutral" size="large">
+              neutral
+            </Badge>
+            <Badge color="stone" size="large">
+              stone
+            </Badge>
           </div>
         </div>
 
@@ -77,6 +101,15 @@ function App() {
             <Badge color="rose">rose</Badge>
             <Badge color="pink">pink</Badge>
             <Badge color="zinc">zinc</Badge>
+
+            <Badge color="amber">amber</Badge>
+            <Badge color="cyan">cyan</Badge>
+            <Badge color="teal">teal</Badge>
+            <Badge color="emerald">emerald</Badge>
+            <Badge color="sky">sky</Badge>
+            <Badge color="fuchsia">fuchsia</Badge>
+            <Badge color="neutral">neutral</Badge>
+            <Badge color="stone">stone</Badge>
           </div>
         </div>
 
@@ -125,6 +158,30 @@ function App() {
             </Badge>
             <Badge color="zinc" size="small">
               zinc
+            </Badge>
+            <Badge color="amber" size="small">
+              amber
+            </Badge>
+            <Badge color="cyan" size="small">
+              cyan
+            </Badge>
+            <Badge color="teal" size="small">
+              teal
+            </Badge>
+            <Badge color="emerald" size="small">
+              emerald
+            </Badge>
+            <Badge color="sky" size="small">
+              sky
+            </Badge>
+            <Badge color="fuchsia" size="small">
+              fuchsia
+            </Badge>
+            <Badge color="neutral" size="small">
+              neutral
+            </Badge>
+            <Badge color="stone" size="small">
+              stone
             </Badge>
           </div>
         </div>
@@ -175,6 +232,30 @@ function App() {
             <Badge color="zinc" variant="dotted">
               zinc
             </Badge>
+            <Badge color="amber" variant="dotted">
+              amber
+            </Badge>
+            <Badge color="cyan" variant="dotted">
+              cyan
+            </Badge>
+            <Badge color="teal" variant="dotted">
+              teal
+            </Badge>
+            <Badge color="emerald" variant="dotted">
+              emerald
+            </Badge>
+            <Badge color="sky" variant="dotted">
+              sky
+            </Badge>
+            <Badge color="fuchsia" variant="dotted">
+              fuchsia
+            </Badge>
+            <Badge color="neutral" variant="dotted">
+              neutral
+            </Badge>
+            <Badge color="stone" variant="dotted">
+              stone
+            </Badge>
           </div>
         </div>
 
@@ -224,13 +305,37 @@ function App() {
             <Badge color="zinc" size="large" dissmissable>
               zinc
             </Badge>
+            <Badge color="amber" size="large" dissmissable>
+              amber
+            </Badge>
+            <Badge color="cyan" size="large" dissmissable>
+              cyan
+            </Badge>
+            <Badge color="teal" size="large" dissmissable>
+              teal
+            </Badge>
+            <Badge color="emerald" size="large" dissmissable>
+              emerald
+            </Badge>
+            <Badge color="sky" size="large" dissmissable>
+              sky
+            </Badge>
+            <Badge color="fuchsia" size="large" dissmissable>
+              fuchsia
+            </Badge>
+            <Badge color="neutral" size="large" dissmissable>
+              neutral
+            </Badge>
+            <Badge color="stone" size="large" dissmissable>
+              stone
+            </Badge>
           </div>
         </div>
 
         {/* asChild */}
         <div className="flex flex-col gap-2 py-2">
           <h2>asChild</h2>
-          <div className="flex gap-2 py-2">
+          <div className="flex gap-2 py-2 flex-wrap">
             <Badge color="gray" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
@@ -271,6 +376,30 @@ function App() {
               <a href="#">asChild "a"</a>
             </Badge>
             <Badge color="zinc" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="amber" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="cyan" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="teal" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="emerald" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="sky" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="fuchsia" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="neutral" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="stone" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
           </div>

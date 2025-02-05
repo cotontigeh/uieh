@@ -15,40 +15,41 @@ const badgeVariants = cva({
   base: 'inline-flex items-center ring-1 ring-inset select-none',
   variants: {
     variant: {
-      default: ['rounded-md'],
-      dotted: [
+      default: 'rounded-md',
+      dotted:
         'rounded-md before:w-2 before:h-2 before:rounded-full before:mr-1.5'
-      ]
     },
     color: {
-      gray: ['bg-gray-50 text-gray-600 ring-gray-500/10 before:bg-gray-500'],
-      blue: ['bg-blue-50 text-blue-600 ring-blue-500/10 before:bg-blue-500'],
-      purple: [
-        'bg-purple-50 text-purple-600 ring-purple-500/10 before:bg-purple-500'
-      ],
-      orange: [
-        'bg-orange-50 text-orange-600 ring-orange-500/10 before:bg-orange-500'
-      ],
-      green: [
-        'bg-green-50 text-green-600 ring-green-500/10 before:bg-green-500'
-      ],
-      red: ['bg-red-50 text-red-600 ring-red-500/10 before:bg-red-500'],
-      yellow: [
-        'bg-yellow-50 text-yellow-600 ring-yellow-500/10 before:bg-yellow-500'
-      ],
-      slate: [
-        'bg-slate-50 text-slate-600 ring-slate-500/10 before:bg-slate-500'
-      ],
-      lime: ['bg-lime-50 text-lime-600 ring-lime-500/10 before:bg-lime-500'],
-      rose: ['bg-rose-50 text-rose-600 ring-rose-500/10 before:bg-rose-500'],
-      pink: ['bg-pink-50 text-pink-600 ring-pink-500/10 before:bg-pink-500'],
-      zinc: ['bg-zinc-50 text-zinc-600 ring-zinc-500/10 before:bg-zinc-500'],
-      indigo: [
-        'bg-indigo-50 text-indigo-600 ring-indigo-500/10 before:bg-indigo-500'
-      ],
-      violet: [
-        'bg-violet-50 text-violet-600 ring-violet-500/10 before:bg-violet-500'
-      ]
+      gray: 'bg-gray-50 text-gray-600 ring-gray-500/10 before:bg-gray-500',
+      blue: 'bg-blue-50 text-blue-600 ring-blue-500/10 before:bg-blue-500',
+      purple:
+        'bg-purple-50 text-purple-600 ring-purple-500/10 before:bg-purple-500',
+      orange:
+        'bg-orange-50 text-orange-600 ring-orange-500/10 before:bg-orange-500',
+      green: 'bg-green-50 text-green-600 ring-green-500/10 before:bg-green-500',
+      red: 'bg-red-50 text-red-600 ring-red-500/10 before:bg-red-500',
+      yellow:
+        'bg-yellow-50 text-yellow-600 ring-yellow-500/10 before:bg-yellow-500',
+      slate: 'bg-slate-50 text-slate-600 ring-slate-500/10 before:bg-slate-500',
+      lime: 'bg-lime-50 text-lime-600 ring-lime-500/10 before:bg-lime-500',
+      rose: 'bg-rose-50 text-rose-600 ring-rose-500/10 before:bg-rose-500',
+      pink: 'bg-pink-50 text-pink-600 ring-pink-500/10 before:bg-pink-500',
+      zinc: 'bg-zinc-50 text-zinc-600 ring-zinc-500/10 before:bg-zinc-500',
+      indigo:
+        'bg-indigo-50 text-indigo-600 ring-indigo-500/10 before:bg-indigo-500',
+      violet:
+        'bg-violet-50 text-violet-600 ring-violet-500/10 before:bg-violet-500',
+      amber: 'bg-amber-50 text-amber-600 ring-amber-500/10 before:bg-amber-500',
+      cyan: 'bg-cyan-50 text-cyan-600 ring-cyan-500/10 before:bg-cyan-500',
+      teal: 'bg-teal-50 text-teal-600 ring-teal-500/10 before:bg-teal-500',
+      emerald:
+        'bg-emerald-50 text-emerald-600 ring-emerald-500/10 before:bg-emerald-500',
+      sky: 'bg-sky-50 text-sky-600 ring-sky-500/10 before:bg-sky-500',
+      fuchsia:
+        'bg-fuchsia-50 text-fuchsia-600 ring-fuchsia-500/10 before:bg-fuchsia-500',
+      neutral:
+        'bg-neutral-50 text-neutral-600 ring-neutral-500/10 before:bg-neutral-500',
+      stone: 'bg-stone-50 text-stone-600 ring-stone-500/10 before:bg-stone-500'
     },
     size: {
       small: ['px-2 py-1 text-xs font-medium'],
@@ -150,6 +151,54 @@ const badgeVariants = cva({
       clickable: true,
       className: 'hover:bg-violet-100 hover:ring-violet-500'
     },
+    {
+      variant: 'default',
+      color: 'amber',
+      clickable: true,
+      className: 'hover:bg-amber-100 hover:ring-amber-500'
+    },
+    {
+      variant: 'default',
+      color: 'cyan',
+      clickable: true,
+      className: 'hover:bg-cyan-100 hover:ring-cyan-500'
+    },
+    {
+      variant: 'default',
+      color: 'teal',
+      clickable: true,
+      className: 'hover:bg-teal-100 hover:ring-teal-500'
+    },
+    {
+      variant: 'default',
+      color: 'emerald',
+      clickable: true,
+      className: 'hover:bg-emerald-100 hover:ring-emerald-500'
+    },
+    {
+      variant: 'default',
+      color: 'sky',
+      clickable: true,
+      className: 'hover:bg-sky-100 hover:ring-sky-500'
+    },
+    {
+      variant: 'default',
+      color: 'fuchsia',
+      clickable: true,
+      className: 'hover:bg-fuchsia-100 hover:ring-fuchsia-500'
+    },
+    {
+      variant: 'default',
+      color: 'neutral',
+      clickable: true,
+      className: 'hover:bg-neutral-100 hover:ring-neutral-500'
+    },
+    {
+      variant: 'default',
+      color: 'stone',
+      clickable: true,
+      className: 'hover:bg-stone-100 hover:ring-stone-500'
+    },
     // Variant dotted
     {
       variant: 'dotted',
@@ -238,6 +287,54 @@ const badgeVariants = cva({
       color: 'violet',
       clickable: true,
       className: 'hover:ring-violet-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'amber',
+      clickable: true,
+      className: 'hover:ring-amber-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'cyan',
+      clickable: true,
+      className: 'hover:ring-cyan-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'teal',
+      clickable: true,
+      className: 'hover:ring-teal-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'emerald',
+      clickable: true,
+      className: 'hover:ring-emerald-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'sky',
+      clickable: true,
+      className: 'hover:ring-sky-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'fuchsia',
+      clickable: true,
+      className: 'hover:ring-fuchsia-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'neutral',
+      clickable: true,
+      className: 'hover:ring-neutral-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'stone',
+      clickable: true,
+      className: 'hover:ring-stone-500'
     }
   ],
   defaultVariants: {
