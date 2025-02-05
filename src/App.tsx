@@ -5,9 +5,11 @@ import { Button } from './Button'
 function App() {
   return (
     <>
-      <h1 className="text-3xl uppercase">uieh</h1>
+      <h1 className="text-6xl uppercase">uieh</h1>
 
       <section className="flex flex-col gap-2 p-2">
+        <h1 className="text-3xl uppercase">Badge</h1>
+
         {/* Size large */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Size large</h2>
@@ -21,6 +23,12 @@ function App() {
             <Badge color="purple" size="large">
               Purple
             </Badge>
+            <Badge color="indigo" size="large">
+              indigo
+            </Badge>
+            <Badge color="violet" size="large">
+              violet
+            </Badge>
             <Badge color="green" size="large">
               Green
             </Badge>
@@ -33,6 +41,21 @@ function App() {
             <Badge color="yellow" size="large">
               Yellow
             </Badge>
+            <Badge color="slate" size="large">
+              slate
+            </Badge>
+            <Badge color="lime" size="large">
+              lime
+            </Badge>
+            <Badge color="rose" size="large">
+              rose
+            </Badge>
+            <Badge color="pink" size="large">
+              pink
+            </Badge>
+            <Badge color="zinc" size="large">
+              zinc
+            </Badge>
           </div>
         </div>
 
@@ -43,10 +66,17 @@ function App() {
             <Badge color="gray">Gray</Badge>
             <Badge color="blue">Blue</Badge>
             <Badge color="purple">Purple</Badge>
+            <Badge color="indigo">indigo</Badge>
+            <Badge color="violet">violet</Badge>
             <Badge color="green">Green</Badge>
             <Badge color="orange">Orange</Badge>
             <Badge color="red">Red</Badge>
             <Badge color="yellow">Yellow</Badge>
+            <Badge color="slate">slate</Badge>
+            <Badge color="lime">lime</Badge>
+            <Badge color="rose">rose</Badge>
+            <Badge color="pink">pink</Badge>
+            <Badge color="zinc">zinc</Badge>
           </div>
         </div>
 
@@ -63,6 +93,12 @@ function App() {
             <Badge color="purple" size="small">
               Purple
             </Badge>
+            <Badge color="indigo" size="small">
+              indigo
+            </Badge>
+            <Badge color="violet" size="small">
+              violet
+            </Badge>
             <Badge color="green" size="small">
               Green
             </Badge>
@@ -75,6 +111,21 @@ function App() {
             <Badge color="yellow" size="small">
               Yellow
             </Badge>
+            <Badge color="slate" size="small">
+              slate
+            </Badge>
+            <Badge color="lime" size="small">
+              lime
+            </Badge>
+            <Badge color="rose" size="small">
+              rose
+            </Badge>
+            <Badge color="pink" size="small">
+              pink
+            </Badge>
+            <Badge color="zinc" size="small">
+              zinc
+            </Badge>
           </div>
         </div>
 
@@ -82,26 +133,47 @@ function App() {
         <div className="flex flex-col gap-2 py-2">
           <h2>Variant dotted</h2>
           <div className="flex gap-2 py-2">
-            <Badge variant="dotted" color="gray">
+            <Badge color="gray" variant="dotted">
               Gray
             </Badge>
-            <Badge variant="dotted" color="blue">
+            <Badge color="blue" variant="dotted">
               Blue
             </Badge>
-            <Badge variant="dotted" color="purple">
+            <Badge color="purple" variant="dotted">
               Purple
             </Badge>
-            <Badge variant="dotted" color="green">
+            <Badge color="indigo" variant="dotted">
+              indigo
+            </Badge>
+            <Badge color="violet" variant="dotted">
+              violet
+            </Badge>
+            <Badge color="green" variant="dotted">
               Green
             </Badge>
-            <Badge variant="dotted" color="orange">
+            <Badge color="orange" variant="dotted">
               Orange
             </Badge>
-            <Badge variant="dotted" color="red">
+            <Badge color="red" variant="dotted">
               Red
             </Badge>
-            <Badge variant="dotted" color="yellow">
+            <Badge color="yellow" variant="dotted">
               Yellow
+            </Badge>
+            <Badge color="slate" variant="dotted">
+              slate
+            </Badge>
+            <Badge color="lime" variant="dotted">
+              lime
+            </Badge>
+            <Badge color="rose" variant="dotted">
+              rose
+            </Badge>
+            <Badge color="pink" variant="dotted">
+              pink
+            </Badge>
+            <Badge color="zinc" variant="dotted">
+              zinc
             </Badge>
           </div>
         </div>
@@ -110,74 +182,47 @@ function App() {
         <div className="flex flex-col gap-2 py-2">
           <h2>Dissmissable</h2>
           <div className="flex gap-2 py-1">
-            <Badge variant="dotted" color="gray" size="large" dissmissable>
+            <Badge color="gray" size="large" dissmissable>
               Gray
             </Badge>
-            <Badge variant="dotted" color="blue" size="large" dissmissable>
+            <Badge color="blue" size="large" dissmissable>
               Blue
             </Badge>
-            <Badge variant="dotted" color="purple" size="large" dissmissable>
+            <Badge color="purple" size="large" dissmissable>
               Purple
             </Badge>
-            <Badge variant="dotted" color="green" size="large" dissmissable>
+            <Badge color="indigo" size="large" dissmissable>
+              indigo
+            </Badge>
+            <Badge color="violet" size="large" dissmissable>
+              violet
+            </Badge>
+            <Badge color="green" size="large" dissmissable>
               Green
             </Badge>
-            <Badge variant="dotted" color="orange" size="large" dissmissable>
+            <Badge color="orange" size="large" dissmissable>
               Orange
             </Badge>
-            <Badge variant="dotted" color="red" size="large" dissmissable>
+            <Badge color="red" size="large" dissmissable>
               Red
             </Badge>
-            <Badge variant="dotted" color="yellow" size="large" dissmissable>
+            <Badge color="yellow" size="large" dissmissable>
               Yellow
             </Badge>
-          </div>
-
-          <div className="flex gap-2 py-1">
-            <Badge variant="dotted" color="gray" dissmissable>
-              Gray
+            <Badge color="slate" size="large" dissmissable>
+              slate
             </Badge>
-            <Badge variant="dotted" color="blue" dissmissable>
-              Blue
+            <Badge color="lime" size="large" dissmissable>
+              lime
             </Badge>
-            <Badge variant="dotted" color="purple" dissmissable>
-              Purple
+            <Badge color="rose" size="large" dissmissable>
+              rose
             </Badge>
-            <Badge variant="dotted" color="green" dissmissable>
-              Green
+            <Badge color="pink" size="large" dissmissable>
+              pink
             </Badge>
-            <Badge variant="dotted" color="orange" dissmissable>
-              Orange
-            </Badge>
-            <Badge variant="dotted" color="red" dissmissable>
-              Red
-            </Badge>
-            <Badge variant="dotted" color="yellow" dissmissable>
-              Yellow
-            </Badge>
-          </div>
-
-          <div className="flex gap-2 py-1">
-            <Badge variant="dotted" color="gray" size="small" dissmissable>
-              Gray
-            </Badge>
-            <Badge variant="dotted" color="blue" size="small" dissmissable>
-              Blue
-            </Badge>
-            <Badge variant="dotted" color="purple" size="small" dissmissable>
-              Purple
-            </Badge>
-            <Badge variant="dotted" color="green" size="small" dissmissable>
-              Green
-            </Badge>
-            <Badge variant="dotted" color="orange" size="small" dissmissable>
-              Orange
-            </Badge>
-            <Badge variant="dotted" color="red" size="small" dissmissable>
-              Red
-            </Badge>
-            <Badge variant="dotted" color="yellow" size="small" dissmissable>
-              Yellow
+            <Badge color="zinc" size="large" dissmissable>
+              zinc
             </Badge>
           </div>
         </div>
@@ -186,13 +231,19 @@ function App() {
         <div className="flex flex-col gap-2 py-2">
           <h2>asChild</h2>
           <div className="flex gap-2 py-2">
-            <Badge color="blue" asChild>
-              <a href="#">asChild "a"</a>
-            </Badge>
             <Badge color="gray" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
+            <Badge color="blue" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
             <Badge color="purple" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="indigo" asChild>
+              <a href="#">asChild "a"</a>
+            </Badge>
+            <Badge color="violet" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
             <Badge color="green" asChild>
@@ -207,27 +258,19 @@ function App() {
             <Badge color="yellow" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
-          </div>
-          <div className="flex gap-2 py-2">
-            <Badge variant="dotted" color="blue" asChild>
+            <Badge color="slate" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
-            <Badge variant="dotted" color="gray" asChild>
+            <Badge color="lime" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
-            <Badge variant="dotted" color="purple" asChild>
+            <Badge color="rose" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
-            <Badge variant="dotted" color="green" asChild>
+            <Badge color="pink" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
-            <Badge variant="dotted" color="orange" asChild>
-              <a href="#">asChild "a"</a>
-            </Badge>
-            <Badge variant="dotted" color="red" asChild>
-              <a href="#">asChild "a"</a>
-            </Badge>
-            <Badge variant="dotted" color="yellow" asChild>
+            <Badge color="zinc" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
           </div>
@@ -235,6 +278,8 @@ function App() {
       </section>
 
       <section className="flex flex-col gap-2 p-2">
+        <h1 className="text-3xl uppercase">Button</h1>
+
         {/* Size large */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Size large</h2>

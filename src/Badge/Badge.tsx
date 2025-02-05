@@ -35,6 +35,19 @@ const badgeVariants = cva({
       red: ['bg-red-50 text-red-600 ring-red-500/10 before:bg-red-500'],
       yellow: [
         'bg-yellow-50 text-yellow-600 ring-yellow-500/10 before:bg-yellow-500'
+      ],
+      slate: [
+        'bg-slate-50 text-slate-600 ring-slate-500/10 before:bg-slate-500'
+      ],
+      lime: ['bg-lime-50 text-lime-600 ring-lime-500/10 before:bg-lime-500'],
+      rose: ['bg-rose-50 text-rose-600 ring-rose-500/10 before:bg-rose-500'],
+      pink: ['bg-pink-50 text-pink-600 ring-pink-500/10 before:bg-pink-500'],
+      zinc: ['bg-zinc-50 text-zinc-600 ring-zinc-500/10 before:bg-zinc-500'],
+      indigo: [
+        'bg-indigo-50 text-indigo-600 ring-indigo-500/10 before:bg-indigo-500'
+      ],
+      violet: [
+        'bg-violet-50 text-violet-600 ring-violet-500/10 before:bg-violet-500'
       ]
     },
     size: {
@@ -95,6 +108,48 @@ const badgeVariants = cva({
       clickable: true,
       className: 'hover:bg-yellow-100 hover:ring-yellow-500'
     },
+    {
+      variant: 'default',
+      color: 'slate',
+      clickable: true,
+      className: 'hover:bg-slate-100 hover:ring-slate-500'
+    },
+    {
+      variant: 'default',
+      color: 'lime',
+      clickable: true,
+      className: 'hover:bg-lime-100 hover:ring-lime-500'
+    },
+    {
+      variant: 'default',
+      color: 'rose',
+      clickable: true,
+      className: 'hover:bg-rose-100 hover:ring-rose-500'
+    },
+    {
+      variant: 'default',
+      color: 'pink',
+      clickable: true,
+      className: 'hover:bg-pink-100 hover:ring-pink-500'
+    },
+    {
+      variant: 'default',
+      color: 'zinc',
+      clickable: true,
+      className: 'hover:bg-zinc-100 hover:ring-zinc-500'
+    },
+    {
+      variant: 'default',
+      color: 'indigo',
+      clickable: true,
+      className: 'hover:bg-indigo-100 hover:ring-indigo-500'
+    },
+    {
+      variant: 'default',
+      color: 'violet',
+      clickable: true,
+      className: 'hover:bg-violet-100 hover:ring-violet-500'
+    },
     // Variant dotted
     {
       variant: 'dotted',
@@ -141,6 +196,48 @@ const badgeVariants = cva({
       color: 'yellow',
       clickable: true,
       className: 'hover:ring-yellow-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'slate',
+      clickable: true,
+      className: 'hover:ring-slate-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'lime',
+      clickable: true,
+      className: 'hover:ring-lime-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'rose',
+      clickable: true,
+      className: 'hover:ring-rose-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'pink',
+      clickable: true,
+      className: 'hover:ring-pink-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'zinc',
+      clickable: true,
+      className: 'hover:ring-zinc-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'indigo',
+      clickable: true,
+      className: 'hover:ring-indigo-500'
+    },
+    {
+      variant: 'dotted',
+      color: 'violet',
+      clickable: true,
+      className: 'hover:ring-violet-500'
     }
   ],
   defaultVariants: {
