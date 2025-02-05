@@ -234,7 +234,7 @@ function App() {
         </div>
       </section>
 
-      <section>
+      <section className="flex flex-col gap-2 p-2">
         {/* Size large */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Size large</h2>
@@ -248,6 +248,12 @@ function App() {
             <Button color="purple" size="large">
               Purple
             </Button>
+            <Button color="indigo" size="large">
+              indigo
+            </Button>
+            <Button color="violet" size="large">
+              violet
+            </Button>
             <Button color="green" size="large">
               Green
             </Button>
@@ -260,6 +266,21 @@ function App() {
             <Button color="yellow" size="large">
               Yellow
             </Button>
+            <Button color="slate" size="large">
+              slate
+            </Button>
+            <Button color="lime" size="large">
+              lime
+            </Button>
+            <Button color="rose" size="large">
+              rose
+            </Button>
+            <Button color="pink" size="large">
+              pink
+            </Button>
+            <Button color="zinc" size="large">
+              zinc
+            </Button>
           </div>
         </div>
 
@@ -270,10 +291,17 @@ function App() {
             <Button color="gray">Gray</Button>
             <Button color="blue">Blue</Button>
             <Button color="purple">Purple</Button>
+            <Button color="indigo">indigo</Button>
+            <Button color="violet">violet</Button>
             <Button color="green">Green</Button>
             <Button color="orange">Orange</Button>
             <Button color="red">Red</Button>
             <Button color="yellow">Yellow</Button>
+            <Button color="slate">slate</Button>
+            <Button color="lime">lime</Button>
+            <Button color="rose">rose</Button>
+            <Button color="pink">pink</Button>
+            <Button color="zinc">zinc</Button>
           </div>
         </div>
 
@@ -290,6 +318,12 @@ function App() {
             <Button color="purple" size="small">
               Purple
             </Button>
+            <Button color="indigo" size="small">
+              indigo
+            </Button>
+            <Button color="violet" size="small">
+              violet
+            </Button>
             <Button color="green" size="small">
               Green
             </Button>
@@ -301,6 +335,21 @@ function App() {
             </Button>
             <Button color="yellow" size="small">
               Yellow
+            </Button>
+            <Button color="slate" size="small">
+              slate
+            </Button>
+            <Button color="lime" size="small">
+              lime
+            </Button>
+            <Button color="rose" size="small">
+              rose
+            </Button>
+            <Button color="pink" size="small">
+              pink
+            </Button>
+            <Button color="zinc" size="small">
+              zinc
             </Button>
           </div>
         </div>
@@ -318,6 +367,12 @@ function App() {
             <Button color="purple" variant="ghost">
               Purple
             </Button>
+            <Button color="indigo" variant="ghost">
+              indigo
+            </Button>
+            <Button color="violet" variant="ghost">
+              violet
+            </Button>
             <Button color="green" variant="ghost">
               Green
             </Button>
@@ -329,6 +384,21 @@ function App() {
             </Button>
             <Button color="yellow" variant="ghost">
               Yellow
+            </Button>
+            <Button color="slate" variant="ghost">
+              slate
+            </Button>
+            <Button color="lime" variant="ghost">
+              lime
+            </Button>
+            <Button color="rose" variant="ghost">
+              rose
+            </Button>
+            <Button color="pink" variant="ghost">
+              pink
+            </Button>
+            <Button color="zinc" variant="ghost">
+              zinc
             </Button>
           </div>
         </div>
@@ -347,7 +417,7 @@ function App() {
 
         {/* Disable */}
         <div className="flex flex-col gap-2 py-2">
-          <h2>Size medium (default)</h2>
+          <h2>Disable</h2>
           <div className="flex gap-2 py-2">
             <Button color="green" disable>
               Disable
