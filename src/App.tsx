@@ -13,7 +13,7 @@ function App() {
         {/* Size large */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Size large</h2>
-          <div className="flex gap-2 ">
+          <div className="flex flex-wrap gap-2 ">
             <Badge color="gray" size="large">
               Gray
             </Badge>
@@ -86,7 +86,7 @@ function App() {
         {/* Size medium */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Size medium (default)</h2>
-          <div className="flex gap-2 py-2">
+          <div className="flex flex-wrap gap-2 py-2">
             <Badge color="gray">Gray</Badge>
             <Badge color="blue">Blue</Badge>
             <Badge color="purple">Purple</Badge>
@@ -116,7 +116,7 @@ function App() {
         {/* Size small */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Size small</h2>
-          <div className="flex gap-2 py-2">
+          <div className="flex flex-wrap gap-2 py-2">
             <Badge color="gray" size="small">
               Gray
             </Badge>
@@ -189,7 +189,7 @@ function App() {
         {/* Variant dotted */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Variant dotted</h2>
-          <div className="flex gap-2 py-2">
+          <div className="flex flex-wrap gap-2 py-2">
             <Badge color="gray" variant="dotted">
               Gray
             </Badge>
@@ -262,7 +262,7 @@ function App() {
         {/* Dissmissable */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Dissmissable</h2>
-          <div className="flex gap-2 py-1">
+          <div className="flex flex-wrap gap-2 py-1">
             <Badge color="gray" size="large" dissmissable>
               Gray
             </Badge>
@@ -335,7 +335,7 @@ function App() {
         {/* asChild */}
         <div className="flex flex-col gap-2 py-2">
           <h2>asChild</h2>
-          <div className="flex gap-2 py-2 flex-wrap">
+          <div className="flex flex-wrap gap-2 py-2">
             <Badge color="gray" asChild>
               <a href="#">asChild "a"</a>
             </Badge>
@@ -412,7 +412,7 @@ function App() {
         {/* Size large */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Size large</h2>
-          <div className="flex gap-2 py-2">
+          <div className="flex flex-wrap gap-2 py-2">
             <Button color="gray" size="large">
               Gray
             </Button>
@@ -455,13 +455,37 @@ function App() {
             <Button color="zinc" size="large">
               zinc
             </Button>
+            <Button color="amber" size="large">
+              amber
+            </Button>
+            <Button color="cyan" size="large">
+              cyan
+            </Button>
+            <Button color="teal" size="large">
+              teal
+            </Button>
+            <Button color="emerald" size="large">
+              emerald
+            </Button>
+            <Button color="sky" size="large">
+              sky
+            </Button>
+            <Button color="fuchsia" size="large">
+              fuchsia
+            </Button>
+            <Button color="neutral" size="large">
+              neutral
+            </Button>
+            <Button color="stone" size="large">
+              stone
+            </Button>
           </div>
         </div>
 
         {/* Size medium */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Size medium (default)</h2>
-          <div className="flex gap-2 py-2">
+          <div className="flex flex-wrap gap-2 py-2">
             <Button color="gray">Gray</Button>
             <Button color="blue">Blue</Button>
             <Button color="purple">Purple</Button>
@@ -476,13 +500,21 @@ function App() {
             <Button color="rose">rose</Button>
             <Button color="pink">pink</Button>
             <Button color="zinc">zinc</Button>
+            <Button color="amber">amber</Button>
+            <Button color="cyan">cyan</Button>
+            <Button color="teal">teal</Button>
+            <Button color="emerald">emerald</Button>
+            <Button color="sky">sky</Button>
+            <Button color="fuchsia">fuchsia</Button>
+            <Button color="neutral">neutral</Button>
+            <Button color="stone">stone</Button>
           </div>
         </div>
 
         {/* Size small */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Size small</h2>
-          <div className="flex gap-2 py-2">
+          <div className="flex flex-wrap gap-2 py-2">
             <Button color="gray" size="small">
               Gray
             </Button>
@@ -525,13 +557,37 @@ function App() {
             <Button color="zinc" size="small">
               zinc
             </Button>
+            <Button color="amber" size="small">
+              amber
+            </Button>
+            <Button color="cyan" size="small">
+              cyan
+            </Button>
+            <Button color="teal" size="small">
+              teal
+            </Button>
+            <Button color="emerald" size="small">
+              emerald
+            </Button>
+            <Button color="sky" size="small">
+              sky
+            </Button>
+            <Button color="fuchsia" size="small">
+              fuchsia
+            </Button>
+            <Button color="neutral" size="small">
+              neutral
+            </Button>
+            <Button color="stone" size="small">
+              stone
+            </Button>
           </div>
         </div>
 
         {/* Ghost variant */}
         <div className="flex flex-col gap-2 py-2">
           <h2>Ghost variant</h2>
-          <div className="flex gap-2 py-2">
+          <div className="flex flex-wrap gap-2 py-2">
             <Button color="gray" variant="ghost">
               Gray
             </Button>
@@ -573,6 +629,30 @@ function App() {
             </Button>
             <Button color="zinc" variant="ghost">
               zinc
+            </Button>
+            <Button color="amber" variant="ghost">
+              amber
+            </Button>
+            <Button color="cyan" variant="ghost">
+              cyan
+            </Button>
+            <Button color="teal" variant="ghost">
+              teal
+            </Button>
+            <Button color="emerald" variant="ghost">
+              emerald
+            </Button>
+            <Button color="sky" variant="ghost">
+              sky
+            </Button>
+            <Button color="fuchsia" variant="ghost">
+              fuchsia
+            </Button>
+            <Button color="neutral" variant="ghost">
+              neutral
+            </Button>
+            <Button color="stone" variant="ghost">
+              stone
             </Button>
           </div>
         </div>

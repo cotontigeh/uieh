@@ -29,7 +29,15 @@ const buttonVariants = cva({
       pink: ['bg-pink-400 text-white', 'hover:bg-pink-400'],
       zinc: ['bg-zinc-400 text-white', 'hover:bg-zinc-400'],
       indigo: ['bg-indigo-400 text-white', 'hover:bg-indigo-400'],
-      violet: ['bg-violet-400 text-white', 'hover:bg-violet-400']
+      violet: ['bg-violet-400 text-white', 'hover:bg-violet-400'],
+      amber: ['bg-amber-400 text-white', 'hover:bg-amber-400'],
+      cyan: ['bg-cyan-400 text-white', 'hover:bg-cyan-400'],
+      teal: ['bg-teal-400 text-white', 'hover:bg-teal-400'],
+      emerald: ['bg-emerald-400 text-white', 'hover:bg-emerald-400'],
+      sky: ['bg-sky-400 text-white', 'hover:bg-sky-400'],
+      fuchsia: ['bg-fuchsia-400 text-white', 'hover:bg-fuchsia-400'],
+      neutral: ['bg-neutral-400 text-white', 'hover:bg-neutral-400'],
+      stone: ['bg-stone-400 text-white', 'hover:bg-stone-400']
     },
     size: {
       small: 'text-sm px-2 py-1',
@@ -115,6 +123,46 @@ const buttonVariants = cva({
       variant: 'ghost',
       color: 'violet',
       className: ['text-violet-600', 'hover:bg-violet-100']
+    },
+    {
+      variant: 'ghost',
+      color: 'amber',
+      className: ['text-amber-600', 'hover:bg-amber-100']
+    },
+    {
+      variant: 'ghost',
+      color: 'cyan',
+      className: ['text-cyan-600', 'hover:bg-cyan-100']
+    },
+    {
+      variant: 'ghost',
+      color: 'teal',
+      className: ['text-teal-600', 'hover:bg-teal-100']
+    },
+    {
+      variant: 'ghost',
+      color: 'emerald',
+      className: ['text-emerald-600', 'hover:bg-emerald-100']
+    },
+    {
+      variant: 'ghost',
+      color: 'sky',
+      className: ['text-sky-600', 'hover:bg-sky-100']
+    },
+    {
+      variant: 'ghost',
+      color: 'fuchsia',
+      className: ['text-fuchsia-600', 'hover:bg-fuchsia-100']
+    },
+    {
+      variant: 'ghost',
+      color: 'neutral',
+      className: ['text-neutral-600', 'hover:bg-neutral-100']
+    },
+    {
+      variant: 'ghost',
+      color: 'stone',
+      className: ['text-stone-600', 'hover:bg-stone-100']
     }
   ],
   defaultVariants: {
