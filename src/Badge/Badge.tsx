@@ -17,7 +17,8 @@ const badgeVariants = cva({
     variant: {
       default: 'rounded-md',
       dotted:
-        'rounded-md before:w-2 before:h-2 before:rounded-full before:mr-1.5'
+        'rounded-md before:w-2 before:h-2 before:rounded-full before:mr-1.5',
+      rounded: 'rounded-xl'
     },
     color: {
       gray: 'bg-gray-50 text-gray-600 ring-gray-500/10 before:bg-gray-500',
@@ -335,6 +336,11 @@ const badgeVariants = cva({
       color: 'stone',
       clickable: true,
       className: 'hover:ring-stone-500'
+    },
+    // Variant rounded
+    {
+      variant: 'rounded',
+      className: 'px-2 py-0.5'
     }
   ],
   defaultVariants: {
