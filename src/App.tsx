@@ -9,12 +9,14 @@ function App() {
       <h1 className="text-6xl uppercase">uieh</h1>
 
       <Tabs className="mt-9">
-        <TabLink active>Buttons</TabLink>
-        <TabLink>Badge</TabLink>
+        <TabLink color="green" active>
+          Badge
+        </TabLink>
+        <TabLink color="blue">Tab</TabLink>
       </Tabs>
 
       <Tabs className="mt-9" variant="noBorder">
-        <TabLink active variant="pill">
+        <TabLink active variant="pill" color="green">
           Buttons
         </TabLink>
         <TabLink variant="pill">Badge</TabLink>
@@ -30,24 +32,22 @@ function App() {
           <BiHash />
           Buttons
         </TabLink>
-        <TabLink active>
+        <TabLink active color="red">
           <BiTv />
           Badge
         </TabLink>
       </Tabs>
 
       <Tabs className="mt-9">
-        <TabLink>
+        <TabLink color="green" active>
           Buttons
-          <Badge variant="rounded" color="blue">
+          <Badge variant="rounded" color="green">
             3
           </Badge>
         </TabLink>
-        <TabLink active>
+        <TabLink>
           Badge
-          <Badge variant="rounded" color="blue">
-            1
-          </Badge>
+          <Badge variant="rounded">1</Badge>
         </TabLink>
       </Tabs>
     </main>
