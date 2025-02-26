@@ -2,7 +2,11 @@ import { forwardRef, isValidElement } from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { cn } from '@/lib/utils'
 import CloseIcon from '@/icons/X'
-import { badgeVariants, BadgeVariantsType } from './badge.variants'
+import {
+  badgeDismissibleVariants,
+  badgeVariants,
+  BadgeVariantsType
+} from './badge.variants'
 
 export type BadgeProps = React.HTMLAttributes<HTMLSpanElement> &
   BadgeVariantsType & {
@@ -48,7 +52,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
             {children}
             <CloseIcon
               onClick={onDismissClick}
-              className="ml-1.5 cursor-pointer hover:fill-gray-900"
+              className={badgeDismissibleVariants({ color })}
               size={closeIconSize}
             />
           </>

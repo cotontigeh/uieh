@@ -17,7 +17,7 @@ export const badgeVariants = cva({
     color: {
       blue: [
         'bg-blue-50 text-blue-600 ring-blue-500/10 before:bg-blue-500',
-        'dark:bg-blue-500 dark:text-slate-50 dark:ring-blue-900'
+        'dark:bg-blue-300 dark:text-blue-950 dark:ring-blue-900'
       ],
       green: [
         'bg-green-50 text-green-600 ring-green-500/10 before:bg-green-500',
@@ -25,11 +25,11 @@ export const badgeVariants = cva({
       ],
       red: [
         'bg-red-50 text-red-600 ring-red-500/10 before:bg-red-500',
-        'dark:bg-red-400 dark:text-black dark:ring-red-900'
+        'dark:bg-red-300 dark:text-red-950 dark:ring-red-900'
       ],
       slate: [
         'bg-slate-50 text-slate-600 ring-slate-500/10 before:bg-slate-500',
-        'dark:bg-slate-500 dark:text-slate-50 dark:ring-slate-900'
+        'dark:bg-slate-300 dark:text-slate-950 dark:ring-slate-900'
       ]
     },
     size: {
@@ -41,7 +41,7 @@ export const badgeVariants = cva({
       unset: null,
       true: ['cursor-pointer']
     },
-    dissmissable: {
+    dismissible: {
       unset: null,
       true: []
     }
@@ -77,7 +77,7 @@ export const badgeVariants = cva({
       variant: 'dotted',
       className: [
         'bg-transparent ring-gray-300 text-gray-500',
-        'dark:bg-transparent dark:ring-gray-700 dark:text-gray-300'
+        'dark:bg-transparent dark:ring-gray-700 dark:text-slate-50'
       ]
     },
     {
@@ -114,5 +114,20 @@ export const badgeVariants = cva({
     variant: 'default',
     color: 'blue',
     size: 'medium'
+  }
+})
+
+export const badgeDismissibleVariants = cva({
+  base: [
+    'ml-1.5 cursor-pointer hover:fill-gray-700',
+    'dark:fill-gray-700 dark:hover:fill-gray-900'
+  ],
+  variants: {
+    color: {
+      blue: '',
+      green: '',
+      red: '',
+      slate: ''
+    }
   }
 })

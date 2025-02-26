@@ -77,16 +77,16 @@ export const BadgesV2View = () => {
       <div className="flex flex-col gap-2 py-2">
         <h2>Dissmissable</h2>
         <div className="flex flex-wrap gap-2 py-1">
-          <Badge color="blue" size="large" dissmissable>
+          <Badge color="blue" size="large" dismissible>
             Blue
           </Badge>
-          <Badge color="green" size="large" dissmissable>
+          <Badge color="green" size="large" dismissible>
             Green
           </Badge>
-          <Badge color="red" size="large" dissmissable>
+          <Badge color="red" size="large" dismissible>
             Red
           </Badge>
-          <Badge color="slate" size="large" dissmissable>
+          <Badge color="slate" size="large" dismissible>
             slate
           </Badge>
         </div>
