@@ -15,7 +15,7 @@ function App() {
         <Button onClick={() => setTheme('dark')}>Dark</Button>
         <Button onClick={() => setTheme('light')}>Light</Button>
       </div>
-      <BadgesView />
+      <ButtonsView />
     </main>
   )
 }

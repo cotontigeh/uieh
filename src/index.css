@@ -2,7 +2,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-  @apply bg-white dark:bg-gray-900 dark:text-white;
+  @apply bg-white dark:bg-black dark:text-white;
 }
 
 h1 {

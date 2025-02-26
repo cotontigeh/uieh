@@ -10,19 +10,19 @@ export const buttonVariants = cva({
     color: {
       blue: [
         'bg-blue-500 text-white hover:bg-blue-400',
-        'dark:bg-blue-600 dark:hover:bg-blue-500'
+        'dark:bg-blue-500/80 dark:hover:bg-blue-500/90'
       ],
       green: [
         'bg-green-500 text-white hover:bg-green-400',
-        'dark:bg-green-600 dark:hover:bg-green-500'
+        'dark:bg-green-500/80 dark:hover:bg-green-500/90'
       ],
       red: [
         'bg-red-500 text-white hover:bg-red-400',
-        'dark:bg-red-600 dark:hover:bg-red-500'
+        'dark:bg-red-500/80 dark:hover:bg-red-500/90'
       ],
       slate: [
         'bg-slate-500 text-white hover:bg-slate-400',
-        'dark:bg-slate-600 dark:hover:bg-slate-500'
+        'dark:bg-slate-500/80 dark:hover:bg-slate-500/90'
       ]
     },
     size: {
