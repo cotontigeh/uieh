@@ -1,7 +1,7 @@
 import { Button } from '@/Button/Button'
 import { BiAlarm } from 'react-icons/bi'
 
-export const Buttons = () => {
+export const ButtonsView = () => {
   return (
     <section className="flex flex-col gap-2 p-2">
       <h1 className="text-3xl uppercase">Button</h1>

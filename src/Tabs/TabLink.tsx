@@ -114,7 +114,7 @@ const tabLinkVariants = cva({
       active: true,
       className: [
         'text-slate-500 border-slate-500',
-        'hover:border-slate-500 hover:text-slate-500'
+        'hover:border-slate-300 hover:text-slate-600'
       ]
     },
     {
@@ -238,7 +238,10 @@ const tabLinkVariants = cva({
         'hover:text-slate-500 hover:border-transparent'
       ]
     }
-  ]
+  ],
+  defaultVariants: {
+    color: 'slate'
+  }
 })
 
 export const TabLink = forwardRef<HTMLAnchorElement, TabLinkProps>(

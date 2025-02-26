@@ -1,6 +1,6 @@
 import { Badge } from '@/Badge/Badge'
 
-export const Badges = () => {
+export const BadgesView = () => {
   return (
     <section className="flex flex-col gap-2 p-2">
       <h1 className="text-3xl uppercase">Badge</h1>
