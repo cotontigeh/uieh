@@ -11,8 +11,7 @@ export const badgeVariants = cva({
     variant: {
       default: 'rounded-md',
       dotted:
-        'rounded-md before:w-2 before:h-2 before:rounded-full before:mr-1.5',
-      rounded: 'rounded-xl'
+        'rounded-md before:w-2 before:h-2 before:rounded-full before:mr-1.5'
     },
     color: {
       blue: [
@@ -47,37 +46,54 @@ export const badgeVariants = cva({
     }
   },
   compoundVariants: [
-    // Variant default
+    /**************************************************************************
+     * VARIANT: DEFAULT
+     **************************************************************************/
     {
       variant: 'default',
       color: 'blue',
       clickable: true,
-      className: 'hover:bg-blue-100 hover:ring-blue-500/30'
+      className: [
+        'hover:bg-blue-100 hover:ring-blue-500/30',
+        'dark:hover:bg-blue-200 dark:hover:ring-blue-900/50'
+      ]
     },
     {
       variant: 'default',
       color: 'green',
       clickable: true,
-      className: 'hover:bg-green-100 hover:ring-green-500/30'
+      className: [
+        'hover:bg-green-100 hover:ring-green-500/30',
+        'dark:hover:bg-green-200 dark:hover:ring-green-900/50'
+      ]
     },
     {
       variant: 'default',
       color: 'red',
       clickable: true,
-      className: 'hover:bg-red-100 hover:ring-red-500/30'
+      className: [
+        'hover:bg-red-100 hover:ring-red-500/30',
+        'dark:hover:bg-red-200 dark:hover:ring-red-900/50'
+      ]
     },
     {
       variant: 'default',
       color: 'slate',
       clickable: true,
-      className: 'hover:bg-slate-100 hover:ring-slate-500'
+      className: [
+        'hover:bg-slate-100 hover:ring-slate-500/30',
+        'dark:hover:bg-slate-200 dark:hover:ring-slate-900/50'
+      ]
     },
-    // Variant dotted
+
+    /**************************************************************************
+     * VARIANT: DOTTED
+     **************************************************************************/
     {
       variant: 'dotted',
       className: [
-        'bg-transparent ring-gray-300 text-gray-500',
-        'dark:bg-transparent dark:ring-gray-700 dark:text-slate-50'
+        'bg-transparent ring-slate-300 text-slate-500',
+        'dark:bg-transparent dark:ring-slate-700 dark:text-slate-50'
       ]
     },
     {
@@ -102,12 +118,7 @@ export const badgeVariants = cva({
       variant: 'dotted',
       color: 'slate',
       clickable: true,
-      className: 'hover:ring-slate-500'
-    },
-    // Variant rounded
-    {
-      variant: 'rounded',
-      className: 'px-2 py-0.5'
+      className: 'hover:ring-slate-500/30'
     }
   ],
   defaultVariants: {
@@ -119,8 +130,8 @@ export const badgeVariants = cva({
 
 export const badgeDismissibleVariants = cva({
   base: [
-    'ml-1.5 cursor-pointer hover:fill-gray-700',
-    'dark:fill-gray-700 dark:hover:fill-gray-900'
+    'ml-1.5 cursor-pointer hover:fill-slate-700',
+    'dark:fill-slate-700 dark:hover:fill-slate-900'
   ],
   variants: {
     color: {

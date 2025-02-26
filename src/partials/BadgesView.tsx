@@ -5,29 +5,10 @@ export const BadgesView = () => {
     <section className="flex flex-col gap-2 p-2">
       <h1 className="text-3xl uppercase">Badge</h1>
 
-      {/* Size large */}
+      {/* Colors */}
       <div className="flex flex-col gap-2 py-2">
-        <h2>Size large</h2>
+        <h2>Colors</h2>
         <div className="flex flex-wrap gap-2 ">
-          <Badge color="blue" size="large">
-            Blue
-          </Badge>
-          <Badge color="green" size="large">
-            Green
-          </Badge>
-          <Badge color="red" size="large">
-            Red
-          </Badge>
-          <Badge color="slate" size="large">
-            slate
-          </Badge>
-        </div>
-      </div>
-
-      {/* Size medium */}
-      <div className="flex flex-col gap-2 py-2">
-        <h2>Size medium (default)</h2>
-        <div className="flex flex-wrap gap-2 py-2">
           <Badge color="blue">Blue</Badge>
           <Badge color="green">Green</Badge>
           <Badge color="red">Red</Badge>
@@ -35,20 +16,30 @@ export const BadgesView = () => {
         </div>
       </div>
 
-      {/* Size small */}
+      {/* Sizes */}
       <div className="flex flex-col gap-2 py-2">
-        <h2>Size small</h2>
-        <div className="flex flex-wrap gap-2 py-2">
-          <Badge color="blue" size="small">
+        <h2>Sizes</h2>
+        <div className="py-2">
+          <Badge size="small">Small</Badge>
+          <Badge size="medium">Medium</Badge>
+          <Badge size="large">Large</Badge>
+        </div>
+      </div>
+
+      {/* Clickable */}
+      <div className="flex flex-col gap-2 py-2">
+        <h2>Clickable</h2>
+        <div className="flex flex-wrap gap-2 ">
+          <Badge color="blue" onClick={() => alert('clicked')}>
             Blue
           </Badge>
-          <Badge color="green" size="small">
+          <Badge color="green" onClick={() => alert('clicked')}>
             Green
           </Badge>
-          <Badge color="red" size="small">
+          <Badge color="red" onClick={() => alert('clicked')}>
             Red
           </Badge>
-          <Badge color="slate" size="small">
+          <Badge color="slate" onClick={() => alert('clicked')}>
             slate
           </Badge>
         </div>
@@ -68,6 +59,33 @@ export const BadgesView = () => {
             Red
           </Badge>
           <Badge color="slate" variant="dotted">
+            slate
+          </Badge>
+        </div>
+      </div>
+
+      {/* Variant dotted clickable */}
+      <div className="flex flex-col gap-2 py-2">
+        <h2>Variant dotted clickable</h2>
+        <div className="flex flex-wrap gap-2 py-2">
+          <Badge color="blue" variant="dotted" onClick={() => alert('clicked')}>
+            Blue
+          </Badge>
+          <Badge
+            color="green"
+            variant="dotted"
+            onClick={() => alert('clicked')}
+          >
+            Green
+          </Badge>
+          <Badge color="red" variant="dotted" onClick={() => alert('clicked')}>
+            Red
+          </Badge>
+          <Badge
+            color="slate"
+            variant="dotted"
+            onClick={() => alert('clicked')}
+          >
             slate
           </Badge>
         </div>

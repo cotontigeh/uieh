@@ -2,6 +2,7 @@
 import { Button } from './Button/Button'
 import { useTheme } from './hooks/useTheme'
 import { BadgesView } from './partials/BadgesView'
+import { ButtonsView } from './partials/ButtonsView'
 import { TabsView } from './partials/TabsView'
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <main className="mx-auto max-w-[1360px] px-8">
-      <h1 className="text-6xl uppercase">uieh</h1>
+      <h1 className="text-[120px] uppercase">uieh</h1>
       <div className="flex gap-2 p-2">
         <Button onClick={() => setTheme('dark')}>Dark</Button>
         <Button onClick={() => setTheme('light')}>Light</Button>
