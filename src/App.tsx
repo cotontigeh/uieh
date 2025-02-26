@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Button } from './Button/Button'
 import { useTheme } from './hooks/useTheme'
-import { BadgesV2View } from './partials/BadgesV2View'
+import { BadgesView } from './partials/BadgesView'
 import { TabsView } from './partials/TabsView'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Button onClick={() => setTheme('dark')}>Dark</Button>
         <Button onClick={() => setTheme('light')}>Light</Button>
       </div>
-      <BadgesV2View />
+      <BadgesView />
     </main>
   )
 }
