@@ -1,4 +1,4 @@
-import { Button } from '@/Button/Button'
+import { Button } from '@/ui/Button/Button'
 import { BiAlarm } from 'react-icons/bi'
 
 export const ButtonsView = () => {

@@ -1,4 +1,4 @@
-import { Badge } from '@/Badge/Badge'
+import { Badge } from '@/ui/Badge/Badge'
 
 export const BadgesView = () => {
   return (

@@ -1,7 +1,7 @@
 import { forwardRef, isValidElement } from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { cn } from '@/lib/utils'
-import CloseIcon from '@/icons/X'
+import CloseIcon from '@/ui/icons/X'
 import {
   badgeDismissibleVariants,
   badgeVariants,

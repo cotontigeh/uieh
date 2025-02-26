@@ -1,7 +1,6 @@
-import { Tabs } from '@/Tabs/Tabs'
-import { TabLink } from '@/TabLink/TabLink'
+import { Tabs } from '@/ui/Tabs/Tabs'
+import { TabLink } from '@/ui/TabLink/TabLink'
 import { BiHash, BiTv } from 'react-icons/bi'
-import { Badge } from '@/Badge/Badge'
 
 export const TabsView = () => {
   return (
@@ -95,17 +94,6 @@ export const TabsView = () => {
           <TabLink active>
             <BiTv />
             Badge
-          </TabLink>
-        </Tabs>
-
-        <Tabs>
-          <TabLink active>
-            Buttons
-            <Badge variant="rounded">3</Badge>
-          </TabLink>
-          <TabLink>
-            Badge
-            <Badge variant="rounded">1</Badge>
           </TabLink>
         </Tabs>
 

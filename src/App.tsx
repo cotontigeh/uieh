@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Button } from './Button/Button'
+import { Button } from './ui/Button/Button'
 import { useTheme } from './hooks/useTheme'
-import { BadgesView } from './partials/BadgesView'
-import { ButtonsView } from './partials/ButtonsView'
-import { TabsView } from './partials/TabsView'
+import { BadgesView } from './pages/BadgesView'
+import { ButtonsView } from './pages/ButtonsView'
+import { TabsView } from './pages/TabsView'
 
 function App() {
   const { setTheme } = useTheme()
