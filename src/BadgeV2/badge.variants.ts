@@ -17,14 +17,19 @@ export const badgeVariants = cva({
     color: {
       blue: [
         'bg-blue-50 text-blue-600 ring-blue-500/10 before:bg-blue-500',
-        'dark:bg-blue-500 dark:text-gray-50 dark:ring-blue-500'
+        'dark:bg-blue-500 dark:text-slate-50 dark:ring-blue-900'
       ],
       green: [
-        'bg-green-50 text-green-600 ring-green-500/10 before:bg-green-500'
+        'bg-green-50 text-green-600 ring-green-500/10 before:bg-green-500',
+        'dark:bg-green-300 dark:text-green-900 dark:ring-green-900'
       ],
-      red: ['bg-red-50 text-red-600 ring-red-500/10 before:bg-red-500'],
+      red: [
+        'bg-red-50 text-red-600 ring-red-500/10 before:bg-red-500',
+        'dark:bg-red-400 dark:text-black dark:ring-red-900'
+      ],
       slate: [
-        'bg-slate-50 text-slate-600 ring-slate-500/10 before:bg-slate-500'
+        'bg-slate-50 text-slate-600 ring-slate-500/10 before:bg-slate-500',
+        'dark:bg-slate-500 dark:text-slate-50 dark:ring-slate-900'
       ]
     },
     size: {

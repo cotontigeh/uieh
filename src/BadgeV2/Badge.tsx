@@ -8,7 +8,7 @@ export type BadgeProps = React.HTMLAttributes<HTMLSpanElement> &
   BadgeVariantsType & {
     color?: string
     asChild?: boolean
-    onDissmissClick?: () => void
+    onDismissClick?: () => void
   }
 
 export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
@@ -20,14 +20,14 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
       size,
       className,
       asChild,
-      dissmissable,
+      dismissible,
       onClick,
-      onDissmissClick,
+      onDismissClick,
       ...props
     },
     ref
   ) => {
-    const Component = asChild && !dissmissable ? Slot : 'span'
+    const Component = asChild && !dismissible ? Slot : 'span'
     const closeIconSize = size === 'small' ? 12 : size === 'large' ? 18 : 16
     const clickable =
       typeof onClick !== 'undefined' ||
@@ -43,11 +43,11 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
         )}
         {...props}
       >
-        {dissmissable ? (
+        {dismissible ? (
           <>
             {children}
             <CloseIcon
-              onClick={onDissmissClick}
+              onClick={onDismissClick}
               className="ml-1.5 cursor-pointer hover:fill-gray-900"
               size={closeIconSize}
             />
