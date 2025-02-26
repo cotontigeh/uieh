@@ -4,3 +4,16 @@
 body {
   @apply bg-white dark:bg-gray-900 dark:text-white;
 }
+
+h1 {
+  @apply text-3xl uppercase font-black;
+}
+
+h2 {
+  @apply text-2xl uppercase font-medium;
+}
+
+.display {
+  @apply flex flex-col gap-6 ring-1 ring-slate-200 p-4 rounded-xl;
+  @apply dark:ring-slate-600;
+}

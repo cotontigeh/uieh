@@ -1,27 +1,37 @@
 import { cn } from '@/lib/utils'
-import { cva, VariantProps } from 'cva'
-import { forwardRef } from 'react'
+import { VariantProps } from 'cva'
+import React, {
+  Children,
+  cloneElement,
+  forwardRef,
+  isValidElement
+} from 'react'
+import { tabsVariants } from './tabs.variants'
 
 export type TabsProps = React.HTMLAttributes<HTMLDivElement> &
-  VariantProps<typeof tabsVariants>
-
-const tabsVariants = cva({
-  base: ['flex gap-4', 'border-b-1 border-slate-200'],
-  variants: {
-    variant: {
-      noBorder: 'border-transparent'
-    }
+  VariantProps<typeof tabsVariants> & {
+    children:
+      | React.ReactElement<{ color?: string }>
+      | React.ReactElement<{ color?: string }>[]
   }
-})
 
 export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
-  ({ className, variant, ...props }, ref) => {
+  ({ children, className, variant, color, ...props }, ref) => {
+    // Clone children and pass the color prop to each one
+    const childrenWithProps = Children.map(children, (child) => {
+      if (isValidElement(child) && !child.props.color)
+        return cloneElement(child, { color })
+      return child
+    })
+
     return (
       <nav
         ref={ref}
         className={cn(tabsVariants({ variant }), className)}
         {...props}
-      />
+      >
+        {childrenWithProps}
+      </nav>
     )
   }
 )

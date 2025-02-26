@@ -1,53 +1,125 @@
 import { Tabs } from '@/Tabs/Tabs'
-import { TabLink } from '@/Tabs/TabLink'
+import { TabLink } from '@/TabLink/TabLink'
 import { BiHash, BiTv } from 'react-icons/bi'
 import { Badge } from '@/Badge/Badge'
 
 export const TabsView = () => {
   return (
-    <>
-      <Tabs className="mt-9">
-        <TabLink color="green" active>
-          Badge
-        </TabLink>
-        <TabLink color="blue">Tab</TabLink>
-      </Tabs>
+    <section className="flex flex-col gap-10 p-2">
+      <h1>Tabs</h1>
 
-      <Tabs className="mt-9" variant="noBorder">
-        <TabLink active variant="pill" color="green">
-          Buttons
-        </TabLink>
-        <TabLink variant="pill">Badge</TabLink>
-      </Tabs>
+      <section className="display">
+        <h2>Colors</h2>
+        <Tabs color="blue">
+          <TabLink active>Badge</TabLink>
+          <TabLink>Tab</TabLink>
+        </Tabs>
 
-      <Tabs className="mt-9" variant="noBorder">
-        <TabLink>Buttons</TabLink>
-        <TabLink active>Badge</TabLink>
-      </Tabs>
+        <Tabs color="green">
+          <TabLink active>Badge</TabLink>
+          <TabLink>Tab</TabLink>
+        </Tabs>
 
-      <Tabs className="mt-9">
-        <TabLink>
-          <BiHash />
-          Buttons
-        </TabLink>
-        <TabLink active color="red">
-          <BiTv />
-          Badge
-        </TabLink>
-      </Tabs>
+        <Tabs color="red">
+          <TabLink active>Badge</TabLink>
+          <TabLink>Tab</TabLink>
+        </Tabs>
 
-      <Tabs className="mt-9">
-        <TabLink color="green" active>
-          Buttons
-          <Badge variant="rounded" color="green">
-            3
-          </Badge>
-        </TabLink>
-        <TabLink>
-          Badge
-          <Badge variant="rounded">1</Badge>
-        </TabLink>
-      </Tabs>
-    </>
+        <Tabs color="slate">
+          <TabLink active>Badge</TabLink>
+          <TabLink>Tab</TabLink>
+        </Tabs>
+      </section>
+
+      <section className="display">
+        <h2>No border</h2>
+        <Tabs color="blue" variant="noBorder">
+          <TabLink active>Badge</TabLink>
+          <TabLink>Tab</TabLink>
+        </Tabs>
+
+        <Tabs color="green" variant="noBorder">
+          <TabLink active>Badge</TabLink>
+          <TabLink>Tab</TabLink>
+        </Tabs>
+
+        <Tabs color="red" variant="noBorder">
+          <TabLink active>Badge</TabLink>
+          <TabLink>Tab</TabLink>
+        </Tabs>
+
+        <Tabs color="slate" variant="noBorder">
+          <TabLink active>Badge</TabLink>
+          <TabLink>Tab</TabLink>
+        </Tabs>
+      </section>
+
+      <section className="display">
+        <h2>Pill variant</h2>
+        <Tabs color="blue" variant="noBorder">
+          <TabLink variant="pill" active>
+            Buttons
+          </TabLink>
+          <TabLink variant="pill">Badge</TabLink>
+        </Tabs>
+
+        <Tabs color="green" variant="noBorder">
+          <TabLink variant="pill" active>
+            Buttons
+          </TabLink>
+          <TabLink variant="pill">Badge</TabLink>
+        </Tabs>
+
+        <Tabs color="red" variant="noBorder">
+          <TabLink variant="pill" active>
+            Buttons
+          </TabLink>
+          <TabLink variant="pill">Badge</TabLink>
+        </Tabs>
+
+        <Tabs color="slate" variant="noBorder">
+          <TabLink variant="pill" active>
+            Buttons
+          </TabLink>
+          <TabLink variant="pill">Badge</TabLink>
+        </Tabs>
+      </section>
+
+      <section className="display">
+        <h2>With decorations</h2>
+        <Tabs color="blue">
+          <TabLink>
+            <BiHash />
+            Buttons
+          </TabLink>
+          <TabLink active>
+            <BiTv />
+            Badge
+          </TabLink>
+        </Tabs>
+
+        <Tabs>
+          <TabLink active>
+            Buttons
+            <Badge variant="rounded">3</Badge>
+          </TabLink>
+          <TabLink>
+            Badge
+            <Badge variant="rounded">1</Badge>
+          </TabLink>
+        </Tabs>
+
+        <Tabs color="blue" variant="noBorder">
+          <TabLink variant="pill" active>
+            <BiHash />
+            Buttons
+          </TabLink>
+          <TabLink variant="pill">
+            <BiTv />
+            Badge
+          </TabLink>
+        </Tabs>
+      </section>
+    </section>
   )
 }
