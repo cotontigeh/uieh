@@ -33,7 +33,7 @@ export const tabLinkVariants = cva({
       color: 'blue',
       active: true,
       className: [
-        'text-blue-500 border-blue-500 hover:border-blue-500 hover:text-blue-500',
+        'border-blue-500 hover:border-blue-500 hover:text-blue-500',
         'dark:border-blue-500 dark:hover:border-blue-500'
       ]
     },
@@ -41,7 +41,7 @@ export const tabLinkVariants = cva({
       color: 'green',
       active: true,
       className: [
-        'text-green-500 border-green-500 hover:border-green-500 hover:text-green-500',
+        'border-green-500 hover:border-green-500 hover:text-green-500',
         'dark:border-green-500 dark:hover:border-green-500'
       ]
     },
@@ -49,7 +49,7 @@ export const tabLinkVariants = cva({
       color: 'red',
       active: true,
       className: [
-        'text-red-500 border-red-500 hover:border-red-500 hover:text-red-500',
+        'border-red-500 hover:border-red-500 hover:text-red-500',
         'dark:border-red-500 dark:hover:border-red-500'
       ]
     },
@@ -57,7 +57,7 @@ export const tabLinkVariants = cva({
       color: 'slate',
       active: true,
       className: [
-        'text-slate-500 border-slate-500 hover:border-slate-500 hover:text-slate-600',
+        'border-slate-500 hover:border-slate-500 hover:text-slate-600',
         'dark:border-slate-500 dark:hover:border-slate-500'
       ]
     },

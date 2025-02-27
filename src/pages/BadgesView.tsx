@@ -2,8 +2,8 @@ import { Badge } from '@/ui/Badge/Badge'
 
 export const BadgesView = () => {
   return (
-    <section className="flex flex-col gap-2 p-2">
-      <h1 className="text-3xl uppercase">Badge</h1>
+    <>
+      <h1>Badge</h1>
 
       {/* Colors */}
       <div className="flex flex-col gap-2 py-2">
@@ -128,6 +128,6 @@ export const BadgesView = () => {
           </Badge>
         </div>
       </div>
-    </section>
+    </>
   )
 }

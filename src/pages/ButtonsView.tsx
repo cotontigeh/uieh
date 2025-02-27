@@ -3,8 +3,8 @@ import { BiAlarm } from 'react-icons/bi'
 
 export const ButtonsView = () => {
   return (
-    <section className="flex flex-col gap-2 p-2">
-      <h1 className="text-3xl uppercase">Button</h1>
+    <>
+      <h1>Button</h1>
 
       {/* Size large */}
       <div className="flex flex-col gap-2 py-2">
@@ -95,6 +95,6 @@ export const ButtonsView = () => {
           </Button>
         </div>
       </div>
-    </section>
+    </>
   )
 }

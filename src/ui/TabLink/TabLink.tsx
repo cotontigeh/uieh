@@ -4,7 +4,7 @@ import { VariantProps } from 'cva'
 import { forwardRef } from 'react'
 import { tabLinkVariants } from './tabLink.variants'
 
-export type TabLinkProps = React.HTMLAttributes<HTMLAnchorElement> &
+export type TabLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> &
   VariantProps<typeof tabLinkVariants> & {
     asChild?: boolean
   }

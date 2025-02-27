@@ -4,7 +4,7 @@ import { BiHash, BiTv } from 'react-icons/bi'
 
 export const TabsView = () => {
   return (
-    <section className="flex flex-col gap-10 p-2">
+    <>
       <h1>Tabs</h1>
 
       <section className="display">
@@ -108,6 +108,6 @@ export const TabsView = () => {
           </TabLink>
         </Tabs>
       </section>
-    </section>
+    </>
   )
 }
