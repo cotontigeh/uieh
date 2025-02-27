@@ -1,7 +1,7 @@
 import { cva } from 'cva'
 
 export const buttonVariants = cva({
-  base: 'inline-flex items-center gap-2 rounded-md cursor-pointer select-none',
+  base: 'font-semibold inline-flex items-center gap-2 rounded-lg cursor-pointer select-none',
   variants: {
     variant: {
       default: '',
@@ -26,9 +26,9 @@ export const buttonVariants = cva({
       ]
     },
     size: {
-      small: 'text-sm px-2 py-1',
+      small: 'text-sm px-3 py-2',
       medium: 'text-md px-4 py-2',
-      large: 'text-lg px-6 py-3'
+      large: 'text-lg px-6 py-2.5'
     },
     disable: {
       unset: null,
