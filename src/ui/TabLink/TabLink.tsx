@@ -21,3 +21,5 @@ export const TabLink = forwardRef<HTMLAnchorElement, TabLinkProps>(
     )
   }
 )
+
+TabLink.displayName = 'TabLink'

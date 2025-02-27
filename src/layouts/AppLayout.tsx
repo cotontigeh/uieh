@@ -16,7 +16,7 @@ export default function RouteLayout() {
         color={theme === 'dark' ? 'white' : 'slate'}
         size="small"
         className="absolute top-5 left-8"
-        onToggle={() => setMenuIsOpen(!menuIsOpen)}
+        onClick={() => setMenuIsOpen(!menuIsOpen)}
         isOpen={menuIsOpen}
       />
 

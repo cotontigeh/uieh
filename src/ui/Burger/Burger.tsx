@@ -6,19 +6,14 @@ import { cn } from '@/lib/utils'
 export type BurgerProps = React.HTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof burgerVariants> & {
     isOpen?: boolean
-    onToggle?: () => void
   }
 
 export const Burger = React.forwardRef<HTMLButtonElement, BurgerProps>(
-  (
-    { className, color, size, disable, isOpen = false, onToggle, ...props },
-    ref
-  ) => {
+  ({ className, color, size, disable, isOpen = false, ...props }, ref) => {
     return (
       <button
         ref={ref}
         className={cn(burgerVariants({ color, size, disable }), className)}
-        onClick={onToggle}
         aria-expanded={isOpen}
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
         {...props}
