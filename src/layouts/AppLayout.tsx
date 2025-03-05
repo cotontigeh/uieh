@@ -5,7 +5,7 @@ import { Tabs } from '@/ui/Tabs'
 import { useState } from 'react'
 import { Link, Outlet, useLocation } from 'react-router'
 
-export default function RouteLayout() {
+export default function AppLayout() {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
   const { setTheme, theme } = useTheme()
   const { pathname } = useLocation()
