@@ -2,7 +2,7 @@ import { cva } from 'cva'
 
 export const tabLinkVariants = cva({
   base: [
-    'flex gap-2 items-center text-slate-500 font-medium cursor-pointer py-4 px-1.5 border-b-2 border-transparent',
+    'flex gap-2 items-center text-slate-500 font-medium cursor-pointer py-4 px-1.5 border-b-2 border-transparent select-none',
     'hover:text-slate-600 hover:border-slate-300',
     'dark:text-slate-100 dark:hover:text-slate-50 dark:hover:border-slate-300'
   ],

@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router'
 
 import './index.css'
-import App from './App.tsx'
 import { ButtonsView } from './pages/ButtonsView.tsx'
 import AppLayout from './layouts/AppLayout.tsx'
 import { BadgesView } from './pages/BadgesView.tsx'
@@ -14,7 +13,7 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route element={<AppLayout />}>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<ButtonsView />} />
           <Route path="/buttons" element={<ButtonsView />} />
           <Route path="/badges" element={<BadgesView />} />
           <Route path="/tabs" element={<TabsView />} />
