@@ -5,8 +5,8 @@ export const burgerVariants = cva({
   variants: {
     color: {
       default: [
-        'text-base-content/60 hover:text-base-content',
-        'dark:text-base-content-dark/60 dark:hover:text-base-content-dark'
+        'text-base-content hover:text-base-content',
+        'dark:text-base-content-dark dark:hover:text-base-content-dark'
       ]
     },
     size: {

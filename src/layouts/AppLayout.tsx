@@ -27,7 +27,7 @@ export default function AppLayout() {
             UIEH
           </div>
           <NavLinksMobileContainer open={menuIsOpen}>
-            <div className="relative flex gap-2 items-center p-2 pb-4 mb-2 mt-2 border-b border-base-300 dark:border-base-300-dark w-full md:hidden">
+            <div className="relative flex gap-2 items-center font-semibold p-2 pb-4 mb-2 mt-2 border-b border-base-300 dark:border-base-300-dark w-full md:hidden">
               <BiAlbum
                 size={34}
                 className={cn(
@@ -36,13 +36,13 @@ export default function AppLayout() {
                 )}
               />
               UIEH
-              <Burger
-                size="small"
-                className="md:hidden absolute right-0"
-                onClick={() => setMenuIsOpen(!menuIsOpen)}
-                isOpen={menuIsOpen}
-              />
             </div>
+            <Burger
+              size="small"
+              className="md:hidden absolute -right-6 top-2"
+              onClick={() => setMenuIsOpen(!menuIsOpen)}
+              isOpen={menuIsOpen}
+            />
             <NavLink active={pathname === '/'} asChild>
               <Link to="/">Home</Link>
             </NavLink>

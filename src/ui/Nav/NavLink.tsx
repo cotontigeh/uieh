@@ -22,4 +22,4 @@ export const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>(
   }
 )
 
-NavLink.displayName = 'Nav'
+NavLink.displayName = 'NavLink'
