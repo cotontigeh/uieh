@@ -4,11 +4,10 @@ export const burgerVariants = cva({
   base: 'relative inline-block cursor-pointer',
   variants: {
     color: {
-      blue: 'text-blue-500 hover:text-blue-400',
-      green: 'text-green-500 hover:text-green-400',
-      red: 'text-red-500 hover:text-red-400',
-      slate: 'text-slate-600 hover:text-slate-500',
-      white: 'text-white hover:text-gray-200'
+      default: [
+        'text-base-content/60 hover:text-base-content',
+        'dark:text-base-content-dark/60 dark:hover:text-base-content-dark'
+      ]
     },
     size: {
       small: 'w-5 h-4',
@@ -17,11 +16,14 @@ export const burgerVariants = cva({
     },
     disable: {
       unset: null,
-      true: 'cursor-default text-gray-400 hover:text-gray-400'
+      true: [
+        'cursor-default hover:text-base-content/60',
+        'dark:hover:text-base-content-dark/60'
+      ]
     }
   },
   defaultVariants: {
-    color: 'slate',
+    color: 'default',
     size: 'medium'
   }
 })
