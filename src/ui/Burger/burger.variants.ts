@@ -10,7 +10,7 @@ export const burgerVariants = cva({
       ]
     },
     size: {
-      small: 'w-5 h-4',
+      small: 'w-4 h-3',
       medium: 'w-6 h-5',
       large: 'w-7 h-6'
     },
