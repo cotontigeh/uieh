@@ -1,4 +1,10 @@
-import { Children, cloneElement, forwardRef, isValidElement } from 'react'
+import {
+  Children,
+  cloneElement,
+  forwardRef,
+  isValidElement,
+  useEffect
+} from 'react'
 import { cn } from '@/lib/utils'
 import {
   navLinksMobileContainerVariants,
@@ -23,6 +29,14 @@ export const NavLinksMobileContainer = forwardRef<
       return cloneElement(child, { mobile: true })
     return child
   })
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [open])
 
   return (
     <div

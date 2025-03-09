@@ -72,8 +72,8 @@ export default function AppLayout() {
             </span>
           </div>
         </NavContainer>
+        <Backdrop open={menuIsOpen} onClick={() => setMenuIsOpen(false)} />
       </Nav>
-      <Backdrop open={menuIsOpen} onClick={() => setMenuIsOpen(false)} />
       <main className="container mx-auto px-8 pt-10 md:px-0">
         <section className="flex flex-col gap-10">
           <Outlet />
