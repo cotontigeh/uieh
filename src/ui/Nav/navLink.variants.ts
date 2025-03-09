@@ -7,9 +7,14 @@ export const navLinkVariants = cva({
   variants: {
     variant: {
       default: [
-        'p-2 px-4 rounded-lg font-semibold hover:bg-base-200',
-        'dark:hover:bg-base-200-dark'
+        'p-2 px-4 rounded-lg font-semibold',
+        'p-2 px-4 rounded-lg font-semibold',
+        'hover:bg-base-200 dark:hover:bg-base-200-dark'
       ]
+    },
+    mobile: {
+      unset: null,
+      true: ''
     },
     active: {
       unset: null,
@@ -24,9 +29,15 @@ export const navLinkVariants = cva({
         'bg-base-300 hover:bg-base-300',
         'dark:bg-base-300-dark dark:hover:bg-base-300-dark'
       ]
+    },
+    {
+      variant: 'default',
+      mobile: true,
+      className: ['flex w-full justify-start', 'md:block md:w-auto']
     }
   ],
   defaultVariants: {
-    variant: 'default'
+    variant: 'default',
+    mobile: false
   }
 })
