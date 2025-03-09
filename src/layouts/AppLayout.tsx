@@ -2,29 +2,19 @@ import { useTheme } from '@/hooks/useTheme'
 import { cn } from '@/lib/utils'
 import { Backdrop } from '@/ui/Backdrop'
 import { Burger } from '@/ui/Burger'
-import { Button } from '@/ui/Button'
 import { Nav, NavContainer, NavLink, NavLinksMobileContainer } from '@/ui/Nav'
-import { TabLink } from '@/ui/TabLink'
-import { Tabs } from '@/ui/Tabs'
 import { useState } from 'react'
 import { BiAlbum } from 'react-icons/bi'
 import { Link, Outlet, useLocation } from 'react-router'
 
 export default function AppLayout() {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const { setTheme, theme } = useTheme()
+  const { toggleTheme, theme } = useTheme()
   const { pathname } = useLocation()
 
   return (
     <>
-      {/* <Burger
-        color={theme === 'dark' ? 'white' : 'slate'}
-        size="small"
-        className="absolute top-5 left-8"
-        onClick={() => setMenuIsOpen(!menuIsOpen)}
-        isOpen={menuIsOpen}
-      /> */}
-      <Nav>
+      <Nav sticky>
         <NavContainer className="container mx-auto px-8 md:px-0">
           <Burger
             size="small"
@@ -32,14 +22,12 @@ export default function AppLayout() {
             onClick={() => setMenuIsOpen(!menuIsOpen)}
             isOpen={menuIsOpen}
           />
-
           <div className="cursor-pointer flex gap-2 items-center font-semibold ml-2 md:ml-0 md:mr-4">
             <BiAlbum size={34} />
             UIEH
           </div>
-
           <NavLinksMobileContainer open={menuIsOpen}>
-            <div className="relative flex gap-2 items-center p-2 pb-4 mb-2 border-b border-base-300 dark:border-base-300-dark w-full md:hidden">
+            <div className="relative flex gap-2 items-center p-2 pb-4 mb-2 mt-2 border-b border-base-300 dark:border-base-300-dark w-full md:hidden">
               <BiAlbum
                 size={34}
                 className={cn(
@@ -71,44 +59,23 @@ export default function AppLayout() {
               <Link to="/tabs">Tabs</Link>
             </NavLink>
           </NavLinksMobileContainer>
-
-          <NavLink active={pathname === '/'} className="ml-auto" asChild>
-            <Link to="/">Right</Link>
-          </NavLink>
+          <div
+            onClick={toggleTheme}
+            className="select-none flex gap-2 items-center cursor-pointer ml-auto"
+          >
+            <span className={theme === 'dark' ? 'font-bold' : undefined}>
+              Dark
+            </span>
+            /
+            <span className={theme === 'light' ? 'font-bold' : undefined}>
+              Light
+            </span>
+          </div>
         </NavContainer>
       </Nav>
       <Backdrop open={menuIsOpen} onClick={() => setMenuIsOpen(false)} />
       <main className="container mx-auto px-8 pt-10 md:px-0">
         <section className="flex flex-col gap-10">
-          <Tabs color="blue">
-            <TabLink active={pathname === '/buttons'} asChild>
-              <Link to="/buttons">Buttons</Link>
-            </TabLink>
-            <TabLink active={pathname === '/badges'} asChild>
-              <Link to="/badges">Badges</Link>
-            </TabLink>
-            <TabLink active={pathname === '/nav'} asChild>
-              <Link to="/nav">Nav</Link>
-            </TabLink>
-            <TabLink active={pathname === '/tabs'} asChild>
-              <Link to="/tabs">Tabs</Link>
-            </TabLink>
-            <TabLink
-              color="green"
-              active={theme === 'dark'}
-              className="ml-auto"
-              onClick={() => setTheme('dark')}
-            >
-              Dark
-            </TabLink>
-            <TabLink
-              color="green"
-              active={theme === 'light'}
-              onClick={() => setTheme('light')}
-            >
-              Light
-            </TabLink>
-          </Tabs>
           <Outlet />
         </section>
       </main>

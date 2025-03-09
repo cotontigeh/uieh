@@ -9,13 +9,13 @@ export type NavProps = React.HTMLAttributes<HTMLDivElement> &
   }
 
 export const Nav = forwardRef<HTMLDivElement, NavProps>(
-  ({ variant, size, className, asChild, ...props }, ref) => {
+  ({ variant, size, sticky, className, asChild, ...props }, ref) => {
     const Component = asChild ? Slot : 'nav'
 
     return (
       <Component
         ref={ref}
-        className={cn(navVariants({ variant, size }), className)}
+        className={cn(navVariants({ variant, size, sticky }), className)}
         {...props}
       />
     )
