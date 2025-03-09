@@ -2,6 +2,7 @@ import { useTheme } from '@/hooks/useTheme'
 import { cn } from '@/lib/utils'
 import { Backdrop } from '@/ui/Backdrop'
 import { Burger } from '@/ui/Burger'
+import { Container } from '@/ui/Container'
 import { Nav, NavContainer, NavLink, NavLinksMobileContainer } from '@/ui/Nav'
 import { useState } from 'react'
 import { BiAlbum } from 'react-icons/bi'
@@ -15,7 +16,7 @@ export default function AppLayout() {
   return (
     <>
       <Nav sticky>
-        <NavContainer className="container mx-auto px-8 md:px-0">
+        <NavContainer>
           <Burger
             size="small"
             className="md:hidden"
@@ -74,11 +75,11 @@ export default function AppLayout() {
         </NavContainer>
         <Backdrop open={menuIsOpen} onClick={() => setMenuIsOpen(false)} />
       </Nav>
-      <main className="container mx-auto px-8 pt-10 md:px-0">
-        <section className="flex flex-col gap-10">
+      <Container asChild>
+        <section className="flex flex-col gap-10 pt-5">
           <Outlet />
         </section>
-      </main>
+      </Container>
     </>
   )
 }
