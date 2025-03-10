@@ -11,17 +11,16 @@ import {
   NavLinksMobileContainerVariantsType
 } from './navLinksMobileContainer.variants'
 
-export type NavLinksMobileContainerProps =
-  React.HTMLAttributes<HTMLDivElement> &
-    NavLinksMobileContainerVariantsType & {
-      children:
-        | React.ReactElement<{ mobile?: boolean }>
-        | React.ReactElement<{ mobile?: boolean }>[]
-    }
+export type NavMobileContainerProps = React.HTMLAttributes<HTMLDivElement> &
+  NavLinksMobileContainerVariantsType & {
+    children:
+      | React.ReactElement<{ mobile?: boolean }>
+      | React.ReactElement<{ mobile?: boolean }>[]
+  }
 
-export const NavLinksMobileContainer = forwardRef<
+export const NavMobileContainer = forwardRef<
   HTMLDivElement,
-  NavLinksMobileContainerProps
+  NavMobileContainerProps
 >(({ open, className, children, ...props }, ref) => {
   // Clone children and pass the color prop to each one
   const childrenWithProps = Children.map(children, (child) => {
@@ -49,4 +48,4 @@ export const NavLinksMobileContainer = forwardRef<
   )
 })
 
-NavLinksMobileContainer.displayName = 'NavLinksMobileContainer'
+NavMobileContainer.displayName = 'NavMobileContainer'
