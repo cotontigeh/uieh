@@ -2,7 +2,13 @@ import { useTheme } from '@/hooks/useTheme'
 import { cn } from '@/lib/utils'
 import { Backdrop } from '@/ui/Backdrop'
 import { Burger } from '@/ui/Burger'
-import { Nav, NavContainer, NavLink, NavLinksMobileContainer } from '@/ui/Nav'
+import {
+  Nav,
+  NavContainer,
+  NavLink,
+  NavMobileContainer,
+  NavMobileContainerHeader
+} from '@/ui/Nav'
 import { useState } from 'react'
 import { BiAlbum } from 'react-icons/bi'
 import { Link, useLocation } from 'react-router'
@@ -13,21 +19,24 @@ export const AppNav = () => {
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
+  const toggleNav = () => setMenuIsOpen(!menuIsOpen)
+
   return (
     <Nav sticky>
       <NavContainer>
         <Burger
           size="small"
           className="md:hidden"
-          onClick={() => setMenuIsOpen(!menuIsOpen)}
+          onClick={toggleNav}
           isOpen={menuIsOpen}
         />
         <div className="cursor-pointer flex gap-2 items-center font-semibold ml-2 md:ml-0 md:mr-4">
           <BiAlbum size={34} />
           UIEH
         </div>
-        <NavLinksMobileContainer open={menuIsOpen}>
-          <div className="relative flex gap-2 items-center font-semibold p-2 pb-4 mb-2 mt-2 border-b border-base-300 dark:border-base-300-dark w-full md:hidden">
+
+        <NavMobileContainer open={menuIsOpen}>
+          <NavMobileContainerHeader>
             <BiAlbum
               size={34}
               className={cn(
@@ -36,29 +45,31 @@ export const AppNav = () => {
               )}
             />
             UIEH
-          </div>
+          </NavMobileContainerHeader>
           <Burger
             size="small"
+            color="white"
             className="md:hidden absolute -right-6 top-2"
-            onClick={() => setMenuIsOpen(!menuIsOpen)}
-            isOpen={menuIsOpen}
+            onClick={() => setMenuIsOpen(false)}
+            isOpen
           />
-          <NavLink active={pathname === '/'} asChild>
+          <NavLink onClick={toggleNav} active={pathname === '/'} asChild>
             <Link to="/">Home</Link>
           </NavLink>
-          <NavLink active={pathname === '/buttons'} asChild>
+          <NavLink onClick={toggleNav} active={pathname === '/buttons'} asChild>
             <Link to="/buttons">Buttons</Link>
           </NavLink>
-          <NavLink active={pathname === '/badges'} asChild>
+          <NavLink onClick={toggleNav} active={pathname === '/badges'} asChild>
             <Link to="/badges">Badges</Link>
           </NavLink>
-          <NavLink active={pathname === '/nav'} asChild>
+          <NavLink onClick={toggleNav} active={pathname === '/nav'} asChild>
             <Link to="/nav">Nav</Link>
           </NavLink>
-          <NavLink active={pathname === '/tabs'} asChild>
+          <NavLink onClick={toggleNav} active={pathname === '/tabs'} asChild>
             <Link to="/tabs">Tabs</Link>
           </NavLink>
-        </NavLinksMobileContainer>
+        </NavMobileContainer>
+
         <div
           onClick={toggleTheme}
           className="select-none flex gap-2 items-center cursor-pointer ml-auto"
