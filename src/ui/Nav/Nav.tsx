@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import { Children, cloneElement, forwardRef, isValidElement } from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { cn } from '@/lib/utils'
 import { navVariants, NavVariantsType } from './nav.variants'
@@ -6,18 +6,33 @@ import { navVariants, NavVariantsType } from './nav.variants'
 export type NavProps = React.HTMLAttributes<HTMLDivElement> &
   NavVariantsType & {
     asChild?: boolean
+    children:
+      | React.ReactElement<{ color?: string }>
+      | React.ReactElement<{ color?: string }>[]
   }
 
 export const Nav = forwardRef<HTMLDivElement, NavProps>(
-  ({ variant, size, sticky, className, asChild, ...props }, ref) => {
+  (
+    { children, variant, size, sticky, color, className, asChild, ...props },
+    ref
+  ) => {
     const Component = asChild ? Slot : 'nav'
+
+    // Clone children and pass the color prop to each one
+    const childrenWithProps = Children.map(children, (child) => {
+      if (isValidElement(child) && !child.props.color)
+        return cloneElement(child, { color })
+      return child
+    })
 
     return (
       <Component
         ref={ref}
-        className={cn(navVariants({ variant, size, sticky }), className)}
+        className={cn(navVariants({ variant, size, sticky, color }), className)}
         {...props}
-      />
+      >
+        {childrenWithProps}
+      </Component>
     )
   }
 )

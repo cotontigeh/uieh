@@ -14,18 +14,18 @@ import {
 export type NavMobileContainerProps = React.HTMLAttributes<HTMLDivElement> &
   NavLinksMobileContainerVariantsType & {
     children:
-      | React.ReactElement<{ mobile?: boolean }>
-      | React.ReactElement<{ mobile?: boolean }>[]
+      | React.ReactElement<{ mobile?: boolean; color?: string }>
+      | React.ReactElement<{ mobile?: boolean; color?: string }>[]
   }
 
 export const NavMobileContainer = forwardRef<
   HTMLDivElement,
   NavMobileContainerProps
->(({ open, className, children, ...props }, ref) => {
+>(({ open, color, className, children, ...props }, ref) => {
   // Clone children and pass the color prop to each one
   const childrenWithProps = Children.map(children, (child) => {
     if (isValidElement(child) && !child.props.mobile)
-      return cloneElement(child, { mobile: true })
+      return cloneElement(child, { mobile: true, color })
     return child
   })
 
@@ -40,7 +40,10 @@ export const NavMobileContainer = forwardRef<
   return (
     <div
       ref={ref}
-      className={cn(navLinksMobileContainerVariants({ open }), className)}
+      className={cn(
+        navLinksMobileContainerVariants({ open, color }),
+        className
+      )}
       {...props}
     >
       {childrenWithProps}

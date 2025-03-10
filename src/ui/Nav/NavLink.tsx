@@ -9,13 +9,16 @@ export type NavLinkProps = React.HTMLAttributes<HTMLAnchorElement> &
   }
 
 export const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>(
-  ({ variant, active, className, mobile, asChild, ...props }, ref) => {
+  ({ variant, color, active, className, mobile, asChild, ...props }, ref) => {
     const Component = asChild ? Slot : 'a'
 
     return (
       <Component
         ref={ref}
-        className={cn(navLinkVariants({ variant, active, mobile }), className)}
+        className={cn(
+          navLinkVariants({ variant, active, mobile, color }),
+          className
+        )}
         {...props}
       />
     )

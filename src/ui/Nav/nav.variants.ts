@@ -6,10 +6,14 @@ export const navVariants = cva({
   base: 'border-b border-transparent',
   variants: {
     variant: {
-      default: [
+      default: []
+    },
+    color: {
+      base: [
         'bg-base-100 border-base-300',
         'dark:bg-base-100-dark dark:border-base-300-dark'
-      ]
+      ],
+      primary: ['bg-primary border-primary-content/20 text-primary-content']
     },
     size: {
       small: 'h-15',
@@ -24,6 +28,7 @@ export const navVariants = cva({
   compoundVariants: [],
   defaultVariants: {
     variant: 'default',
+    color: 'base',
     size: 'medium'
   }
 })

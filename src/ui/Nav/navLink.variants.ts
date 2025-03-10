@@ -6,10 +6,11 @@ export const navLinkVariants = cva({
   base: ['select-none cursor-pointer'],
   variants: {
     variant: {
-      default: [
-        'p-2 px-4 rounded-lg font-semibold',
-        'hover:bg-base-200 dark:hover:bg-base-200-dark'
-      ]
+      default: ['p-2 px-4 rounded-lg font-semibold']
+    },
+    color: {
+      base: ['hover:bg-base-200 dark:hover:bg-base-200-dark'],
+      primary: ['hover:bg-base-300 hover:text-primary']
     },
     mobile: {
       unset: null,
@@ -22,12 +23,17 @@ export const navLinkVariants = cva({
   },
   compoundVariants: [
     {
-      variant: 'default',
+      color: 'base',
       active: true,
       className: [
         'bg-base-300 hover:bg-base-300',
         'dark:bg-base-300-dark dark:hover:bg-base-300-dark'
       ]
+    },
+    {
+      color: 'primary',
+      active: true,
+      className: ['bg-base-300 hover:bg-base-300 text-primary']
     },
     {
       variant: 'default',
@@ -37,6 +43,7 @@ export const navLinkVariants = cva({
   ],
   defaultVariants: {
     variant: 'default',
+    color: 'base',
     mobile: false
   }
 })
