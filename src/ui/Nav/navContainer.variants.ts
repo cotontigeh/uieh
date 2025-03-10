@@ -8,14 +8,10 @@ export const navContainerVariants = cva({
     variant: {
       default: ['flex gap-4 items-center h-full']
     },
-    color: {
-      base: '',
-      primary: ''
-    }
+    color: {}
   },
   compoundVariants: [],
   defaultVariants: {
-    variant: 'default',
-    color: 'base'
+    variant: 'default'
   }
 })

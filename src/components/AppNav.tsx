@@ -19,7 +19,7 @@ export const AppNav = () => {
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
-  const toggleNav = () => setMenuIsOpen(!menuIsOpen)
+  const toggleNav = (open = false) => setMenuIsOpen(open ? open : !menuIsOpen)
 
   return (
     <Nav sticky>
@@ -27,16 +27,19 @@ export const AppNav = () => {
         <Burger
           size="small"
           className="md:hidden"
-          onClick={toggleNav}
+          onClick={() => toggleNav()}
           isOpen={menuIsOpen}
         />
-        <div className="cursor-pointer flex gap-2 items-center font-semibold ml-2 md:ml-0 md:mr-4">
+        <Link
+          to="/"
+          className="cursor-pointer flex gap-2 items-center font-semibold ml-2 md:ml-0 md:mr-4 text-xl"
+        >
           <BiAlbum size={34} />
           UIEH
-        </div>
+        </Link>
 
         <NavMobileContainer open={menuIsOpen}>
-          <NavMobileContainerHeader>
+          <NavMobileContainerHeader className="text-xl">
             <BiAlbum
               size={34}
               className={cn(
@@ -53,19 +56,39 @@ export const AppNav = () => {
             onClick={() => setMenuIsOpen(false)}
             isOpen
           />
-          <NavLink onClick={toggleNav} active={pathname === '/'} asChild>
+          <NavLink
+            onClick={() => toggleNav(false)}
+            active={pathname === '/'}
+            asChild
+          >
             <Link to="/">Home</Link>
           </NavLink>
-          <NavLink onClick={toggleNav} active={pathname === '/buttons'} asChild>
+          <NavLink
+            onClick={() => toggleNav(false)}
+            active={pathname === '/buttons'}
+            asChild
+          >
             <Link to="/buttons">Buttons</Link>
           </NavLink>
-          <NavLink onClick={toggleNav} active={pathname === '/badges'} asChild>
+          <NavLink
+            onClick={() => toggleNav(false)}
+            active={pathname === '/badges'}
+            asChild
+          >
             <Link to="/badges">Badges</Link>
           </NavLink>
-          <NavLink onClick={toggleNav} active={pathname === '/nav'} asChild>
+          <NavLink
+            onClick={() => toggleNav(false)}
+            active={pathname === '/nav'}
+            asChild
+          >
             <Link to="/nav">Nav</Link>
           </NavLink>
-          <NavLink onClick={toggleNav} active={pathname === '/tabs'} asChild>
+          <NavLink
+            onClick={() => toggleNav(false)}
+            active={pathname === '/tabs'}
+            asChild
+          >
             <Link to="/tabs">Tabs</Link>
           </NavLink>
         </NavMobileContainer>
@@ -83,7 +106,11 @@ export const AppNav = () => {
           </span>
         </div>
       </NavContainer>
-      <Backdrop open={menuIsOpen} onClick={() => setMenuIsOpen(false)} />
+      <Backdrop
+        className="md:hidden"
+        open={menuIsOpen}
+        onClick={() => setMenuIsOpen(false)}
+      />
     </Nav>
   )
 }
