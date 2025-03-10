@@ -8,7 +8,6 @@ export const navLinkVariants = cva({
     variant: {
       default: [
         'p-2 px-4 rounded-lg font-semibold',
-        'p-2 px-4 rounded-lg font-semibold',
         'hover:bg-base-200 dark:hover:bg-base-200-dark'
       ]
     },
