@@ -23,7 +23,10 @@ export const navLinksMobileContainerVariants = cva({
         'bg-base-100 border-r border-base-300',
         'dark:bg-base-100-dark dark:border-base-300-dark'
       ],
-      primary: ['border-r border-base-300/20 bg-primary']
+      primary: ['border-r border-base-300/20 bg-primary'],
+      secondary: ['border-r border-base-300/20 bg-secondary'],
+      accent: ['border-r border-base-300/20 bg-accent'],
+      neutral: ['border-r border-base-300/20 bg-neutral']
     },
     open: {
       unset: null,

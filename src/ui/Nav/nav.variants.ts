@@ -13,7 +13,12 @@ export const navVariants = cva({
         'bg-base-100 border-base-300',
         'dark:bg-base-100-dark dark:border-base-300-dark'
       ],
-      primary: ['bg-primary border-primary-content/20 text-primary-content']
+      primary: ['bg-primary border-primary-content/20 text-primary-content'],
+      secondary: [
+        'bg-secondary border-secondary-content/20 text-secondary-content'
+      ],
+      accent: ['bg-accent border-accent-content/20 text-accent-content'],
+      neutral: ['bg-neutral border-neutral-content/20 text-neutral-content']
     },
     size: {
       small: 'h-15',

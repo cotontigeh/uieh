@@ -10,7 +10,10 @@ export const navLinkVariants = cva({
     },
     color: {
       base: ['hover:bg-base-200 dark:hover:bg-base-200-dark'],
-      primary: ['hover:bg-base-300 hover:text-primary']
+      primary: ['hover:bg-base-300 hover:text-primary'],
+      secondary: ['hover:bg-base-300 hover:text-secondary'],
+      accent: ['hover:bg-base-300 hover:text-accent'],
+      neutral: ['hover:bg-base-300 hover:text-neutral']
     },
     mobile: {
       unset: null,
@@ -22,6 +25,11 @@ export const navLinkVariants = cva({
     }
   },
   compoundVariants: [
+    {
+      variant: 'default',
+      mobile: true,
+      className: ['flex w-full justify-start', 'md:block md:w-auto']
+    },
     {
       color: 'base',
       active: true,
@@ -36,9 +44,19 @@ export const navLinkVariants = cva({
       className: ['bg-base-300 hover:bg-base-300 text-primary']
     },
     {
-      variant: 'default',
-      mobile: true,
-      className: ['flex w-full justify-start', 'md:block md:w-auto']
+      color: 'secondary',
+      active: true,
+      className: ['bg-base-300 hover:bg-base-300 text-secondary']
+    },
+    {
+      color: 'accent',
+      active: true,
+      className: ['bg-base-300 hover:bg-base-300 text-accent']
+    },
+    {
+      color: 'neutral',
+      active: true,
+      className: ['bg-base-300 hover:bg-base-300 text-neutral']
     }
   ],
   defaultVariants: {
