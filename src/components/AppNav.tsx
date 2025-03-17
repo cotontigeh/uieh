@@ -19,17 +19,17 @@ export const AppNav = () => {
 
   return (
     <>
-      <Nav color="primary" sticky>
+      <Nav sticky>
         <NavContainer>
           <Burger
             size="small"
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => toggleNav()}
             isOpen={menuIsOpen}
           />
           <Link
             to="/"
-            className="cursor-pointer flex gap-2 items-center font-semibold ml-2 md:ml-0 md:mr-4 text-xl"
+            className="cursor-pointer flex gap-2 items-center font-semibold ml-2 lg:ml-0 lg:mr-4 text-xl"
           >
             <BiAlbum size={34} />
             UIEH
@@ -38,7 +38,7 @@ export const AppNav = () => {
           {routes.map((link, i) => (
             <NavLink
               asChild
-              className="hidden md:flex"
+              className="hidden lg:flex"
               key={i}
               active={pathname === link.to}
             >
@@ -61,13 +61,20 @@ export const AppNav = () => {
         </NavContainer>
       </Nav>
 
-      <Sidebar variant="fly" open={menuIsOpen}>
+      {/* Mobile */}
+      <Sidebar
+        className="lg:hidden"
+        variant="fly"
+        open={menuIsOpen}
+        hideScrollWhenOpened
+      >
         <NavHeader mobile onCloseClick={toggleNav} />
         {routes.map((link, i) => (
           <NavLink
             key={i}
             onClick={() => toggleNav(false)}
             active={pathname === link.to}
+            fullWidth
             asChild
           >
             <Link to={link.to}>{link.name}</Link>
@@ -76,7 +83,7 @@ export const AppNav = () => {
       </Sidebar>
 
       <Backdrop
-        className="md:hidden"
+        className="lg:hidden"
         open={menuIsOpen}
         onClick={() => setMenuIsOpen(false)}
       />

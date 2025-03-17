@@ -14,6 +14,7 @@ export type SidebarProps = React.HTMLAttributes<HTMLDivElement> &
      * If `true`, the sidebar will be visible.
      * @default false
      */
+    // todo: rename to hideScrollWhenOpened
     hideScrollWhenOpened?: boolean
   }
 
