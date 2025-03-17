@@ -1,9 +1,9 @@
 import { NavLink } from '@/ui/Nav'
 import { Sidebar } from '@/ui/Sidebar'
 import { Link } from 'react-router'
-import { Header } from './partials/Header'
 import { Display } from '@/components/Display'
 import { cn } from '@/lib/utils'
+import { NavHeader } from '@/components/NavHeader'
 
 const displayClassName = cn(
   'flex-row gap-4',
@@ -18,7 +18,7 @@ export const SidebarView = () => {
       {/* Base */}
       <Display className={displayClassName}>
         <Sidebar color="base">
-          <Header />
+          <NavHeader />
           <NavLink fullWidth active asChild>
             <Link to="#">Home</Link>
           </NavLink>
@@ -41,7 +41,7 @@ export const SidebarView = () => {
       {/* Primary */}
       <Display className={displayClassName}>
         <Sidebar color="primary">
-          <Header />
+          <NavHeader />
           <NavLink fullWidth active asChild>
             <Link to="#">Home</Link>
           </NavLink>
@@ -64,7 +64,7 @@ export const SidebarView = () => {
       {/* Secondary */}
       <Display className={displayClassName}>
         <Sidebar color="secondary">
-          <Header />
+          <NavHeader />
           <NavLink fullWidth active asChild>
             <Link to="#">Home</Link>
           </NavLink>
@@ -87,7 +87,7 @@ export const SidebarView = () => {
       {/* Accent */}
       <Display className={displayClassName}>
         <Sidebar color="accent">
-          <Header />
+          <NavHeader />
           <NavLink fullWidth active asChild>
             <Link to="#">Home</Link>
           </NavLink>

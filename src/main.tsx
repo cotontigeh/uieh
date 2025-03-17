@@ -9,7 +9,7 @@ import { BadgesView } from './pages/BadgesView.tsx'
 import { TabsView } from './pages/TabsView.tsx'
 import { NavView } from './pages/NavView.tsx'
 import { HomeView } from './pages/HomeView.tsx'
-import { SidebarView } from './pages/SidebarView/SidebarView.tsx'
+import { SidebarView } from './pages/SidebarView.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
