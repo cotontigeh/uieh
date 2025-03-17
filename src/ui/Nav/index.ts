@@ -1,7 +1,3 @@
-export * from './nav.variants'
-export * from './navLink.variants'
 export * from './Nav'
 export * from './NavContainer'
 export * from './NavLink'
-export * from './NavMobileContainer'
-export * from './NavMobileContainerHeader'

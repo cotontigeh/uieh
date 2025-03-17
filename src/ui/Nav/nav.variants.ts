@@ -3,7 +3,7 @@ import { cva, VariantProps } from 'cva'
 export type NavVariantsType = VariantProps<typeof navVariants>
 
 export const navVariants = cva({
-  base: 'border-b border-transparent',
+  base: ['flex gap-4 items-center', 'border-b border-transparent'],
   variants: {
     variant: {
       default: []

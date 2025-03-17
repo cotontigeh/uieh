@@ -6,9 +6,6 @@ import { navVariants, NavVariantsType } from './nav.variants'
 export type NavProps = React.HTMLAttributes<HTMLDivElement> &
   NavVariantsType & {
     asChild?: boolean
-    children:
-      | React.ReactElement<{ color?: string }>
-      | React.ReactElement<{ color?: string }>[]
   }
 
 export const Nav = forwardRef<HTMLDivElement, NavProps>(
@@ -19,11 +16,14 @@ export const Nav = forwardRef<HTMLDivElement, NavProps>(
     const Component = asChild ? Slot : 'nav'
 
     // Clone children and pass the color prop to each one
-    const childrenWithProps = Children.map(children, (child) => {
-      if (isValidElement(child) && !child.props.color)
-        return cloneElement(child, { color })
-      return child
-    })
+    const childrenWithProps = Children.map(
+      children as React.ReactElement<{ color?: string }>,
+      (child) => {
+        if (isValidElement(child) && !child.props.color)
+          return cloneElement(child, { color })
+        return child
+      }
+    )
 
     return (
       <Component
