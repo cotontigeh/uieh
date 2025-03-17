@@ -15,7 +15,7 @@ export const navLinkVariants = cva({
       accent: ['hover:bg-base-300 hover:text-accent'],
       neutral: ['hover:bg-base-300 hover:text-neutral']
     },
-    mobile: {
+    fullWidth: {
       unset: null,
       true: ''
     },
@@ -27,8 +27,8 @@ export const navLinkVariants = cva({
   compoundVariants: [
     {
       variant: 'default',
-      mobile: true,
-      className: ['flex w-full justify-start', 'md:block md:w-auto']
+      fullWidth: true,
+      className: ['flex w-full justify-start']
     },
     {
       color: 'base',
@@ -62,6 +62,6 @@ export const navLinkVariants = cva({
   defaultVariants: {
     variant: 'default',
     color: 'base',
-    mobile: false
+    fullWidth: false
   }
 })
