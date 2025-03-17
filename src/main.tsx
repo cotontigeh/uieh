@@ -8,17 +8,20 @@ import AppLayout from './layouts/AppLayout.tsx'
 import { BadgesView } from './pages/BadgesView.tsx'
 import { TabsView } from './pages/TabsView.tsx'
 import { NavView } from './pages/NavView.tsx'
+import { HomeView } from './pages/HomeView.tsx'
+import { SidebarView } from './pages/SidebarView/SidebarView.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route element={<AppLayout />}>
-          <Route path="/" element={<ButtonsView />} />
+          <Route path="/" element={<HomeView />} />
           <Route path="/buttons" element={<ButtonsView />} />
           <Route path="/badges" element={<BadgesView />} />
           <Route path="/tabs" element={<TabsView />} />
           <Route path="/nav" element={<NavView />} />
+          <Route path="/sidebar" element={<SidebarView />} />
         </Route>
       </Routes>
     </BrowserRouter>
