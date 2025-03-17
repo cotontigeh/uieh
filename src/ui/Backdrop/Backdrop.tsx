@@ -12,7 +12,7 @@ export const Backdrop = forwardRef<HTMLDivElement, BackdropProps>(
         ref={ref}
         className={cn(
           open ? 'block' : 'hidden',
-          'fixed z-0 top-0 left-0 w-full h-full bg-black/70',
+          'fixed z-80 top-0 left-0 w-full h-full bg-black/70',
           className
         )}
         {...props}
