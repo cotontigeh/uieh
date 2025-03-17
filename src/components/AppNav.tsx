@@ -91,6 +91,13 @@ export const AppNav = () => {
           >
             <Link to="/tabs">Tabs</Link>
           </NavLink>
+          <NavLink
+            onClick={() => toggleNav(false)}
+            active={pathname === '/sidebar'}
+            asChild
+          >
+            <Link to="/sidebar">Sidebar</Link>
+          </NavLink>
         </NavMobileContainer>
 
         <div
