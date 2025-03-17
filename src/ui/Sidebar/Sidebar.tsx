@@ -1,4 +1,4 @@
-import {
+import React, {
   Children,
   cloneElement,
   forwardRef,
@@ -15,9 +15,6 @@ export type SidebarProps = React.HTMLAttributes<HTMLDivElement> &
      * @default false
      */
     hideScrollWhenOpened?: boolean
-    children:
-      | React.ReactElement<{ mobile?: boolean; color?: string }>
-      | React.ReactElement<{ mobile?: boolean; color?: string }>[]
   }
 
 export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
@@ -25,6 +22,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
     {
       open,
       color,
+      variant,
       className,
       hideScrollWhenOpened = false,
       children,
@@ -33,11 +31,14 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
     ref
   ) => {
     // Clone children and pass the color prop to each one
-    const childrenWithProps = Children.map(children, (child) => {
-      if (isValidElement(child) && !child.props.mobile)
-        return cloneElement(child, { mobile: true, color })
-      return child
-    })
+    const childrenWithProps = Children.map(
+      children as React.ReactElement<{ color?: string }>,
+      (child) => {
+        if (isValidElement(child) && !child.props.color)
+          return cloneElement(child, { color })
+        return child
+      }
+    )
 
     useEffect(() => {
       if (!hideScrollWhenOpened) return
@@ -52,7 +53,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
     return (
       <div
         ref={ref}
-        className={cn(sidebarVariants({ open, color }), className)}
+        className={cn(sidebarVariants({ open, color, variant }), className)}
         {...props}
       >
         {childrenWithProps}
