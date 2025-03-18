@@ -4,14 +4,14 @@ export type SidebarVariantsType = VariantProps<typeof sidebarVariants>
 
 export const sidebarVariants = cva({
   base: [
-    'flex flex-col gap-2 items-start p-4 h-full w-5/6',
-    'md:w-2/6',
+    'flex flex-col gap-2 items-start p-4 h-full w-3/6',
+    'lg:w-2/6',
     'transition-left duration-200'
   ],
   variants: {
     variant: {
       default: [''],
-      fly: ['fixed top-0 z-90']
+      fly: ['fixed top-0 z-90 w-5/6', 'lg:w-2/6']
     },
     color: {
       base: [
