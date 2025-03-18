@@ -13,7 +13,7 @@ export const Container = forwardRef<HTMLDivElement, ContainerProps>(
     return (
       <Component
         ref={ref}
-        className={cn('container mx-auto px-8 md:px-0', className)}
+        className={cn('container mx-auto px-8 lg:px-0', className)}
         {...props}
       />
     )
