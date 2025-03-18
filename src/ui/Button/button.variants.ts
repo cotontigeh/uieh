@@ -1,86 +1,74 @@
 import { cva } from 'cva'
 
 export const buttonVariants = cva({
-  base: 'font-semibold inline-flex items-center gap-2 rounded-lg cursor-pointer select-none',
+  base: [
+    'flex items-center gap-2 select-none cursor-pointe rounded-lg font-semibold cursor-pointer'
+  ],
   variants: {
     variant: {
-      default: '',
-      ghost: 'ring-1'
+      default: [''],
+      ghost: ['ring-2']
     },
     color: {
-      blue: [
-        'bg-blue-500 text-white hover:bg-blue-400',
-        'dark:bg-blue-500/80 dark:hover:bg-blue-500/90'
+      base: [
+        'bg-base-content ring-base-content text-base-300',
+        'hover:bg-base-100-dark',
+        'dark:bg-base-content-dark dark:ring-base-content-dark dark:text-base-300-dark',
+        'dark:hover:bg-base-200'
       ],
-      green: [
-        'bg-green-500 text-white hover:bg-green-400',
-        'dark:bg-green-500/80 dark:hover:bg-green-500/90'
+      primary: [
+        'bg-primary text-primary-content ring-primary hover:bg-primary/90'
       ],
-      red: [
-        'bg-red-500 text-white hover:bg-red-400',
-        'dark:bg-red-500/80 dark:hover:bg-red-500/90'
+      secondary: [
+        'bg-secondary text-secondary-content ring-secondary hover:bg-secondary/90'
       ],
-      slate: [
-        'bg-slate-500 text-white hover:bg-slate-400',
-        'dark:bg-slate-500/80 dark:hover:bg-slate-500/90'
-      ]
+      accent: ['bg-accent text-accent-content ring-accent hover:bg-accent/90'],
+      neutral: [
+        'bg-neutral text-neutral-content ring-neutral hover:bg-neutral/90'
+      ],
+      info: ['bg-info text-info-content ring-info hover:bg-info/90'],
+      success: [
+        'bg-success text-success-content ring-success hover:bg-success/90'
+      ],
+      warning: [
+        'bg-warning text-warning-content ring-warning hover:bg-warning/90'
+      ],
+      error: ['bg-error text-error-content ring-error hover:bg-error/90']
     },
     size: {
       small: 'text-sm px-3 py-2',
       medium: 'text-md px-4 py-2',
-      large: 'text-lg px-6 py-2.5'
+      large: 'text-lg px-5 py-3'
     },
-    disable: {
+    disabled: {
       unset: null,
-      true: [
-        'cursor-default bg-gray-200 text-gray-400 hover:bg-gray-200',
-        'dark:bg-slate-700 dark:hover:bg-slate-700'
-      ]
+      true: ['cursor-default opacity-50 pointer-events-none']
+    },
+    fullWidth: {
+      unset: null,
+      true: 'w-full justify-center'
     }
   },
   compoundVariants: [
     {
       variant: 'ghost',
       className: [
-        'bg-transparent hover:bg-transparent',
-        'dark:bg-transparent dark:hover:bg-transparent'
+        'bg-transparent text-base-content',
+        'dark:bg-transparent dark:text-base-content-dark'
       ]
     },
     {
       variant: 'ghost',
-      color: 'blue',
+      color: 'base',
       className: [
-        'text-blue-500 hover:text-blue-600',
-        'dark:text-blue-400 dark:hover:text-blue-300'
-      ]
-    },
-    {
-      variant: 'ghost',
-      color: 'green',
-      className: [
-        'text-green-500 hover:text-green-600',
-        'dark:text-green-400 dark:hover:text-green-300'
-      ]
-    },
-    {
-      variant: 'ghost',
-      color: 'red',
-      className: [
-        'text-red-500 hover:text-red-600',
-        'dark:text-red-400 dark:hover:text-red-300'
-      ]
-    },
-    {
-      variant: 'ghost',
-      color: 'slate',
-      className: [
-        'text-slate-600 hover:text-slate-600',
-        'dark:text-slate-400 dark:hover:text-slate-300'
+        'hover:text-base-content-dark',
+        'dark:hover:text-base-content'
       ]
     }
   ],
   defaultVariants: {
-    color: 'blue',
+    variant: 'default',
+    color: 'base',
     size: 'medium'
   }
 })
