@@ -19,6 +19,14 @@ export const Nav = forwardRef<HTMLDivElement, NavProps>(
     const childrenWithProps = Children.map(
       children as React.ReactElement<{ color?: string }>,
       (child) => {
+        if (typeof child.type === 'string') return child
+
+        if (
+          'displayName' in child.type &&
+          child.type.displayName !== 'NavContainer'
+        )
+          return child
+
         if (isValidElement(child) && !child.props.color)
           return cloneElement(child, { color })
         return child
