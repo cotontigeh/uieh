@@ -6,139 +6,83 @@ export type BadgeVariantsType = Omit<
 >
 
 export const badgeVariants = cva({
-  base: 'inline-flex items-center ring-1 ring-inset select-none',
+  base: [
+    'inline-flex items-center justify-center select-none ring-1 ring-inset rounded-md'
+  ],
   variants: {
     variant: {
-      default: 'rounded-md',
-      dotted:
-        'rounded-md before:w-2 before:h-2 before:rounded-full before:mr-1.5'
+      default: [''],
+      dashed: ['']
     },
     color: {
-      blue: [
-        'bg-blue-50 text-blue-600 ring-blue-500/10 before:bg-blue-500',
-        'dark:bg-blue-300 dark:text-blue-950 dark:ring-blue-900'
+      base: [
+        'bg-base-200 text-base-content ring-base-200',
+        'dark:bg-base-300-dark dark:text-base-content-dark dark:ring-base-300-dark'
       ],
-      green: [
-        'bg-green-50 text-green-600 ring-green-500/10 before:bg-green-500',
-        'dark:bg-green-300 dark:text-green-900 dark:ring-green-900'
-      ],
-      red: [
-        'bg-red-50 text-red-600 ring-red-500/10 before:bg-red-500',
-        'dark:bg-red-300 dark:text-red-950 dark:ring-red-900'
-      ],
-      slate: [
-        'bg-slate-50 text-slate-600 ring-slate-500/10 before:bg-slate-500',
-        'dark:bg-slate-300 dark:text-slate-950 dark:ring-slate-900'
-      ]
+      primary: ['bg-primary text-primary-content ring-primary'],
+      secondary: ['bg-secondary text-secondary-content ring-secondary'],
+      accent: ['bg-accent text-accent-content ring-accent'],
+      neutral: ['bg-neutral text-neutral-content ring-neutral'],
+      info: ['bg-info text-info-content ring-info'],
+      success: ['bg-success text-success-content ring-success'],
+      warning: ['bg-warning text-warning-content ring-warning'],
+      error: ['bg-error text-error-content ring-error']
     },
     size: {
       small: ['px-2 py-1 text-xs font-medium'],
       medium: ['px-2 py-1 text-md font-medium'],
       large: ['px-2 py-1 text-lg font-medium']
-    },
-    clickable: {
-      unset: null,
-      true: ['cursor-pointer']
-    },
-    dismissible: {
-      unset: null,
-      true: []
     }
   },
   compoundVariants: [
-    /**************************************************************************
-     * VARIANT: DEFAULT
-     **************************************************************************/
     {
-      variant: 'default',
-      color: 'blue',
-      clickable: true,
-      className: [
-        'hover:bg-blue-100 hover:ring-blue-500/30',
-        'dark:hover:bg-blue-200 dark:hover:ring-blue-900/50'
-      ]
+      variant: 'dashed',
+      className: ['bg-transparent', 'dark:bg-transparent']
     },
     {
-      variant: 'default',
-      color: 'green',
-      clickable: true,
-      className: [
-        'hover:bg-green-100 hover:ring-green-500/30',
-        'dark:hover:bg-green-200 dark:hover:ring-green-900/50'
-      ]
+      variant: 'dashed',
+      color: 'primary',
+      className: ['text-primary', 'dark:text-primary-dark']
     },
     {
-      variant: 'default',
-      color: 'red',
-      clickable: true,
-      className: [
-        'hover:bg-red-100 hover:ring-red-500/30',
-        'dark:hover:bg-red-200 dark:hover:ring-red-900/50'
-      ]
+      variant: 'dashed',
+      color: 'secondary',
+      className: ['text-secondary', 'dark:text-secondary-dark']
     },
     {
-      variant: 'default',
-      color: 'slate',
-      clickable: true,
-      className: [
-        'hover:bg-slate-100 hover:ring-slate-500/30',
-        'dark:hover:bg-slate-200 dark:hover:ring-slate-900/50'
-      ]
-    },
-
-    /**************************************************************************
-     * VARIANT: DOTTED
-     **************************************************************************/
-    {
-      variant: 'dotted',
-      className: [
-        'bg-transparent ring-slate-300 text-slate-500',
-        'dark:bg-transparent dark:ring-slate-700 dark:text-slate-50'
-      ]
+      variant: 'dashed',
+      color: 'accent',
+      className: ['text-accent', 'dark:text-accent-dark']
     },
     {
-      variant: 'dotted',
-      color: 'blue',
-      clickable: true,
-      className: 'hover:ring-blue-500/30'
+      variant: 'dashed',
+      color: 'neutral',
+      className: ['text-neutral', 'dark:text-neutral-dark']
     },
     {
-      variant: 'dotted',
-      color: 'green',
-      clickable: true,
-      className: 'hover:ring-green-500/30'
+      variant: 'dashed',
+      color: 'info',
+      className: ['text-info', 'dark:text-info-dark']
     },
     {
-      variant: 'dotted',
-      color: 'red',
-      clickable: true,
-      className: 'hover:ring-red-500/30'
+      variant: 'dashed',
+      color: 'success',
+      className: ['text-success', 'dark:text-success-dark']
     },
     {
-      variant: 'dotted',
-      color: 'slate',
-      clickable: true,
-      className: 'hover:ring-slate-500/30'
+      variant: 'dashed',
+      color: 'warning',
+      className: ['text-warning', 'dark:text-warning-dark']
+    },
+    {
+      variant: 'dashed',
+      color: 'error',
+      className: ['text-error', 'dark:text-error-dark']
     }
   ],
   defaultVariants: {
     variant: 'default',
-    color: 'blue',
+    color: 'base',
     size: 'medium'
-  }
-})
-
-export const badgeDismissibleVariants = cva({
-  base: [
-    'ml-1.5 cursor-pointer hover:fill-slate-700',
-    'dark:fill-slate-700 dark:hover:fill-slate-900'
-  ],
-  variants: {
-    color: {
-      blue: '',
-      green: '',
-      red: '',
-      slate: ''
-    }
   }
 })
