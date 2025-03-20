@@ -7,7 +7,7 @@ export default function AppLayout() {
     <>
       <AppNav />
       <Container asChild>
-        <main className="flex flex-col gap-10 pt-5">
+        <main className="flex flex-col gap-10 pt-5 pb-5">
           <Outlet />
         </main>
       </Container>

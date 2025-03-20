@@ -19,7 +19,7 @@ export const AppNav = () => {
 
   return (
     <>
-      <Nav sticky>
+      <Nav>
         <NavContainer>
           <Burger
             size="small"
