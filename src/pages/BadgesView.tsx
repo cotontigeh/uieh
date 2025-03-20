@@ -1,3 +1,4 @@
+import { Display } from '@/components/Display'
 import { Badge } from '@/ui/Badge/Badge'
 
 export const BadgesView = () => {
@@ -5,129 +6,127 @@ export const BadgesView = () => {
     <>
       <h1>Badge</h1>
 
-      {/* Colors */}
-      <div className="flex flex-col gap-2 py-2">
-        <h2>Colors</h2>
-        <div className="flex flex-wrap gap-2 ">
-          <Badge color="blue">Blue</Badge>
-          <Badge color="green">Green</Badge>
-          <Badge color="red">Red</Badge>
-          <Badge color="slate">slate</Badge>
-        </div>
-      </div>
+      <Display>
+        <h2>Size large</h2>
 
-      {/* Sizes */}
-      <div className="flex flex-col gap-2 py-2">
-        <h2>Sizes</h2>
-        <div className="py-2">
-          <Badge size="small">Small</Badge>
-          <Badge size="medium">Medium</Badge>
-          <Badge size="large">Large</Badge>
-        </div>
-      </div>
-
-      {/* Clickable */}
-      <div className="flex flex-col gap-2 py-2">
-        <h2>Clickable</h2>
-        <div className="flex flex-wrap gap-2 ">
-          <Badge color="blue" onClick={() => alert('clicked')}>
-            Blue
-          </Badge>
-          <Badge color="green" onClick={() => alert('clicked')}>
-            Green
-          </Badge>
-          <Badge color="red" onClick={() => alert('clicked')}>
-            Red
-          </Badge>
-          <Badge color="slate" onClick={() => alert('clicked')}>
-            slate
-          </Badge>
-        </div>
-      </div>
-
-      {/* Variant dotted */}
-      <div className="flex flex-col gap-2 py-2">
-        <h2>Variant dotted</h2>
         <div className="flex flex-wrap gap-2 py-2">
-          <Badge color="blue" variant="dotted">
-            Blue
+          <Badge size="large">Base</Badge>
+          <Badge color="primary" size="large">
+            Primary
           </Badge>
-          <Badge color="green" variant="dotted">
-            Green
+          <Badge color="secondary" size="large">
+            Secondary
           </Badge>
-          <Badge color="red" variant="dotted">
-            Red
+          <Badge color="accent" size="large">
+            Accent
           </Badge>
-          <Badge color="slate" variant="dotted">
-            slate
+          <Badge color="neutral" size="large">
+            Neutral
+          </Badge>
+          <Badge color="info" size="large">
+            Info
+          </Badge>
+          <Badge color="success" size="large">
+            Success
+          </Badge>
+          <Badge color="warning" size="large">
+            Warning
+          </Badge>
+          <Badge color="error" size="large">
+            Error
           </Badge>
         </div>
-      </div>
+      </Display>
 
-      {/* Variant dotted clickable */}
-      <div className="flex flex-col gap-2 py-2">
-        <h2>Variant dotted clickable</h2>
+      <Display>
+        <h2>Size medium (default)</h2>
+
         <div className="flex flex-wrap gap-2 py-2">
-          <Badge color="blue" variant="dotted" onClick={() => alert('clicked')}>
-            Blue
-          </Badge>
-          <Badge
-            color="green"
-            variant="dotted"
-            onClick={() => alert('clicked')}
-          >
-            Green
-          </Badge>
-          <Badge color="red" variant="dotted" onClick={() => alert('clicked')}>
-            Red
-          </Badge>
-          <Badge
-            color="slate"
-            variant="dotted"
-            onClick={() => alert('clicked')}
-          >
-            slate
-          </Badge>
+          <Badge>Base</Badge>
+          <Badge color="primary">Primary</Badge>
+          <Badge color="secondary">Secondary</Badge>
+          <Badge color="accent">Accent</Badge>
+          <Badge color="neutral">Neutral</Badge>
+          <Badge color="info">Info</Badge>
+          <Badge color="success">Success</Badge>
+          <Badge color="warning">Warning</Badge>
+          <Badge color="error">Error</Badge>
         </div>
-      </div>
+      </Display>
 
-      {/* Dissmissable */}
-      <div className="flex flex-col gap-2 py-2">
-        <h2>Dissmissable</h2>
-        <div className="flex flex-wrap gap-2 py-1">
-          <Badge color="blue" size="large" dismissible>
-            Blue
+      <Display>
+        <h2>Size small</h2>
+
+        <div className="flex flex-wrap gap-2 py-2">
+          <Badge size="small">Base</Badge>
+          <Badge color="primary" size="small">
+            Primary
           </Badge>
-          <Badge color="green" size="large" dismissible>
-            Green
+          <Badge color="secondary" size="small">
+            Secondary
           </Badge>
-          <Badge color="red" size="large" dismissible>
-            Red
+          <Badge color="accent" size="small">
+            Accent
           </Badge>
-          <Badge color="slate" size="large" dismissible>
-            slate
+          <Badge color="neutral" size="small">
+            Neutral
+          </Badge>
+          <Badge color="info" size="small">
+            Info
+          </Badge>
+          <Badge color="success" size="small">
+            Success
+          </Badge>
+          <Badge color="warning" size="small">
+            Warning
+          </Badge>
+          <Badge color="error" size="small">
+            Error
           </Badge>
         </div>
-      </div>
+      </Display>
+
+      <Display>
+        <h2>Dashed</h2>
+
+        <div className="flex flex-wrap gap-2 py-2">
+          <Badge variant="dashed">Base</Badge>
+          <Badge color="primary" variant="dashed">
+            Primary
+          </Badge>
+          <Badge color="secondary" variant="dashed">
+            Secondary
+          </Badge>
+          <Badge color="accent" variant="dashed">
+            Accent
+          </Badge>
+          <Badge color="neutral" variant="dashed">
+            Neutral
+          </Badge>
+          <Badge color="info" variant="dashed">
+            Info
+          </Badge>
+          <Badge color="success" variant="dashed">
+            Success
+          </Badge>
+          <Badge color="warning" variant="dashed">
+            Warning
+          </Badge>
+          <Badge color="error" variant="dashed">
+            Error
+          </Badge>
+        </div>
+      </Display>
 
       {/* asChild */}
-      <div className="flex flex-col gap-2 py-2">
+      <Display>
         <h2>asChild</h2>
-        <div className="flex flex-wrap gap-2 py-2">
-          <Badge color="blue" asChild>
-            <a href="#">asChild "a"</a>
-          </Badge>
-          <Badge color="green" asChild>
-            <a href="#">asChild "a"</a>
-          </Badge>
-          <Badge color="red" asChild>
-            <a href="#">asChild "a"</a>
-          </Badge>
-          <Badge color="slate" asChild>
+        <div className="flex">
+          <Badge color="primary" asChild>
             <a href="#">asChild "a"</a>
           </Badge>
         </div>
-      </div>
+      </Display>
     </>
   )
 }

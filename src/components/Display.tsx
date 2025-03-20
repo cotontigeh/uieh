@@ -7,7 +7,8 @@ export const Display = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <section
     className={cn(
-      'flex flex-col gap-6 ring-1 p-4 rounded-xl ring-slate-200 dark:ring-slate-600',
+      'bg-base-100 dark:bg-base-100-dark',
+      'flex flex-col flex-wrap gap-6 ring-1 p-4 rounded-xl ring-slate-200 dark:ring-slate-600',
       className
     )}
     {...rest}
