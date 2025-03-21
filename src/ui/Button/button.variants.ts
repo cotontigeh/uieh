@@ -67,6 +67,7 @@ export const buttonVariants = cva({
         'dark:hover:text-base-content'
       ]
     },
+    // Text Variant
     {
       variant: 'text',
       color: [
@@ -82,9 +83,13 @@ export const buttonVariants = cva({
       ],
       className: [
         'bg-transparent dark:bg-transparent',
-        'text-base-content hover:text-base-content-dark',
-        'dark:text-base-content-dark dark:hover:text-base-content'
+        'text-base-content dark:text-base-content-dark'
       ]
+    },
+    {
+      variant: 'text',
+      color: ['base'],
+      className: ['hover:text-base-content-dark dark:hover:text-base-content']
     }
   ],
   defaultVariants: {
