@@ -7,7 +7,8 @@ export const buttonVariants = cva({
   variants: {
     variant: {
       default: [''],
-      ghost: ['ring-[1.1px]']
+      ghost: ['ring-[1.1px]'],
+      text: 'bg-transparent border-transparent'
     },
     color: {
       base: [
@@ -64,6 +65,25 @@ export const buttonVariants = cva({
       className: [
         'hover:text-base-content-dark',
         'dark:hover:text-base-content'
+      ]
+    },
+    {
+      variant: 'text',
+      color: [
+        'base',
+        'primary',
+        'secondary',
+        'accent',
+        'neutral',
+        'info',
+        'success',
+        'warning',
+        'error'
+      ],
+      className: [
+        'bg-transparent dark:bg-transparent',
+        'text-base-content hover:text-base-content-dark',
+        'dark:text-base-content-dark dark:hover:text-base-content'
       ]
     }
   ],
