@@ -2,23 +2,26 @@ import { cva } from 'cva'
 
 export const tabLinkVariants = cva({
   base: [
-    'flex gap-2 items-center text-slate-500 font-medium cursor-pointer py-4 px-1.5 border-b-2 border-transparent select-none',
-    'hover:text-slate-600 hover:border-slate-300',
-    'dark:text-slate-100 dark:hover:text-slate-50 dark:hover:border-slate-300'
+    'flex gap-2 items-center font-medium cursor-pointer py-4 px-1.5 border-transparent select-none',
+    'text-base-content hover:border-base-300-dark',
+    'dark:text-base-content-dark'
   ],
   variants: {
     variant: {
+      default: [
+        'border-b-2 hover:border-base-content-dark dark:hover:border-base-300'
+      ],
       pill: [
-        'py-2 px-3 rounded-md',
-        'hover:border-transparent hover:bg-slate-100',
-        'dark:hover:border-transparent dark:hover:bg-slate-500/20'
+        'border-b-0 py-2 px-3 rounded-lg border-transparent',
+        'hover:border-transparent hover:bg-base-300/40',
+        'dark:hover:border-transparent dark:hover:bg-base-300-dark/40'
       ]
     },
     color: {
-      blue: '',
-      green: '',
-      red: '',
-      slate: ''
+      base: [''],
+      primary: [''],
+      secondary: [''],
+      accent: ['']
     },
     active: {
       unset: null,
@@ -30,36 +33,31 @@ export const tabLinkVariants = cva({
      * COLORS
      **************************************************************************/
     {
-      color: 'blue',
+      color: 'base',
       active: true,
       className: [
-        'border-blue-500 hover:border-blue-500 hover:text-blue-500',
-        'dark:border-blue-500 dark:hover:border-blue-500'
+        'border-base-300-dark hover:border-base-content-dark hover:bg-base-300-dark',
+        'dark:border-base-300 dark:hover:border-base-300 dark:hover:bg-base-300-dark'
       ]
     },
     {
-      color: 'green',
+      color: 'primary',
       active: true,
       className: [
-        'border-green-500 hover:border-green-500 hover:text-green-500',
-        'dark:border-green-500 dark:hover:border-green-500'
+        'border-primary hover:border-primary dark:hover:border-primary'
       ]
     },
     {
-      color: 'red',
+      color: 'secondary',
       active: true,
       className: [
-        'border-red-500 hover:border-red-500 hover:text-red-500',
-        'dark:border-red-500 dark:hover:border-red-500'
+        'border-secondary hover:border-secondary dark:hover:border-secondary'
       ]
     },
     {
-      color: 'slate',
+      color: 'accent',
       active: true,
-      className: [
-        'border-slate-500 hover:border-slate-500 hover:text-slate-600',
-        'dark:border-slate-500 dark:hover:border-slate-500'
-      ]
+      className: ['border-accent hover:border-accent dark:hover:border-accent']
     },
 
     /**************************************************************************
@@ -68,45 +66,42 @@ export const tabLinkVariants = cva({
     {
       variant: 'pill',
       active: true,
-      color: 'blue',
+      color: 'base',
       className: [
-        'bg-blue-100 text-blue-500 border-transparent hover:text-blue-500 hover:border-transparent',
-        'dark:bg-blue-500/40 dark:text-white dark:border-transparent',
-        'dark:hover:border-transparent'
+        'bg-base-content text-base-300 hover:bg-base-content',
+        'dark:bg-base-content-dark dark:text-base-300-dark dark:hover:bg-base-content-dark'
       ]
     },
     {
       variant: 'pill',
       active: true,
-      color: 'green',
+      color: 'primary',
       className: [
-        'bg-green-100 text-green-500 border-transparent hover:text-green-500 hover:border-transparent',
-        'dark:bg-green-500/40 dark:text-white dark:border-transparent',
-        'dark:hover:border-transparent'
+        'bg-primary hover:bg-primary text-primary-content hover:bg-primary-content',
+        'dark:hover:bg-primary'
       ]
     },
     {
       variant: 'pill',
       active: true,
-      color: 'red',
+      color: 'secondary',
       className: [
-        'bg-red-100 text-red-500 border-transparent hover:text-red-500 hover:border-transparent',
-        'dark:bg-red-500/40 dark:text-white dark:border-transparent',
-        'dark:hover:border-transparent'
+        'bg-secondary hover:bg-secondary text-secondary-content hover:bg-secondary-content',
+        'dark:hover:bg-secondary'
       ]
     },
     {
       variant: 'pill',
       active: true,
-      color: 'slate',
+      color: 'accent',
       className: [
-        'bg-slate-100 text-slate-500 border-transparent hover:text-slate-500 hover:border-transparent',
-        'dark:bg-slate-500/40 dark:text-white dark:border-transparent',
-        'dark:hover:border-transparent'
+        'bg-accent hover:bg-accent text-accent-content hover:bg-accent-content',
+        'dark:hover:bg-accent'
       ]
     }
   ],
   defaultVariants: {
-    color: 'slate'
+    variant: 'default',
+    color: 'base'
   }
 })
