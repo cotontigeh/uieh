@@ -3,9 +3,25 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/uieh.umd.cjs",
+  "module": "./dist/uieh.js",
+  "exports": {
+    ".": {
+      "import": "./dist/uieh.js",
+      "require": "./dist/uieh.umd.cjs"
+    },
+    "./utils": {
+      "import": "./dist/utils.js",
+      "require": "./dist/utils.cjs"
+    },
+    "./theme/colors.theme.css": "./dist/theme/colors.theme.css"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && cp -r src/theme dist/theme",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -10,5 +10,22 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src')
     }
+  },
+  build: {
+    lib: {
+      entry: {
+        uieh: path.resolve(__dirname, 'src/ui/index.ts'),
+        utils: path.resolve(__dirname, 'src/lib/utils.js')
+      },
+      name: 'uieh'
+    },
+    rollupOptions: {
+      external: ['react'],
+      output: {
+        globals: {
+          react: 'React'
+        }
+      }
+    }
   }
 })
