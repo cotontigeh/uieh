@@ -7,7 +7,7 @@ export const buttonVariants = cva({
   variants: {
     variant: {
       default: [''],
-      ghost: ['ring-2']
+      ghost: ['ring-[1.1px]']
     },
     color: {
       base: [

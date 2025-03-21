@@ -19,7 +19,7 @@ export const NavView = () => {
               <NavLink active>Home</NavLink>
               <NavLink>About</NavLink>
               <NavLink className="ml-auto">Sign in</NavLink>
-              <Button color="primary">Get your ticket</Button>
+              <Button>Get your ticket</Button>
             </NavContainer>
           </Nav>
         </Display>
@@ -30,12 +30,12 @@ export const NavView = () => {
             <NavContainer>
               <BiAlbum
                 size={34}
-                className="text-slate-800 dark:text-slate-300 mr-8 cursor-pointer"
+                className="text-white dark:text-slate-300 mr-8 cursor-pointer"
               />
               <NavLink active>Home</NavLink>
               <NavLink>About</NavLink>
               <NavLink className="ml-auto">Sign in</NavLink>
-              <Button>Get your ticket</Button>
+              <Button color="white">Get your ticket</Button>
             </NavContainer>
           </Nav>
         </Display>
@@ -46,12 +46,12 @@ export const NavView = () => {
             <NavContainer>
               <BiAlbum
                 size={34}
-                className="text-slate-800 dark:text-slate-300 mr-8 cursor-pointer"
+                className="text-white dark:text-slate-300 mr-8 cursor-pointer"
               />
               <NavLink active>Home</NavLink>
               <NavLink>About</NavLink>
               <NavLink className="ml-auto">Sign in</NavLink>
-              <Button>Get your ticket</Button>
+              <Button color="white">Get your ticket</Button>
             </NavContainer>
           </Nav>
         </Display>
@@ -62,12 +62,12 @@ export const NavView = () => {
             <NavContainer>
               <BiAlbum
                 size={34}
-                className="text-slate-800 dark:text-slate-300 mr-8 cursor-pointer"
+                className="text-white dark:text-slate-300 mr-8 cursor-pointer"
               />
               <NavLink active>Home</NavLink>
               <NavLink>About</NavLink>
               <NavLink className="ml-auto">Sign in</NavLink>
-              <Button>Get your ticket</Button>
+              <Button color="white">Get your ticket</Button>
             </NavContainer>
           </Nav>
         </Display>
