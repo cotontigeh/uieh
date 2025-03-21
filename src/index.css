@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "./theme/colors.theme.css";
+@import 'tailwindcss';
+@import './theme/colors.theme.css';
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
@@ -15,6 +15,10 @@ h2 {
   @apply text-2xl uppercase font-medium;
 }
 
+h3 {
+  @apply text-lg uppercase font-bold;
+}
+
 .display {
   @apply flex flex-col gap-6 ring-1 ring-slate-200 p-4 rounded-xl;
   @apply dark:ring-slate-600;
@@ -24,9 +28,9 @@ h2 {
   --color-orange-50: oklch(0.984 0.01 38.24);
   --color-orange-100: oklch(0.968 0.04 38.24);
   --color-orange-200: oklch(0.929 0.08 38.24);
-  --color-orange-300: oklch(0.869 0.10 38.24);
-  --color-orange-400: oklch(0.830 0.11 38.24);
-  --color-orange-500: oklch(0.720 0.12 38.24);
+  --color-orange-300: oklch(0.869 0.1 38.24);
+  --color-orange-400: oklch(0.83 0.11 38.24);
+  --color-orange-500: oklch(0.72 0.12 38.24);
   --color-orange-600: oklch(0.46 0.14 38.24);
   --color-orange-700: oklch(0.38 0.14 38.24);
   --color-orange-800: oklch(0.28 0.14 38.24);
