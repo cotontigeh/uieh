@@ -16,6 +16,7 @@ export const buttonVariants = cva({
         'dark:bg-base-content-dark dark:ring-base-content-dark dark:text-base-300-dark',
         'dark:hover:bg-base-200'
       ],
+      white: ['bg-white text-base-content ring-white hover:bg-white/95'],
       primary: [
         'bg-primary text-primary-content ring-primary hover:bg-primary/90'
       ],
