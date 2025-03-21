@@ -119,6 +119,21 @@ export const ButtonsView = () => {
         </div>
       </Display>
 
+      {/* Text variant */}
+      <Display>
+        <h2>Text variant</h2>
+        <div className="flex gap-4">
+          <Button variant="text" size="large">
+            Text
+          </Button>
+          <Button variant="text">Text</Button>
+
+          <Button size="small" variant="text">
+            Text
+          </Button>
+        </div>
+      </Display>
+
       {/* AsChild */}
       <Display>
         <h2>AsChild</h2>
