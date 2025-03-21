@@ -2,7 +2,7 @@ import { cva } from 'cva'
 
 export const buttonVariants = cva({
   base: [
-    'flex items-center gap-2 select-none cursor-pointe rounded-lg font-semibold cursor-pointer'
+    'flex items-center justify-center gap-2 select-none cursor-pointe rounded-lg font-semibold cursor-pointer'
   ],
   variants: {
     variant: {
