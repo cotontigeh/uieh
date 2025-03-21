@@ -124,12 +124,31 @@ export const ButtonsView = () => {
         <h2>Text variant</h2>
         <div className="flex gap-4">
           <Button variant="text" size="large">
-            Text
+            Base
           </Button>
-          <Button variant="text">Text</Button>
-
-          <Button size="small" variant="text">
-            Text
+          <Button color="primary" variant="text" size="large">
+            Primary
+          </Button>
+          <Button color="secondary" variant="text" size="large">
+            Secondary
+          </Button>
+          <Button color="accent" variant="text" size="large">
+            Accent
+          </Button>
+          <Button color="neutral" variant="text" size="large">
+            Neutral
+          </Button>
+          <Button color="info" variant="text" size="large">
+            Info
+          </Button>
+          <Button color="success" variant="text" size="large">
+            Success
+          </Button>
+          <Button color="warning" variant="text" size="large">
+            Warning
+          </Button>
+          <Button color="error" variant="text" size="large">
+            Error
           </Button>
         </div>
       </Display>
