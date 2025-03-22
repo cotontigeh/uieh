@@ -1,7 +1,10 @@
 {
   "name": "uieh",
+  "version": "0.0.1-alpha",
+  "description": "Ui library for react",
+  "author": "Adrien E.",
+  "license": "MIT",
   "private": true,
-  "version": "0.1.0",
   "type": "module",
   "files": [
     "dist"
@@ -18,6 +21,10 @@
       "require": "./dist/utils.cjs"
     },
     "./theme/colors.theme.css": "./dist/theme/colors.theme.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cotontigeh/uieh.git"
   },
   "scripts": {
     "dev": "vite",
