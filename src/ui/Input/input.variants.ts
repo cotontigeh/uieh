@@ -4,24 +4,24 @@ export type InputVariantsType = VariantProps<typeof inputVariants>
 
 export const inputVariants = cva({
   base: [
-    'bg-base-100 ring-base-300 ring-1 rounded-lg p-2 focus:outline-none',
-    'dark:bg-base-100-dark dark:ring-base-300-dark dark:[color-scheme:dark]'
+    'bg-base-100 ring-1 rounded-lg p-2 focus:outline-none',
+    'dark:bg-base-100-dark dark:[color-scheme:dark]'
   ],
   variants: {
     variant: { default: [] },
     color: {
       base: [
-        'focus:ring-base-content/30',
-        'dark:focus:ring-base-content-dark/30'
+        'ring-base-300 focus:ring-base-content/30',
+        'dark:ring-base-300-dark dark:focus:ring-base-content-dark/30'
       ],
-      primary: ['focus:ring-primary', 'dark:focus:ring-primary'],
-      secondary: ['focus:ring-secondary', 'dark:focus:ring-secondary'],
-      accent: ['focus:ring-accent', 'dark:focus:ring-accent'],
-      neutral: ['focus:ring-neutral', 'dark:focus:ring-neutral'],
-      info: ['focus:ring-info', 'dark:focus:ring-info'],
-      success: ['focus:ring-success', 'dark:focus:ring-success'],
-      warning: ['focus:ring-warning', 'dark:focus:ring-warning'],
-      error: ['focus:ring-error', 'dark:focus:ring-error']
+      primary: ['ring-primary/50 focus:ring-primary'],
+      secondary: ['ring-secondary/50 focus:ring-secondary'],
+      accent: ['ring-accent/50 focus:ring-accent'],
+      neutral: ['ring-neutral/50 focus:ring-neutral'],
+      info: ['ring-info/50 focus:ring-info'],
+      success: ['ring-success/50 focus:ring-success'],
+      warning: ['ring-warning/50 focus:ring-warning'],
+      error: ['ring-error/50 focus:ring-error']
     },
     size: { small: 'p-2 text-xs', medium: 'p-3', large: 'p-4 text-lg' },
     disabled: {
