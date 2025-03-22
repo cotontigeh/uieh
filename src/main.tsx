@@ -11,10 +11,9 @@ import { TabsView } from './pages/TabsView.tsx'
 import { NavView } from './pages/NavView.tsx'
 import { HomeView } from './pages/HomeView.tsx'
 import { SidebarView } from './pages/SidebarView.tsx'
+import { InputsView } from './pages/InputsView.tsx'
 
-scan({
-  enabled: true
-})
+scan({ enabled: true })
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -22,6 +21,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route element={<AppLayout />}>
           <Route path="/" element={<HomeView />} />
+          <Route path="/inputs" element={<InputsView />} />
           <Route path="/buttons" element={<ButtonsView />} />
           <Route path="/badges" element={<BadgesView />} />
           <Route path="/tabs" element={<TabsView />} />
