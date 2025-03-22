@@ -1,8 +1,8 @@
 import { cva, VariantProps } from 'cva'
 
-export type TitleVariantsType = VariantProps<typeof titleVariants>
+export type HeadingVariantsType = VariantProps<typeof headingVariants>
 
-export const titleVariants = cva({
+export const headingVariants = cva({
   base: ['font-semibold'],
   variants: {
     variant: {

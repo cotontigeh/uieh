@@ -1,15 +1,15 @@
 import { Display } from '@/components/Display'
 import { Button } from '@/ui/Button'
 import { Nav, NavContainer, NavLink } from '@/ui/Nav'
-import { Title } from '@/ui/Title'
+import { Heading } from '@/ui/Heading'
 import { BiAlbum } from 'react-icons/bi'
 
 export const NavView = () => {
   return (
     <>
-      <Title uppercase>Nav</Title>
+      <Heading uppercase>Nav</Heading>
       <Display>
-        <Title variant="h2">Base</Title>
+        <Heading variant="h2">Base</Heading>
         <Display className="p-0 bg-base-300 dark:bg-base-300-dark h-[200px]">
           <Nav className="px-4">
             <NavContainer>
@@ -25,7 +25,7 @@ export const NavView = () => {
           </Nav>
         </Display>
 
-        <Title variant="h2">Primary</Title>
+        <Heading variant="h2">Primary</Heading>
         <Display className="p-0 bg-base-300 dark:bg-base-300-dark h-[200px]">
           <Nav color="primary" className="px-4">
             <NavContainer>
@@ -41,7 +41,7 @@ export const NavView = () => {
           </Nav>
         </Display>
 
-        <Title variant="h2">Secondary</Title>
+        <Heading variant="h2">Secondary</Heading>
         <Display className="p-0 bg-base-300 dark:bg-base-300-dark h-[200px]">
           <Nav color="secondary" className="px-4">
             <NavContainer>
@@ -57,7 +57,7 @@ export const NavView = () => {
           </Nav>
         </Display>
 
-        <Title variant="h2">Accent</Title>
+        <Heading variant="h2">Accent</Heading>
         <Display className="p-0 bg-base-300 dark:bg-base-300-dark h-[200px]">
           <Nav color="accent" className="px-4">
             <NavContainer>
@@ -76,7 +76,7 @@ export const NavView = () => {
 
       {/* Sticky */}
       <Display>
-        <Title variant="h2">Sticky</Title>
+        <Heading variant="h2">Sticky</Heading>
         <Display className="p-0 bg-base-300 dark:bg-base-300-dark">
           <div className="max-h-[300px] overflow-auto">
             <Nav sticky className="px-4">

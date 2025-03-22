@@ -2,18 +2,18 @@ import { Tabs } from '@/ui/Tabs/Tabs'
 import { TabLink } from '@/ui/TabLink/TabLink'
 import { BiHash, BiTv } from 'react-icons/bi'
 import { Display } from '@/components/Display'
-import { Title } from '@/ui/Title'
+import { Heading } from '@/ui/Heading'
 
 export const TabsView = () => {
   return (
     <>
-      <Title uppercase>Tabs</Title>
+      <Heading uppercase>Tabs</Heading>
 
       <Display>
-        <Title variant="h2">Colors</Title>
+        <Heading variant="h2">Colors</Heading>
 
         <div>
-          <Title variant="h3">Base</Title>
+          <Heading variant="h3">Base</Heading>
           <Tabs>
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -21,7 +21,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <Title variant="h3">Primary</Title>
+          <Heading variant="h3">Primary</Heading>
           <Tabs color="primary">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -29,7 +29,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <Title variant="h3">Secondary</Title>
+          <Heading variant="h3">Secondary</Heading>
           <Tabs color="secondary">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -37,7 +37,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <Title variant="h3">Accent</Title>
+          <Heading variant="h3">Accent</Heading>
           <Tabs color="accent">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -46,9 +46,9 @@ export const TabsView = () => {
       </Display>
 
       <Display>
-        <Title variant="h2">No border</Title>
+        <Heading variant="h2">No border</Heading>
         <div>
-          <Title variant="h3">Base</Title>
+          <Heading variant="h3">Base</Heading>
           <Tabs variant="noBorder">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -56,7 +56,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <Title variant="h3">Primary</Title>
+          <Heading variant="h3">Primary</Heading>
           <Tabs variant="noBorder" color="primary">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -64,7 +64,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <Title variant="h3">Secondary</Title>
+          <Heading variant="h3">Secondary</Heading>
           <Tabs variant="noBorder" color="secondary">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -72,7 +72,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <Title variant="h3">Accent</Title>
+          <Heading variant="h3">Accent</Heading>
           <Tabs variant="noBorder" color="accent">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -81,10 +81,10 @@ export const TabsView = () => {
       </Display>
 
       <Display>
-        <Title variant="h2">Pill variant</Title>
+        <Heading variant="h2">Pill variant</Heading>
 
         <div>
-          <Title variant="h3">Base</Title>
+          <Heading variant="h3">Base</Heading>
           <Tabs variant="noBorder">
             <TabLink variant="pill" active>
               Badge
@@ -94,7 +94,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <Title variant="h3">Primary</Title>
+          <Heading variant="h3">Primary</Heading>
           <Tabs color="primary" variant="noBorder">
             <TabLink variant="pill" active>
               Buttons
@@ -104,7 +104,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <Title variant="h3">Secondary</Title>
+          <Heading variant="h3">Secondary</Heading>
           <Tabs color="secondary" variant="noBorder">
             <TabLink variant="pill" active>
               Buttons
@@ -114,7 +114,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <Title variant="h3">Accent</Title>
+          <Heading variant="h3">Accent</Heading>
           <Tabs color="accent" variant="noBorder">
             <TabLink variant="pill" active>
               Buttons
@@ -125,7 +125,7 @@ export const TabsView = () => {
       </Display>
 
       <Display>
-        <Title variant="h2">With decorations</Title>
+        <Heading variant="h2">With decorations</Heading>
         <Tabs color="primary">
           <TabLink>
             <BiHash />

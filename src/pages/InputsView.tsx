@@ -1,14 +1,14 @@
 import { Display } from '@/components/Display'
 import { Input } from '@/ui/Input'
-import { Title } from '@/ui/Title'
+import { Heading } from '@/ui/Heading'
 
 export const InputsView = () => {
   return (
     <>
-      <Title uppercase>Inputs</Title>
+      <Heading uppercase>Inputs</Heading>
 
       <Display>
-        <Title variant="h2">Colors</Title>
+        <Heading variant="h2">Colors</Heading>
         <Input type="text" placeholder="Example placeholder" />
         <Input type="text" color="primary" placeholder="Primary" />
         <Input type="text" color="secondary" placeholder="Secondary" />
@@ -21,14 +21,14 @@ export const InputsView = () => {
       </Display>
 
       <Display>
-        <Title variant="h2">Sizes</Title>
+        <Heading variant="h2">Sizes</Heading>
         <Input type="text" size="large" placeholder="Large" />
         <Input type="text" placeholder="Medium (Default)" />
         <Input type="text" size="small" placeholder="Small" />
       </Display>
 
       <Display>
-        <Title variant="h2">Types</Title>
+        <Heading variant="h2">Types</Heading>
         <Input type="text" variant="default" placeholder="Text" />
         <Input type="date" placeholder="Date" />
         <Input type="email" placeholder="Email" />

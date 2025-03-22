@@ -1,14 +1,14 @@
 import { Display } from '@/components/Display'
 import { Badge } from '@/ui/Badge/Badge'
-import { Title } from '@/ui/Title'
+import { Heading } from '@/ui/Heading'
 
 export const BadgesView = () => {
   return (
     <>
-      <Title uppercase>Badge</Title>
+      <Heading uppercase>Badge</Heading>
 
       <Display>
-        <Title variant="h2">Size large</Title>
+        <Heading variant="h2">Size large</Heading>
 
         <div className="flex flex-wrap gap-2 py-2">
           <Badge size="large">Base</Badge>
@@ -40,7 +40,7 @@ export const BadgesView = () => {
       </Display>
 
       <Display>
-        <Title variant="h2">Size medium (default)</Title>
+        <Heading variant="h2">Size medium (default)</Heading>
 
         <div className="flex flex-wrap gap-2 py-2">
           <Badge>Base</Badge>
@@ -56,7 +56,7 @@ export const BadgesView = () => {
       </Display>
 
       <Display>
-        <Title variant="h2">Size small</Title>
+        <Heading variant="h2">Size small</Heading>
 
         <div className="flex flex-wrap gap-2 py-2">
           <Badge size="small">Base</Badge>
@@ -88,7 +88,7 @@ export const BadgesView = () => {
       </Display>
 
       <Display>
-        <Title variant="h2">Dashed</Title>
+        <Heading variant="h2">Dashed</Heading>
 
         <div className="flex flex-wrap gap-2 py-2">
           <Badge variant="dashed">Base</Badge>
@@ -121,7 +121,7 @@ export const BadgesView = () => {
 
       {/* asChild */}
       <Display>
-        <Title variant="h2">asChild</Title>
+        <Heading variant="h2">asChild</Heading>
         <div className="flex">
           <Badge color="primary" asChild>
             <a href="#">asChild "a"</a>

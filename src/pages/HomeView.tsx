@@ -1,9 +1,9 @@
-import { Title } from '@/ui/Title'
+import { Heading } from '@/ui/Heading'
 
 export const HomeView = () => {
   return (
     <>
-      <Title uppercase>Home</Title>
+      <Heading uppercase>Home</Heading>
     </>
   )
 }

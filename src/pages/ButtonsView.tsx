@@ -1,16 +1,16 @@
 import { Display } from '@/components/Display'
 import { Button } from '@/ui/Button/Button'
-import { Title } from '@/ui/Title'
+import { Heading } from '@/ui/Heading'
 import { BiAlarm } from 'react-icons/bi'
 
 export const ButtonsView = () => {
   return (
     <>
-      <Title uppercase>Button</Title>
+      <Heading uppercase>Button</Heading>
 
       {/* Size large */}
       <Display>
-        <Title variant="h2">Size large</Title>
+        <Heading variant="h2">Size large</Heading>
         <div className="flex flex-wrap gap-2 py-2">
           <Button size="large">Base</Button>
           <Button color="primary" size="large">
@@ -42,7 +42,7 @@ export const ButtonsView = () => {
 
       {/* Size medium */}
       <Display>
-        <Title variant="h2">Size medium (default)</Title>
+        <Heading variant="h2">Size medium (default)</Heading>
         <div className="flex flex-wrap gap-2 py-2">
           <Button>Base</Button>
           <Button color="primary">Primary</Button>
@@ -58,7 +58,7 @@ export const ButtonsView = () => {
 
       {/* Size small */}
       <Display>
-        <Title variant="h2">Size small</Title>
+        <Heading variant="h2">Size small</Heading>
         <div className="flex flex-wrap gap-2 py-2">
           <Button size="small">Base</Button>
           <Button color="primary" size="small">
@@ -90,7 +90,7 @@ export const ButtonsView = () => {
 
       {/* Ghost variant */}
       <Display>
-        <Title variant="h2">Ghost variant</Title>
+        <Heading variant="h2">Ghost variant</Heading>
         <div className="flex flex-wrap gap-2 py-2">
           <Button variant="ghost">Base</Button>
           <Button color="primary" variant="ghost">
@@ -122,7 +122,7 @@ export const ButtonsView = () => {
 
       {/* Text variant */}
       <Display>
-        <Title variant="h2">Text variant</Title>
+        <Heading variant="h2">Text variant</Heading>
         <div className="flex gap-4">
           <Button variant="text" size="large">
             Base
@@ -156,7 +156,7 @@ export const ButtonsView = () => {
 
       {/* AsChild */}
       <Display>
-        <Title variant="h2">AsChild</Title>
+        <Heading variant="h2">AsChild</Heading>
         <div className="flex gap-2 py-2">
           <Button asChild>
             <a href="#">
@@ -208,7 +208,7 @@ export const ButtonsView = () => {
 
       {/* Disabled */}
       <Display>
-        <Title variant="h2">Disabled</Title>
+        <Heading variant="h2">Disabled</Heading>
         <div className="flex gap-2 py-2">
           <Button disabled>Disabled</Button>
           <Button color="primary" disabled>
@@ -240,7 +240,7 @@ export const ButtonsView = () => {
 
       {/* Full width */}
       <Display>
-        <Title variant="h2">Full width</Title>
+        <Heading variant="h2">Full width</Heading>
         <div className="flex flex-col gap-2 py-2">
           <Button fullWidth>Full width</Button>
           <Button color="primary" fullWidth>
