@@ -7,18 +7,6 @@ body {
   @apply bg-base-200 dark:bg-base-200-dark text-base-content dark:text-base-content-dark;
 }
 
-h1 {
-  @apply text-3xl uppercase font-black;
-}
-
-h2 {
-  @apply text-2xl uppercase font-medium;
-}
-
-h3 {
-  @apply text-lg uppercase font-bold;
-}
-
 .display {
   @apply flex flex-col gap-6 ring-1 ring-slate-200 p-4 rounded-xl;
   @apply dark:ring-slate-600;

@@ -13,6 +13,7 @@ import { HomeView } from './pages/HomeView.tsx'
 import { SidebarView } from './pages/SidebarView.tsx'
 import { InputsView } from './pages/InputsView.tsx'
 import { TextareaView } from './pages/TextareaView.tsx'
+import { TitlesView } from './pages/TitlesView.tsx'
 
 scan({ enabled: true })
 
@@ -22,13 +23,14 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route element={<AppLayout />}>
           <Route path="/" element={<HomeView />} />
-          <Route path="/inputs" element={<InputsView />} />
-          <Route path="/textarea" element={<TextareaView />} />
-          <Route path="/buttons" element={<ButtonsView />} />
           <Route path="/badges" element={<BadgesView />} />
-          <Route path="/tabs" element={<TabsView />} />
-          <Route path="/nav" element={<NavView />} />
+          <Route path="/buttons" element={<ButtonsView />} />
+          <Route path="/inputs" element={<InputsView />} />
           <Route path="/sidebar" element={<SidebarView />} />
+          <Route path="/tabs" element={<TabsView />} />
+          <Route path="/textarea" element={<TextareaView />} />
+          <Route path="/title" element={<TitlesView />} />
+          <Route path="/nav" element={<NavView />} />
         </Route>
       </Routes>
     </BrowserRouter>

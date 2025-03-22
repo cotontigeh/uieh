@@ -1,10 +1,11 @@
 export const routes = [
   { name: 'Home', to: '/' },
-  { name: 'Inputs', to: '/inputs' },
-  { name: 'Textarea', to: '/textarea' },
-  { name: 'Buttons', to: '/buttons' },
   { name: 'Badges', to: '/badges' },
+  { name: 'Buttons', to: '/buttons' },
+  { name: 'Inputs', to: '/inputs' },
   { name: 'Nav', to: '/nav' },
+  { name: 'Sidebar', to: '/sidebar' },
   { name: 'Tabs', to: '/tabs' },
-  { name: 'Sidebar', to: '/sidebar' }
+  { name: 'Textarea', to: '/textarea' },
+  { name: 'Title', to: '/title' }
 ]
