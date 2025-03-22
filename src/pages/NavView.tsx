@@ -1,14 +1,15 @@
 import { Display } from '@/components/Display'
 import { Button } from '@/ui/Button'
 import { Nav, NavContainer, NavLink } from '@/ui/Nav'
+import { Title } from '@/ui/Title'
 import { BiAlbum } from 'react-icons/bi'
 
 export const NavView = () => {
   return (
     <>
-      <h1>Nav</h1>
+      <Title uppercase>Nav</Title>
       <Display>
-        <h2>Base</h2>
+        <Title variant="h2">Base</Title>
         <Display className="p-0 bg-base-300 dark:bg-base-300-dark h-[200px]">
           <Nav className="px-4">
             <NavContainer>
@@ -24,7 +25,7 @@ export const NavView = () => {
           </Nav>
         </Display>
 
-        <h2>Primary</h2>
+        <Title variant="h2">Primary</Title>
         <Display className="p-0 bg-base-300 dark:bg-base-300-dark h-[200px]">
           <Nav color="primary" className="px-4">
             <NavContainer>
@@ -40,7 +41,7 @@ export const NavView = () => {
           </Nav>
         </Display>
 
-        <h2>Secondary</h2>
+        <Title variant="h2">Secondary</Title>
         <Display className="p-0 bg-base-300 dark:bg-base-300-dark h-[200px]">
           <Nav color="secondary" className="px-4">
             <NavContainer>
@@ -56,7 +57,7 @@ export const NavView = () => {
           </Nav>
         </Display>
 
-        <h2>Accent</h2>
+        <Title variant="h2">Accent</Title>
         <Display className="p-0 bg-base-300 dark:bg-base-300-dark h-[200px]">
           <Nav color="accent" className="px-4">
             <NavContainer>
@@ -75,7 +76,7 @@ export const NavView = () => {
 
       {/* Sticky */}
       <Display>
-        <h2>Sticky</h2>
+        <Title variant="h2">Sticky</Title>
         <Display className="p-0 bg-base-300 dark:bg-base-300-dark">
           <div className="max-h-[300px] overflow-auto">
             <Nav sticky className="px-4">

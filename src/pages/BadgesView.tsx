@@ -1,13 +1,14 @@
 import { Display } from '@/components/Display'
 import { Badge } from '@/ui/Badge/Badge'
+import { Title } from '@/ui/Title'
 
 export const BadgesView = () => {
   return (
     <>
-      <h1>Badge</h1>
+      <Title uppercase>Badge</Title>
 
       <Display>
-        <h2>Size large</h2>
+        <Title variant="h2">Size large</Title>
 
         <div className="flex flex-wrap gap-2 py-2">
           <Badge size="large">Base</Badge>
@@ -39,7 +40,7 @@ export const BadgesView = () => {
       </Display>
 
       <Display>
-        <h2>Size medium (default)</h2>
+        <Title variant="h2">Size medium (default)</Title>
 
         <div className="flex flex-wrap gap-2 py-2">
           <Badge>Base</Badge>
@@ -55,7 +56,7 @@ export const BadgesView = () => {
       </Display>
 
       <Display>
-        <h2>Size small</h2>
+        <Title variant="h2">Size small</Title>
 
         <div className="flex flex-wrap gap-2 py-2">
           <Badge size="small">Base</Badge>
@@ -87,7 +88,7 @@ export const BadgesView = () => {
       </Display>
 
       <Display>
-        <h2>Dashed</h2>
+        <Title variant="h2">Dashed</Title>
 
         <div className="flex flex-wrap gap-2 py-2">
           <Badge variant="dashed">Base</Badge>
@@ -120,7 +121,7 @@ export const BadgesView = () => {
 
       {/* asChild */}
       <Display>
-        <h2>asChild</h2>
+        <Title variant="h2">asChild</Title>
         <div className="flex">
           <Badge color="primary" asChild>
             <a href="#">asChild "a"</a>

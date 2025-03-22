@@ -2,17 +2,18 @@ import { Tabs } from '@/ui/Tabs/Tabs'
 import { TabLink } from '@/ui/TabLink/TabLink'
 import { BiHash, BiTv } from 'react-icons/bi'
 import { Display } from '@/components/Display'
+import { Title } from '@/ui/Title'
 
 export const TabsView = () => {
   return (
     <>
-      <h1>Tabs</h1>
+      <Title uppercase>Tabs</Title>
 
       <Display>
-        <h2>Colors</h2>
+        <Title variant="h2">Colors</Title>
 
         <div>
-          <h3>Base</h3>
+          <Title variant="h3">Base</Title>
           <Tabs>
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -20,7 +21,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <h3>Primary</h3>
+          <Title variant="h3">Primary</Title>
           <Tabs color="primary">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -28,7 +29,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <h3>Secondary</h3>
+          <Title variant="h3">Secondary</Title>
           <Tabs color="secondary">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -36,7 +37,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <h3>Accent</h3>
+          <Title variant="h3">Accent</Title>
           <Tabs color="accent">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -45,9 +46,9 @@ export const TabsView = () => {
       </Display>
 
       <Display>
-        <h2>No border</h2>
+        <Title variant="h2">No border</Title>
         <div>
-          <h3>Base</h3>
+          <Title variant="h3">Base</Title>
           <Tabs variant="noBorder">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -55,7 +56,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <h3>Primary</h3>
+          <Title variant="h3">Primary</Title>
           <Tabs variant="noBorder" color="primary">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -63,7 +64,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <h3>Secondary</h3>
+          <Title variant="h3">Secondary</Title>
           <Tabs variant="noBorder" color="secondary">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -71,7 +72,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <h3>Accent</h3>
+          <Title variant="h3">Accent</Title>
           <Tabs variant="noBorder" color="accent">
             <TabLink active>Badge</TabLink>
             <TabLink>Tab</TabLink>
@@ -80,10 +81,10 @@ export const TabsView = () => {
       </Display>
 
       <Display>
-        <h2>Pill variant</h2>
+        <Title variant="h2">Pill variant</Title>
 
         <div>
-          <h3>Base</h3>
+          <Title variant="h3">Base</Title>
           <Tabs variant="noBorder">
             <TabLink variant="pill" active>
               Badge
@@ -93,7 +94,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <h3>Primary</h3>
+          <Title variant="h3">Primary</Title>
           <Tabs color="primary" variant="noBorder">
             <TabLink variant="pill" active>
               Buttons
@@ -103,7 +104,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <h3>Secondary</h3>
+          <Title variant="h3">Secondary</Title>
           <Tabs color="secondary" variant="noBorder">
             <TabLink variant="pill" active>
               Buttons
@@ -113,7 +114,7 @@ export const TabsView = () => {
         </div>
 
         <div>
-          <h3>Accent</h3>
+          <Title variant="h3">Accent</Title>
           <Tabs color="accent" variant="noBorder">
             <TabLink variant="pill" active>
               Buttons
@@ -124,7 +125,7 @@ export const TabsView = () => {
       </Display>
 
       <Display>
-        <h2>With decorations</h2>
+        <Title variant="h2">With decorations</Title>
         <Tabs color="primary">
           <TabLink>
             <BiHash />

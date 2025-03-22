@@ -1,12 +1,13 @@
 import { Display } from '@/components/Display'
 import { Textarea } from '@/ui/Textarea'
+import { Title } from '@/ui/Title'
 
 export const TextareaView = () => {
   return (
     <>
-      <h1>Textarea</h1>
+      <Title uppercase>Textarea</Title>
       <Display>
-        <h2>Colors</h2>
+        <Title variant="h2">Colors</Title>
         <Textarea placeholder="Textarea base color" />
         <Textarea color="primary" placeholder="Textarea primary color" />
         <Textarea color="secondary" placeholder="Textarea secondary color" />

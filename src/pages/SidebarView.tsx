@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import { Display } from '@/components/Display'
 import { cn } from '@/lib/utils'
 import { NavHeader } from '@/components/NavHeader'
+import { Title } from '@/ui/Title'
 
 const displayClassName = cn(
   'flex-row gap-4',
@@ -13,7 +14,7 @@ const displayClassName = cn(
 export const SidebarView = () => {
   return (
     <>
-      <h1>Sidebar</h1>
+      <Title uppercase>Sidebar</Title>
 
       {/* Base */}
       <Display className={displayClassName}>
@@ -35,7 +36,9 @@ export const SidebarView = () => {
             <Link to="#">Tabs</Link>
           </NavLink>
         </Sidebar>
-        <h2 className="py-4">Base color</h2>
+        <Title variant="h2" className="py-4">
+          Base color
+        </Title>
       </Display>
 
       {/* Primary */}
@@ -58,7 +61,9 @@ export const SidebarView = () => {
             <Link to="#">Tabs</Link>
           </NavLink>
         </Sidebar>
-        <h2 className="py-4">Primary color</h2>
+        <Title variant="h2" className="py-4">
+          Primary color
+        </Title>
       </Display>
 
       {/* Secondary */}
@@ -81,7 +86,9 @@ export const SidebarView = () => {
             <Link to="#">Tabs</Link>
           </NavLink>
         </Sidebar>
-        <h2 className="py-4">Secondary color</h2>
+        <Title variant="h2" className="py-4">
+          Secondary color
+        </Title>
       </Display>
 
       {/* Accent */}
@@ -104,7 +111,9 @@ export const SidebarView = () => {
             <Link to="#">Tabs</Link>
           </NavLink>
         </Sidebar>
-        <h2 className="py-4">Accent color</h2>
+        <Title variant="h2" className="py-4">
+          Accent color
+        </Title>
       </Display>
     </>
   )

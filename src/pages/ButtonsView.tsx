@@ -1,15 +1,16 @@
 import { Display } from '@/components/Display'
 import { Button } from '@/ui/Button/Button'
+import { Title } from '@/ui/Title'
 import { BiAlarm } from 'react-icons/bi'
 
 export const ButtonsView = () => {
   return (
     <>
-      <h1>Button</h1>
+      <Title uppercase>Button</Title>
 
       {/* Size large */}
       <Display>
-        <h2>Size large</h2>
+        <Title variant="h2">Size large</Title>
         <div className="flex flex-wrap gap-2 py-2">
           <Button size="large">Base</Button>
           <Button color="primary" size="large">
@@ -41,7 +42,7 @@ export const ButtonsView = () => {
 
       {/* Size medium */}
       <Display>
-        <h2>Size medium (default)</h2>
+        <Title variant="h2">Size medium (default)</Title>
         <div className="flex flex-wrap gap-2 py-2">
           <Button>Base</Button>
           <Button color="primary">Primary</Button>
@@ -57,7 +58,7 @@ export const ButtonsView = () => {
 
       {/* Size small */}
       <Display>
-        <h2>Size small</h2>
+        <Title variant="h2">Size small</Title>
         <div className="flex flex-wrap gap-2 py-2">
           <Button size="small">Base</Button>
           <Button color="primary" size="small">
@@ -89,7 +90,7 @@ export const ButtonsView = () => {
 
       {/* Ghost variant */}
       <Display>
-        <h2>Ghost variant</h2>
+        <Title variant="h2">Ghost variant</Title>
         <div className="flex flex-wrap gap-2 py-2">
           <Button variant="ghost">Base</Button>
           <Button color="primary" variant="ghost">
@@ -121,7 +122,7 @@ export const ButtonsView = () => {
 
       {/* Text variant */}
       <Display>
-        <h2>Text variant</h2>
+        <Title variant="h2">Text variant</Title>
         <div className="flex gap-4">
           <Button variant="text" size="large">
             Base
@@ -155,7 +156,7 @@ export const ButtonsView = () => {
 
       {/* AsChild */}
       <Display>
-        <h2>AsChild</h2>
+        <Title variant="h2">AsChild</Title>
         <div className="flex gap-2 py-2">
           <Button asChild>
             <a href="#">
@@ -207,7 +208,7 @@ export const ButtonsView = () => {
 
       {/* Disabled */}
       <Display>
-        <h2>Disabled</h2>
+        <Title variant="h2">Disabled</Title>
         <div className="flex gap-2 py-2">
           <Button disabled>Disabled</Button>
           <Button color="primary" disabled>
@@ -239,7 +240,7 @@ export const ButtonsView = () => {
 
       {/* Full width */}
       <Display>
-        <h2>Full width</h2>
+        <Title variant="h2">Full width</Title>
         <div className="flex flex-col gap-2 py-2">
           <Button fullWidth>Full width</Button>
           <Button color="primary" fullWidth>

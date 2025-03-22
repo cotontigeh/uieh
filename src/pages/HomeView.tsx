@@ -1,7 +1,9 @@
+import { Title } from '@/ui/Title'
+
 export const HomeView = () => {
   return (
     <>
-      <h1>Home</h1>
+      <Title uppercase>Home</Title>
     </>
   )
 }
