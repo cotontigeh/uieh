@@ -35,6 +35,9 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
     const childrenWithProps = Children.map(
       children as React.ReactElement<{ color?: string }>,
       (child) => {
+        if (typeof child.type === 'string' || typeof child.type === 'symbol')
+          return child
+
         if (isValidElement(child) && !child.props.color)
           return cloneElement(child, { color })
         return child

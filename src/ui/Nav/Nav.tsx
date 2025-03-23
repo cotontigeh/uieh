@@ -19,7 +19,8 @@ export const Nav = forwardRef<HTMLDivElement, NavProps>(
     const childrenWithProps = Children.map(
       children as React.ReactElement<{ color?: string }>,
       (child) => {
-        if (typeof child.type === 'string') return child
+        if (typeof child.type === 'string' || typeof child.type === 'symbol')
+          return child
 
         if (
           'displayName' in child.type &&
