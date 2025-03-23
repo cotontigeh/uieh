@@ -20,7 +20,7 @@ export default defineConfig({
       name: 'uieh'
     },
     rollupOptions: {
-      external: ['react'],
+      external: ['react', '@headlessui/react'],
       output: {
         globals: {
           react: 'React'

@@ -64,6 +64,15 @@
     "typescript-eslint": "^8.26.1",
     "vite": "^6.0.5"
   },
+  "peerDependencies": {
+    "@headlessui/react": "^2.0.0",
+    "react": "^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@headlessui/react": {
+      "optional": false
+    }
+  },
   "resolutions": {
     "esbuild": "^0.25.0"
   },
