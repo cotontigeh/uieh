@@ -21,16 +21,30 @@ export default function AppLayout() {
           className="sticky top-0 bg-base-100 dark:bg-base-100-dark"
         />
 
-        {routes.map((link, i) => (
-          <NavLink
-            asChild
-            fullWidth
-            className="hidden lg:flex"
-            key={i}
-            active={pathname === link.to}
-          >
-            <Link to={link.to}>{link.name}</Link>
-          </NavLink>
+        {routes.map((link) => (
+          <>
+            <NavLink
+              asChild
+              fullWidth
+              className="hidden lg:flex"
+              key={link.to}
+              active={pathname === link.to}
+            >
+              <Link to={link.to}>{link.name}</Link>
+            </NavLink>
+            {link.children
+              ? link.children.map((childrenLink) => (
+                  <NavLink
+                    asChild
+                    className="hidden lg:flex ml-2 mt-1"
+                    key={childrenLink.to}
+                    active={pathname === childrenLink.to}
+                  >
+                    <Link to={childrenLink.to}>{childrenLink.name}</Link>
+                  </NavLink>
+                ))
+              : null}
+          </>
         ))}
       </Sidebar>
 

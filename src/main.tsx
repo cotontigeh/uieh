@@ -14,6 +14,7 @@ import { SidebarView } from './pages/SidebarView.tsx'
 import { InputsView } from './pages/InputsView.tsx'
 import { TextareaView } from './pages/TextareaView.tsx'
 import { TitlesView } from './pages/TitlesView.tsx'
+import { InputExampleView } from './pages/InputExampleView.tsx'
 
 scan({ enabled: true })
 
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/badges" element={<BadgesView />} />
           <Route path="/buttons" element={<ButtonsView />} />
           <Route path="/inputs" element={<InputsView />} />
+          <Route path="/inputs/example" element={<InputExampleView />} />
           <Route path="/sidebar" element={<SidebarView />} />
           <Route path="/tabs" element={<TabsView />} />
           <Route path="/textarea" element={<TextareaView />} />

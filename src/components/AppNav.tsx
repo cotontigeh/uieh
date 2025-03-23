@@ -69,16 +69,30 @@ export const AppNav = () => {
         hideScrollWhenOpened
       >
         <NavHeader mobile onCloseClick={toggleNav} />
-        {routes.map((link, i) => (
-          <NavLink
-            key={i}
-            onClick={() => toggleNav(false)}
-            active={pathname === link.to}
-            fullWidth
-            asChild
-          >
-            <Link to={link.to}>{link.name}</Link>
-          </NavLink>
+        {routes.map((link) => (
+          <>
+            <NavLink
+              asChild
+              fullWidth
+              key={link.to}
+              active={pathname === link.to}
+            >
+              <Link to={link.to}>{link.name}</Link>
+            </NavLink>
+            {link.children
+              ? link.children.map((childrenLink) => (
+                  <NavLink
+                    asChild
+                    fullWidth
+                    className="ml-2 mt-1"
+                    key={childrenLink.to}
+                    active={pathname === childrenLink.to}
+                  >
+                    <Link to={childrenLink.to}>{childrenLink.name}</Link>
+                  </NavLink>
+                ))
+              : null}
+          </>
         ))}
       </Sidebar>
 
