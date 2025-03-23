@@ -1,9 +1,9 @@
-import { Display } from '@/components/Display'
+import { Display } from '@/docs/components/Display'
 import { Button } from '@/ui/Button/Button'
 import { Heading } from '@/ui/Heading'
 import { BiAlarm } from 'react-icons/bi'
 
-export const ButtonsView = () => {
+export default function ButtonPage() {
   return (
     <>
       <Heading uppercase>Button</Heading>

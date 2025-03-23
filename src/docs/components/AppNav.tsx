@@ -7,7 +7,7 @@ import { BiAlbum } from 'react-icons/bi'
 import { Link, useLocation } from 'react-router'
 import { NavHeader } from './NavHeader'
 import { Sidebar } from '@/ui/Sidebar'
-import { routes } from '@/config/routes'
+import { routes } from '@/docs/config/routes'
 
 export const AppNav = () => {
   const { toggleTheme, theme } = useTheme()

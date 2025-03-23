@@ -1,9 +1,9 @@
 import { NavLink } from '@/ui/Nav'
 import { Sidebar } from '@/ui/Sidebar'
 import { Link } from 'react-router'
-import { Display } from '@/components/Display'
+import { Display } from '@/docs/components/Display'
 import { cn } from '@/lib/utils'
-import { NavHeader } from '@/components/NavHeader'
+import { NavHeader } from '@/docs/components/NavHeader'
 import { Heading } from '@/ui/Heading'
 
 const displayClassName = cn(
@@ -11,7 +11,7 @@ const displayClassName = cn(
   'relative overflow-hidden h-[900px] p-0'
 )
 
-export const SidebarView = () => {
+export default function SidebarPage() {
   return (
     <>
       <Heading uppercase>Sidebar</Heading>

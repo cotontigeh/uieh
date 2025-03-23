@@ -1,9 +1,9 @@
-import { Display } from '@/components/Display'
+import { Display } from '@/docs/components/Display'
 import { Input } from '@/ui/Input'
 import { Heading } from '@/ui/Heading'
 import { Button } from '@/ui'
 
-export const InputExampleView = () => {
+export default function InputExamplesPage() {
   return (
     <>
       <Heading uppercase>Inputs Example</Heading>

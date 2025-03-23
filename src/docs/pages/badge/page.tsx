@@ -1,8 +1,8 @@
-import { Display } from '@/components/Display'
+import { Display } from '@/docs/components/Display'
 import { Badge } from '@/ui/Badge/Badge'
 import { Heading } from '@/ui/Heading'
 
-export const BadgesView = () => {
+export default function BadgePage() {
   return (
     <>
       <Heading uppercase>Badge</Heading>

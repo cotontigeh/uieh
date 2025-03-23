@@ -27,7 +27,7 @@
     "url": "https://github.com/cotontigeh/uieh.git"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite -c vite.docs.config.ts",
     "build": "tsc -b && vite build && cp -r src/theme dist/theme",
     "build-docs": "tsc -b && vite build -c vite.docs.config.ts",
     "lint": "eslint .",

@@ -1,10 +1,10 @@
 import { Tabs } from '@/ui/Tabs/Tabs'
 import { TabLink } from '@/ui/TabLink/TabLink'
 import { BiHash, BiTv } from 'react-icons/bi'
-import { Display } from '@/components/Display'
+import { Display } from '@/docs/components/Display'
 import { Heading } from '@/ui/Heading'
 
-export const TabsView = () => {
+export default function TabsPage() {
   return (
     <>
       <Heading uppercase>Tabs</Heading>

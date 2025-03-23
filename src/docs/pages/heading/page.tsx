@@ -1,7 +1,7 @@
-import { Display } from '@/components/Display'
+import { Display } from '@/docs/components/Display'
 import { Heading } from '@/ui/Heading'
 
-export const TitlesView = () => {
+export default function HeadingPage() {
   return (
     <>
       <Heading uppercase>Titles</Heading>

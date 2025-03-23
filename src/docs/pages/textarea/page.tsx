@@ -1,8 +1,8 @@
-import { Display } from '@/components/Display'
+import { Display } from '@/docs/components/Display'
 import { Textarea } from '@/ui/Textarea'
 import { Heading } from '@/ui/Heading'
 
-export const TextareaView = () => {
+export default function TextareaPage() {
   return (
     <>
       <Heading uppercase>Textarea</Heading>

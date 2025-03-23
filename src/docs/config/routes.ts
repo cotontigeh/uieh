@@ -1,20 +1,20 @@
 export const routes = [
   { name: 'Home', to: '/' },
-  { name: 'Badges', to: '/badges' },
-  { name: 'Buttons', to: '/buttons' },
+  { name: 'Badge', to: '/badge' },
+  { name: 'Button', to: '/button' },
+  { name: 'Heading', to: '/heading' },
   {
-    name: 'Inputs',
-    to: '/inputs',
+    name: 'Input',
+    to: '/input',
     children: [
       {
         name: 'Form Example',
-        to: '/inputs/example'
+        to: '/input/example'
       }
     ]
   },
   { name: 'Nav', to: '/nav' },
   { name: 'Sidebar', to: '/sidebar' },
   { name: 'Tabs', to: '/tabs' },
-  { name: 'Textarea', to: '/textarea' },
-  { name: 'Title', to: '/title' }
+  { name: 'Textarea', to: '/textarea' }
 ]

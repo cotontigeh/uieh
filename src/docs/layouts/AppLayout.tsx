@@ -1,12 +1,12 @@
-import { AppNav } from '@/components/AppNav'
-import { NavHeader } from '@/components/NavHeader'
-import { routes } from '@/config/routes'
+import { routes } from '@/docs/config/routes'
 import { Container } from '@/ui/Container'
 import { NavLink } from '@/ui/Nav'
 import { Sidebar } from '@/ui/Sidebar'
 import { Link, Outlet, useLocation } from 'react-router'
+import { AppNav } from '../components/AppNav'
+import { NavHeader } from '../components/NavHeader'
 
-export default function AppLayout() {
+export default function DocLayout() {
   const { pathname } = useLocation()
 
   return (

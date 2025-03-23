@@ -1,10 +1,10 @@
-import { Display } from '@/components/Display'
+import { Display } from '@/docs/components/Display'
 import { Button } from '@/ui/Button'
 import { Nav, NavContainer, NavLink } from '@/ui/Nav'
 import { Heading } from '@/ui/Heading'
 import { BiAlbum } from 'react-icons/bi'
 
-export const NavView = () => {
+export default function NavPage() {
   return (
     <>
       <Heading uppercase>Nav</Heading>
