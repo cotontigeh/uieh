@@ -1,9 +1,12 @@
-import { Textarea as HuTextarea } from '@headlessui/react'
+import {
+  Textarea as HuTextarea,
+  TextareaProps as HuTextareaProps
+} from '@headlessui/react'
 import { forwardRef } from 'react'
 import { cn } from '@/lib/utils'
 import { textareaVariants, TextareaVariantsType } from './textarea.variants'
 
-export type TextareaProps = React.ComponentPropsWithoutRef<typeof HuTextarea> &
+export type TextareaProps = HuTextareaProps &
   TextareaVariantsType & {
     placeholder?: string
     rows?: number
