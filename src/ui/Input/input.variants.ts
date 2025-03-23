@@ -11,8 +11,8 @@ export const inputVariants = cva({
     variant: { default: [] },
     color: {
       base: [
-        'ring-base-300 focus:ring-base-content/30',
-        'dark:ring-base-300-dark dark:focus:ring-base-content-dark/30'
+        'ring-base-content/10 focus:ring-base-content/30',
+        'dark:ring-base-300/10 dark:focus:ring-base-content-dark/30'
       ],
       primary: ['ring-primary/50 focus:ring-primary'],
       secondary: ['ring-secondary/50 focus:ring-secondary'],
