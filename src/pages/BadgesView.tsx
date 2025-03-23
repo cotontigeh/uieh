@@ -91,29 +91,29 @@ export const BadgesView = () => {
         <Heading variant="h2">Dashed</Heading>
 
         <div className="flex flex-wrap gap-2 py-2">
-          <Badge variant="dashed">Base</Badge>
-          <Badge color="primary" variant="dashed">
+          <Badge variant="outlined">Base</Badge>
+          <Badge color="primary" variant="outlined">
             Primary
           </Badge>
-          <Badge color="secondary" variant="dashed">
+          <Badge color="secondary" variant="outlined">
             Secondary
           </Badge>
-          <Badge color="accent" variant="dashed">
+          <Badge color="accent" variant="outlined">
             Accent
           </Badge>
-          <Badge color="neutral" variant="dashed">
+          <Badge color="neutral" variant="outlined">
             Neutral
           </Badge>
-          <Badge color="info" variant="dashed">
+          <Badge color="info" variant="outlined">
             Info
           </Badge>
-          <Badge color="success" variant="dashed">
+          <Badge color="success" variant="outlined">
             Success
           </Badge>
-          <Badge color="warning" variant="dashed">
+          <Badge color="warning" variant="outlined">
             Warning
           </Badge>
-          <Badge color="error" variant="dashed">
+          <Badge color="error" variant="outlined">
             Error
           </Badge>
         </div>
