@@ -1,17 +1,17 @@
+import { Input as HuInput, InputProps as HuInputProps } from '@headlessui/react'
 import { forwardRef } from 'react'
 import { cn } from '@/lib/utils'
 import { inputVariants, InputVariantsType } from './input.variants'
 
-export type InputProps = Omit<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  'size'
-> &
-  InputVariantsType & {}
+export type InputProps = Omit<HuInputProps, 'size' | 'as'> &
+  InputVariantsType & {
+    as?: React.ElementType
+  }
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(
+export const Input = forwardRef<React.ComponentRef<typeof HuInput>, InputProps>(
   ({ variant, size, color, className, disabled, ...props }, ref) => {
     return (
-      <input
+      <HuInput
         ref={ref}
         disabled={disabled}
         className={cn(
