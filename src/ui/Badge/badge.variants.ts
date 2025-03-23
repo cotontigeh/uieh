@@ -12,7 +12,7 @@ export const badgeVariants = cva({
   variants: {
     variant: {
       default: [''],
-      dashed: ['']
+      outlined: ['']
     },
     color: {
       base: [
@@ -36,46 +36,46 @@ export const badgeVariants = cva({
   },
   compoundVariants: [
     {
-      variant: 'dashed',
+      variant: 'outlined',
       className: ['bg-transparent', 'dark:bg-transparent']
     },
     {
-      variant: 'dashed',
+      variant: 'outlined',
       color: 'primary',
       className: ['text-primary', 'dark:text-primary-dark']
     },
     {
-      variant: 'dashed',
+      variant: 'outlined',
       color: 'secondary',
       className: ['text-secondary', 'dark:text-secondary-dark']
     },
     {
-      variant: 'dashed',
+      variant: 'outlined',
       color: 'accent',
       className: ['text-accent', 'dark:text-accent-dark']
     },
     {
-      variant: 'dashed',
+      variant: 'outlined',
       color: 'neutral',
       className: ['text-neutral', 'dark:text-neutral-dark']
     },
     {
-      variant: 'dashed',
+      variant: 'outlined',
       color: 'info',
       className: ['text-info', 'dark:text-info-dark']
     },
     {
-      variant: 'dashed',
+      variant: 'outlined',
       color: 'success',
       className: ['text-success', 'dark:text-success-dark']
     },
     {
-      variant: 'dashed',
+      variant: 'outlined',
       color: 'warning',
       className: ['text-warning', 'dark:text-warning-dark']
     },
     {
-      variant: 'dashed',
+      variant: 'outlined',
       color: 'error',
       className: ['text-error', 'dark:text-error-dark']
     }
