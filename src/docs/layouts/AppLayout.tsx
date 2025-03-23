@@ -5,6 +5,7 @@ import { Sidebar } from '@/ui/Sidebar'
 import { Link, Outlet, useLocation } from 'react-router'
 import { AppNav } from '../components/AppNav'
 import { NavHeader } from '../components/NavHeader'
+import React from 'react'
 
 export default function DocLayout() {
   const { pathname } = useLocation()
@@ -22,7 +23,7 @@ export default function DocLayout() {
         />
 
         {routes.map((link) => (
-          <>
+          <React.Fragment key={link.to}>
             <NavLink
               asChild
               fullWidth
@@ -36,15 +37,15 @@ export default function DocLayout() {
               ? link.children.map((childrenLink) => (
                   <NavLink
                     asChild
-                    className="hidden lg:flex ml-2 mt-1"
                     key={childrenLink.to}
+                    className="hidden lg:flex ml-2 mt-1"
                     active={pathname === childrenLink.to}
                   >
                     <Link to={childrenLink.to}>{childrenLink.name}</Link>
                   </NavLink>
                 ))
               : null}
-          </>
+          </React.Fragment>
         ))}
       </Sidebar>
 

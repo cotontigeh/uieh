@@ -8,6 +8,7 @@ import { Link, useLocation } from 'react-router'
 import { NavHeader } from './NavHeader'
 import { Sidebar } from '@/ui/Sidebar'
 import { routes } from '@/docs/config/routes'
+import React from 'react'
 
 export const AppNav = () => {
   const { toggleTheme, theme } = useTheme()
@@ -38,11 +39,13 @@ export const AppNav = () => {
           {routes.map((link, i) => (
             <NavLink
               asChild
+              key={i + link.to}
               className="hidden lg:flex"
-              key={i}
               active={pathname === link.to}
             >
-              <Link to={link.to}>{link.name}</Link>
+              <Link key={i} to={link.to}>
+                {link.name}
+              </Link>
             </NavLink>
           ))}
 
@@ -70,13 +73,8 @@ export const AppNav = () => {
       >
         <NavHeader mobile onCloseClick={toggleNav} />
         {routes.map((link) => (
-          <>
-            <NavLink
-              asChild
-              fullWidth
-              key={link.to}
-              active={pathname === link.to}
-            >
+          <React.Fragment key={link.to}>
+            <NavLink asChild fullWidth active={pathname === link.to}>
               <Link to={link.to}>{link.name}</Link>
             </NavLink>
             {link.children
@@ -92,7 +90,7 @@ export const AppNav = () => {
                   </NavLink>
                 ))
               : null}
-          </>
+          </React.Fragment>
         ))}
       </Sidebar>
 
