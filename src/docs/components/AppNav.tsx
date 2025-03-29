@@ -74,22 +74,32 @@ export const AppNav = () => {
         <NavHeader mobile onCloseClick={toggleNav} />
         {routes.map((link) => (
           <React.Fragment key={link.to}>
-            <NavLink asChild fullWidth active={pathname === link.to}>
+            <NavLink
+              asChild
+              fullWidth
+              className="ml-2 mt-1"
+              key={link.to}
+              active={pathname === link.to}
+              onClick={() => toggleNav()}
+            >
               <Link to={link.to}>{link.name}</Link>
             </NavLink>
-            {link.children
-              ? link.children.map((childrenLink) => (
+            {link.children ? (
+              <div className="w-full ml-4 pr-4 border-l border-base-100-dark/10 dark:border-base-100/10">
+                {link.children.map((childrenLink) => (
                   <NavLink
                     asChild
                     fullWidth
-                    className="ml-2 mt-1"
                     key={childrenLink.to}
+                    className="ml-2 my-2"
                     active={pathname === childrenLink.to}
+                    onClick={() => toggleNav()}
                   >
                     <Link to={childrenLink.to}>{childrenLink.name}</Link>
                   </NavLink>
-                ))
-              : null}
+                ))}
+              </div>
+            ) : null}
           </React.Fragment>
         ))}
       </Sidebar>
