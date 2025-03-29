@@ -33,18 +33,20 @@ export default function DocLayout() {
             >
               <Link to={link.to}>{link.name}</Link>
             </NavLink>
-            {link.children
-              ? link.children.map((childrenLink) => (
+            {link.children ? (
+              <div className="ml-4 border-l border-base-100-dark/10 dark:border-base-100/10">
+                {link.children.map((childrenLink) => (
                   <NavLink
                     asChild
                     key={childrenLink.to}
-                    className="hidden lg:flex ml-2 mt-1"
+                    className="hidden lg:flex ml-2 my-2"
                     active={pathname === childrenLink.to}
                   >
                     <Link to={childrenLink.to}>{childrenLink.name}</Link>
                   </NavLink>
-                ))
-              : null}
+                ))}
+              </div>
+            ) : null}
           </React.Fragment>
         ))}
       </Sidebar>
