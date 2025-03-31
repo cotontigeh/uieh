@@ -15,6 +15,7 @@ import NavPage from './pages/nav/page.tsx'
 import TabsPage from './pages/tabs/page.tsx'
 import TextareaPage from './pages/textarea/page.tsx'
 import DocLayout from './layouts/AppLayout.tsx'
+import SelectPage from './pages/select/page.tsx'
 
 scan({ enabled: true })
 
@@ -28,11 +29,12 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/button" element={<ButtonPage />} />
           <Route path="/heading" element={<HeadingPage />} />
           <Route path="/input" element={<InputPage />} />
+          <Route path="/input/select" element={<SelectPage />} />
+          <Route path="/input/textarea" element={<TextareaPage />} />
           <Route path="/input/example" element={<InputExamplesPage />} />
           <Route path="/nav" element={<NavPage />} />
           <Route path="/sidebar" element={<SidebarPage />} />
           <Route path="/tabs" element={<TabsPage />} />
-          <Route path="/textarea" element={<TextareaPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

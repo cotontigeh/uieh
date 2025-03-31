@@ -7,6 +7,8 @@ export const routes = [
     name: 'Input',
     to: '/input',
     children: [
+      { name: 'Select', to: '/input/select' },
+      { name: 'Textarea', to: '/input/textarea' },
       {
         name: 'Form Example',
         to: '/input/example'
@@ -15,6 +17,5 @@ export const routes = [
   },
   { name: 'Nav', to: '/nav' },
   { name: 'Sidebar', to: '/sidebar' },
-  { name: 'Tabs', to: '/tabs' },
-  { name: 'Textarea', to: '/textarea' }
+  { name: 'Tabs', to: '/tabs' }
 ]
