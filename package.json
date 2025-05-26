@@ -28,7 +28,7 @@
   },
   "scripts": {
     "dev": "vite -c vite.docs.config.ts",
-    "build": "tsc -b && vite build && cp -r src/theme dist/theme",
+    "build": "tsc -b -d && vite build && cp -r src/theme dist/theme",
     "build-docs": "tsc -b && vite build -c vite.docs.config.ts",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -62,7 +62,8 @@
     "prettier": "^3.4.2",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1",
-    "vite": "^6.2.3"
+    "vite": "^6.2.3",
+    "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {
     "@headlessui/react": "^2.0.0",
