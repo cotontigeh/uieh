@@ -1,1 +1,6 @@
 export * from './Button'
+export * from './Input'
+export * from './Burger'
+export * from './Tabs'
+export * from './TabLink'
+export * from './Badge'
