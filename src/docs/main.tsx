@@ -16,6 +16,7 @@ import TabsPage from './pages/tabs/page.tsx'
 import TextareaPage from './pages/textarea/page.tsx'
 import DocLayout from './layouts/AppLayout.tsx'
 import SelectPage from './pages/select/page.tsx'
+import CardPage from './pages/card/page.tsx'
 
 scan({ enabled: true })
 
@@ -27,6 +28,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/" element={<HomePage />} />
           <Route path="/badge" element={<BadgePage />} />
           <Route path="/button" element={<ButtonPage />} />
+          <Route path="/card" element={<CardPage />} />
           <Route path="/heading" element={<HeadingPage />} />
           <Route path="/input" element={<InputPage />} />
           <Route path="/input/select" element={<SelectPage />} />

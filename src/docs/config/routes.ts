@@ -2,6 +2,7 @@ export const routes = [
   { name: 'Home', to: '/' },
   { name: 'Badge', to: '/badge' },
   { name: 'Button', to: '/button' },
+  { name: 'Card', to: '/card' },
   { name: 'Heading', to: '/heading' },
   {
     name: 'Input',
