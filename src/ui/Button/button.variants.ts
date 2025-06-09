@@ -8,7 +8,8 @@ export const buttonVariants = cva({
     variant: {
       default: [''],
       ghost: ['ring-[1.1px]'],
-      text: 'bg-transparent border-transparent'
+      text: 'bg-transparent border-transparent',
+      flat: 'rounded-none'
     },
     color: {
       base: [
@@ -35,7 +36,8 @@ export const buttonVariants = cva({
       warning: [
         'bg-warning text-warning-content ring-warning hover:bg-warning/90'
       ],
-      error: ['bg-error text-error-content ring-error hover:bg-error/90']
+      error: ['bg-error text-error-content ring-error hover:bg-error/90'],
+      transparent: 'bg-transparent'
     },
     size: {
       small: 'text-sm px-3 py-2',
