@@ -8,6 +8,7 @@ export type ButtonProps = React.HTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
     disabled?: boolean
+    type?: 'button' | 'submit' | 'reset'
   }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
