@@ -1,6 +1,6 @@
 import { Display } from '@/docs/components/Display'
 import { Heading } from '@/ui/Heading'
-import { Select } from '@/ui/select'
+import { Select } from '@/ui/Select'
 
 export default function SelectPage() {
   return (
