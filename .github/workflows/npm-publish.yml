@@ -27,20 +27,26 @@ jobs:
 
       - name: Set version from release
         run: |
-          # For GitHub releases, use the release tag name directly
-          if [ -n "${{ github.event.release.tag_name }}" ]; then
-            VERSION="${{ github.event.release.tag_name }}"
-            # Remove 'v' prefix if present
-            VERSION=${VERSION#v}
-          else
-            # Fallback to GITHUB_REF if needed
-            VERSION=${GITHUB_REF#refs/tags/}
-            VERSION=${VERSION#v}
-          fi
+          VERSION="${{ github.event.release.tag_name }}"
+          # Remove 'v' prefix if present
+          VERSION=${VERSION#v}
           echo "Setting version to $VERSION"
           npm version $VERSION --no-git-tag-version
 
+      - name: Determine npm tag
+        id: npm_tag
+        run: |
+          if [[ "${{ github.event.release.tag_name }}" == *"-alpha"* ]]; then
+            echo "tag=alpha" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event.release.tag_name }}" == *"-beta"* ]]; then
+            echo "tag=beta" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event.release.tag_name }}" == *"-rc"* ]]; then
+            echo "tag=rc" >> $GITHUB_OUTPUT
+          else
+            echo "tag=latest" >> $GITHUB_OUTPUT
+          fi
+
       - name: Publish to NPM
-        run: npm publish
+        run: npm publish --tag ${{ steps.npm_tag.outputs.tag }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
