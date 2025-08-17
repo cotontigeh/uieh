@@ -4,7 +4,6 @@
   "description": "Ui library for react",
   "author": "Adrien E.",
   "license": "MIT",
-  "private": true,
   "type": "module",
   "files": [
     "dist"
@@ -28,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cotontigeh/uieh.git"
+    "url": "git+https://github.com/cotontigeh/uieh.git"
   },
   "scripts": {
     "dev": "vite -c vite.docs.config.ts",
