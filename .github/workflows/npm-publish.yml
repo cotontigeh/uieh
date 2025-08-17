@@ -27,7 +27,8 @@ jobs:
 
       - name: Set version from release
         run: |
-          VERSION=${GITHUB_REF#refs/tags/v}
+          VERSION=${GITHUB_REF#refs/tags/}
+          VERSION=${VERSION#v}
           echo "Setting version to $VERSION"
           npm version $VERSION --no-git-tag-version
 
