@@ -18,6 +18,17 @@ jobs:
         with:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org/'
+          cache: 'yarn'
+
+      - name: Verify package version matches release tag
+        run: |
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          RELEASE_TAG="${{ github.event.release.tag_name }}"
+          RELEASE_VERSION="${RELEASE_TAG#v}"
+          if [ "$PACKAGE_VERSION" != "$RELEASE_VERSION" ]; then
+            echo "Error: Package version ($PACKAGE_VERSION) does not match release tag ($RELEASE_VERSION)"
+            exit 1
+          fi
 
       - name: Install dependencies 
         run: yarn install --frozen-lockfile
@@ -25,28 +36,7 @@ jobs:
       - name: Build package
         run: yarn build
 
-      - name: Set version from release
-        run: |
-          VERSION="${{ github.event.release.tag_name }}"
-          # Remove 'v' prefix if present
-          VERSION=${VERSION#v}
-          echo "Setting version to $VERSION"
-          npm version $VERSION --no-git-tag-version
-
-      - name: Determine npm tag
-        id: npm_tag
-        run: |
-          if [[ "${{ github.event.release.tag_name }}" == *"-alpha"* ]]; then
-            echo "tag=alpha" >> $GITHUB_OUTPUT
-          elif [[ "${{ github.event.release.tag_name }}" == *"-beta"* ]]; then
-            echo "tag=beta" >> $GITHUB_OUTPUT
-          elif [[ "${{ github.event.release.tag_name }}" == *"-rc"* ]]; then
-            echo "tag=rc" >> $GITHUB_OUTPUT
-          else
-            echo "tag=latest" >> $GITHUB_OUTPUT
-          fi
-
       - name: Publish to NPM
-        run: npm publish --tag ${{ steps.npm_tag.outputs.tag }}
+        run: yarn publish --non-interactive
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
