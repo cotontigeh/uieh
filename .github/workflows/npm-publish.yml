@@ -27,8 +27,16 @@ jobs:
 
       - name: Set version from release
         run: |
-          VERSION=${GITHUB_REF#refs/tags/}
-          VERSION=${VERSION#v}
+          # For GitHub releases, use the release tag name directly
+          if [ -n "${{ github.event.release.tag_name }}" ]; then
+            VERSION="${{ github.event.release.tag_name }}"
+            # Remove 'v' prefix if present
+            VERSION=${VERSION#v}
+          else
+            # Fallback to GITHUB_REF if needed
+            VERSION=${GITHUB_REF#refs/tags/}
+            VERSION=${VERSION#v}
+          fi
           echo "Setting version to $VERSION"
           npm version $VERSION --no-git-tag-version
 
