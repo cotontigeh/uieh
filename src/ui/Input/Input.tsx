@@ -9,13 +9,13 @@ export type InputProps = Omit<HuInputProps, 'size' | 'as'> &
   }
 
 export const Input = forwardRef<React.ComponentRef<typeof HuInput>, InputProps>(
-  ({ variant, size, color, className, disabled, ...props }, ref) => {
+  ({ variant, size, color, className, disabled, type, ...props }, ref) => {
     return (
       <HuInput
         ref={ref}
         disabled={disabled}
         className={cn(
-          inputVariants({ variant, size, color, disabled }),
+          inputVariants({ variant, size, color, disabled, type }),
           className
         )}
         {...props}

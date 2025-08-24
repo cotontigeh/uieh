@@ -9,6 +9,13 @@ export const inputVariants = cva({
   ],
   variants: {
     variant: { default: [] },
+    type: {
+      text: [],
+      date: ['appearance-none'],
+      number: [],
+      email: [],
+      password: []
+    },
     color: {
       base: [
         'ring-base-content/10 focus:ring-base-content/30',
