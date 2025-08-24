@@ -13,12 +13,14 @@ export const Input = forwardRef<React.ComponentRef<typeof HuInput>, InputProps>(
     return (
       <HuInput
         ref={ref}
+        type={type}
         disabled={disabled}
         className={cn(
           inputVariants({ variant, size, color, disabled, type }),
           className
         )}
         {...props}
+        as="input"
       />
     )
   }
