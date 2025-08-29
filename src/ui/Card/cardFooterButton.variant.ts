@@ -1,7 +1,7 @@
 import { cva } from 'cva'
 
 export const cardFooterButtonVariants = cva({
-  base: ['flex justify-center items-center w-full px-4 py-2'],
+  base: ['flex justify-center items-center w-full px-4 py-2 cursor-pointer'],
   variants: {
     variant: {},
     color: {

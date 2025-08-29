@@ -5,7 +5,7 @@ export const cardFooterVariants = cva({
   variants: {
     variant: {
       default: 'flex px-4 py-2',
-      button: 'flex w-full justify-center px-4 py-2',
+      button: 'flex w-full justify-center px-4 py-2 cursor-pointer',
       buttons: 'flex w-full justify-center'
     },
     color: {
