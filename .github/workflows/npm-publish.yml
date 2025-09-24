@@ -1,8 +1,14 @@
-name: NPM Publish on Release
+name: NPM Publish with Bun (Monorepo) on publish
 
 on:
   release:
     types: [created]
+  workflow_dispatch:
+    inputs:
+      package_path:
+        description: 'Package path to publish (e.g., packages/uieh)'
+        required: true
+        default: 'packages/uieh'
 
 jobs:
   build-and-publish:
@@ -13,30 +19,61 @@ jobs:
         with:
           ref: ${{ github.event.release.target_commitish }}
 
-      - name: Setup Node.js
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Setup Node.js (for npm registry)
         uses: actions/setup-node@v4
         with:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org/'
-          cache: 'yarn'
 
       - name: Verify package version matches release tag
         run: |
-          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          PACKAGE_PATH="${{ github.event.inputs.package_path || 'packages/uieh' }}"
+          PACKAGE_VERSION=$(bun -p "require('./$PACKAGE_PATH/package.json').version")
           RELEASE_TAG="${{ github.event.release.tag_name }}"
           RELEASE_VERSION="${RELEASE_TAG#v}"
           if [ "$PACKAGE_VERSION" != "$RELEASE_VERSION" ]; then
             echo "Error: Package version ($PACKAGE_VERSION) does not match release tag ($RELEASE_VERSION)"
             exit 1
           fi
+          echo "✅ Package version matches release tag: $PACKAGE_VERSION"
 
-      - name: Install dependencies 
-        run: yarn install --frozen-lockfile
+      - name: Install dependencies with Bun
+        run: |
+          bun install --frozen-lockfile
+          echo "✅ Dependencies installed successfully"
 
       - name: Build package
-        run: yarn build
+        run: |
+          PACKAGE_PATH="${{ github.event.inputs.package_path || 'packages/uieh' }}"
+          cd $PACKAGE_PATH
+          bun run build
+          echo "✅ Package built successfully"
+
+      - name: Verify build output
+        run: |
+          PACKAGE_PATH="${{ github.event.inputs.package_path || 'packages/uieh' }}"
+          if [ ! -d "$PACKAGE_PATH/dist" ]; then
+            echo "❌ Build output directory 'dist' not found"
+            exit 1
+          fi
+          echo "✅ Build output verified"
 
       - name: Publish to NPM
-        run: yarn publish --non-interactive
+        run: |
+          PACKAGE_PATH="${{ github.event.inputs.package_path || 'packages/uieh' }}"
+          cd $PACKAGE_PATH
+          bun publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Verify publication
+        run: |
+          PACKAGE_PATH="${{ github.event.inputs.package_path || 'packages/uieh' }}"
+          PACKAGE_NAME=$(bun -p "require('./$PACKAGE_PATH/package.json').name")
+          PACKAGE_VERSION=$(bun -p "require('./$PACKAGE_PATH/package.json').version")
+          echo "✅ Successfully published $PACKAGE_NAME@$PACKAGE_VERSION to NPM"
