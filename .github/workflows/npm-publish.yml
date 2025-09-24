@@ -30,6 +30,8 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org/'
           scope: '@cotontigeh'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Verify package version matches release tag
         run: |
@@ -64,17 +66,11 @@ jobs:
           fi
           echo "✅ Build output verified"
 
-      - name: Configure NPM authentication for Bun
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-          echo "registry=https://registry.npmjs.org/" >> ~/.npmrc
-          echo "access=public" >> ~/.npmrc
-
       - name: Publish to NPM
         run: |
           PACKAGE_PATH="${{ github.event.inputs.package_path || 'packages/uieh' }}"
           cd $PACKAGE_PATH
-          bun publish --access public --no-git-checks
+          npm publish --access public
 
       - name: Verify publication
         run: |
