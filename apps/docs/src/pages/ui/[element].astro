@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getEntry, render } from 'astro:content';
+
+
+export function getStaticPaths() {
+  return [
+    { params: { element: "button" }},
+  ];
+}
+
+const { element } = Astro.params;
+
+const entry = await getEntry('ui', element);
+
+if (!entry) {
+  throw new Error(`Could not find ${element}`);
+}
+
+const { Content, headings } = await render(entry);
+
+console.log(headings)
+
+
+---
+
+<Layout>
+  <Content />
+</Layout>

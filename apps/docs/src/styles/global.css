@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "uieh/theme/colors.theme.css";
+@source "../../../../node_modules/uieh/";
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  /* @apply bg-white dark:bg-neutral-950/99 dark:text-white; */
+  @apply bg-base-200 dark:bg-base-200-dark text-base-content dark:text-base-content-dark;
+}
