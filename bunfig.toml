@@ -1,0 +1,23 @@
+[install]
+# Use exact versions for reproducible builds
+exact = true
+# Install peer dependencies automatically
+peer = true
+
+[install.scopes]
+# Configure scoped packages if needed
+"@cotontigeh" = "https://registry.npmjs.org/"
+
+[run]
+# Enable bun's fast bundler for development
+bun = true
+
+[test]
+# Configure test environment
+preload = ["./test/setup.ts"]
+
+[publish]
+# Default publish configuration
+access = "public"
+# Don't run git checks during CI
+git = false
