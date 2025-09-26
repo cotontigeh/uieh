@@ -1,0 +1,40 @@
+---
+import { Sidebar, NavLink } from "uieh";
+import { routes } from "../../config/routes";
+---
+
+<Sidebar className="h-full overflow-hidden">
+  <h3 class="text-2xl font-bold">Docs</h3>
+  <hr class="h-1 w-full border-base-300 dark:border-base-300-dark" />
+  <NavLink
+    variant="underline"
+    fullWidth
+    href={routes.docs.to}
+    active={Astro.url.pathname === routes.docs.to}
+  >
+    Getting Started
+  </NavLink>
+
+  <!-- UI -->
+  <NavLink
+    variant="underline"
+    fullWidth
+    href={routes.docs.children.ui.to}
+    active={Astro.url.pathname.includes("/docs/ui")}
+  >
+    {routes.docs.children.ui.name}
+  </NavLink>
+
+  <div
+    class="pl-4 border-l border-base-100-dark/10 dark:border-base-100/10 w-full"
+  >
+    <NavLink
+      variant="underline"
+      fullWidth
+      href="/docs/ui/button"
+      active={Astro.url.pathname === routes.docs.children.ui.children.button.to}
+    >
+      Button
+    </NavLink>
+  </div>
+</Sidebar>

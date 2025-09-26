@@ -1,0 +1,35 @@
+---
+import { Nav, NavContainer, NavLink, Button } from "uieh";
+import { routes } from "../../config/routes";
+import { Theme } from "../React/Theme/Theme";
+---
+
+<Nav color="base">
+  <NavContainer>
+    <NavLink
+      className="text-xl font-bold mr-2 border-1 border-base-300 dark:border-base-300-dark"
+      href={routes.home.to}
+    >
+      UIEH
+    </NavLink>
+    <NavLink
+      color="base"
+      active={Astro.url.pathname === routes.home.to}
+      href={routes.home.to}
+    >
+      {routes.home.name}
+    </NavLink>
+    <NavLink
+      color="base"
+      active={Astro.url.pathname.includes(routes.docs.to)}
+      href={routes.docs.to}
+    >
+      {routes.docs.name}
+    </NavLink>
+    <Button className="ml-auto">
+      <a href="https://github.com/cotontigeh/uieh" target="_blank"> Github </a>
+    </Button>
+    <Button color="secondary" disabled> Discord </Button>
+    <Theme client:only="react" />
+  </NavContainer>
+</Nav>

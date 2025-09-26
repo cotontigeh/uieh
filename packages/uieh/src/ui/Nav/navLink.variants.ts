@@ -6,14 +6,15 @@ export const navLinkVariants = cva({
   base: ['select-none cursor-pointer'],
   variants: {
     variant: {
-      default: ['p-2 px-4 rounded-lg font-semibold']
+      default: ['p-2 px-4 rounded-lg'],
+      underline: ['p-2 px-4']
     },
     color: {
       base: ['hover:bg-base-200 dark:hover:bg-base-200-dark'],
-      primary: ['hover:bg-base-300 hover:text-primary'],
-      secondary: ['hover:bg-base-300 hover:text-secondary'],
-      accent: ['hover:bg-base-300 hover:text-accent'],
-      neutral: ['hover:bg-base-300 hover:text-neutral']
+      primary: ['hover:bg-primary hover:text-primary-content'],
+      secondary: ['hover:bg-secondary hover:text-secondary-content'],
+      accent: ['hover:bg-accent hover:text-accent-content'],
+      neutral: ['hover:bg-neutral hover:text-neutral-content']
     },
     fullWidth: {
       unset: null,
@@ -25,14 +26,18 @@ export const navLinkVariants = cva({
     }
   },
   compoundVariants: [
+    // Globals
     {
-      variant: 'default',
+      variant: ['default', 'underline'],
       fullWidth: true,
       className: ['flex w-full justify-start']
     },
+
+    // Default Variants
     {
       color: 'base',
       active: true,
+      variant: 'default',
       className: [
         'bg-base-300 hover:bg-base-300',
         'dark:bg-base-300-dark dark:hover:bg-base-300-dark'
@@ -41,22 +46,39 @@ export const navLinkVariants = cva({
     {
       color: 'primary',
       active: true,
-      className: ['bg-base-300 hover:bg-base-300 text-primary']
+      variant: 'default',
+      className: ['bg-primary text-primary-content']
     },
     {
       color: 'secondary',
       active: true,
-      className: ['bg-base-300 hover:bg-base-300 text-secondary']
+      variant: 'default',
+      className: ['bg-secondary text-secondary-content']
     },
     {
       color: 'accent',
       active: true,
-      className: ['bg-base-300 hover:bg-base-300 text-accent']
+      variant: 'default',
+      className: ['bg-accent text-accent-content']
     },
     {
       color: 'neutral',
       active: true,
-      className: ['bg-base-300 hover:bg-base-300 text-neutral']
+      variant: 'default',
+      className: ['bg-neutral text-neutral-content']
+    },
+
+    // Underline Variants
+    {
+      variant: 'underline',
+      className: [
+        'hover:bg-transparent dark:hover:bg-transparent hover:text-shadow-md'
+      ]
+    },
+    {
+      active: true,
+      variant: 'underline',
+      className: ['font-semibold hover:text-shadow-transparent']
     }
   ],
   defaultVariants: {
