@@ -6,6 +6,7 @@ import { navLinkVariants, NavLinkVariantsType } from './navLink.variants'
 export type NavLinkProps = React.HTMLAttributes<HTMLAnchorElement> &
   NavLinkVariantsType & {
     asChild?: boolean
+    href?: string
   }
 
 export const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>(
@@ -14,7 +15,6 @@ export const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>(
     ref
   ) => {
     const Component = asChild ? Slot : 'a'
-
     return (
       <Component
         ref={ref}
