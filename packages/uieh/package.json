@@ -30,7 +30,7 @@
     "url": "git+https://github.com/cotontigeh/uieh.git"
   },
   "scripts": {
-    "dev": "nodemon --watch src --exec \"bun run build\"",
+    "dev": "nodemon",
     "dev-old": "vite -c vite.docs.config.ts",
     "build": "vite build && cp -r src/theme dist/theme",
     "build-docs": "tsc -b && vite build -c vite.docs.config.ts",

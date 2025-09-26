@@ -1,0 +1,11 @@
+{
+  "watch": [
+    "src"
+  ],
+  "ext": "ts,tsx,js,jsx,json",
+  "ignore": [
+    "dist",
+    "node_modules"
+  ],
+  "exec": "bun run build"
+}

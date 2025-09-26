@@ -2,7 +2,7 @@
   "name": "uieh-monorepo",
   "private": true,
   "scripts": {
-    "dev": "bun run --filter uieh dev",
+    "dev": "bun run --filter uieh --filter docs dev",
     "build": "bun run --filter uieh build",
     "build:all": "bun run --filter '*' build",
     "lint": "bun run --filter '*' lint",
