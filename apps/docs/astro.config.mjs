@@ -12,4 +12,7 @@ export default defineConfig({
     // @ts-ignore
     plugins: [tailwindcss()],
   },
+  server: {
+    port: 4321,
+  },
 });
