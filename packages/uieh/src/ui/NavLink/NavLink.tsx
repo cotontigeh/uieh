@@ -1,10 +1,11 @@
 import { forwardRef } from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { cn } from '@/lib/utils'
-import { navLinkVariants, NavLinkVariantsType } from './navLink.variants'
+import { navLinkVariants } from './navLink.variants'
+import { NavLinkVariants } from './navLink.type'
 
 export type NavLinkProps = React.HTMLAttributes<HTMLAnchorElement> &
-  NavLinkVariantsType & {
+  NavLinkVariants & {
     asChild?: boolean
     href?: string
   }
