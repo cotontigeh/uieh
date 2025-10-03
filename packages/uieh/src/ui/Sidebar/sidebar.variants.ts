@@ -1,6 +1,5 @@
-import { cva, VariantProps } from 'cva'
-
-export type SidebarVariantsType = VariantProps<typeof sidebarVariants>
+import { cva } from 'cva'
+import { flyCompoundVariant } from './compoundVariants/flyVariant.compound'
 
 export const sidebarVariants = cva({
   base: [
@@ -18,6 +17,7 @@ export const sidebarVariants = cva({
         'bg-base-100 border-r border-base-300',
         'dark:bg-base-100-dark dark:border-base-300-dark'
       ],
+      transparent: ['border-r border-base-300', 'dark:border-base-300-dark'],
       primary: [
         'border-r border-base-300/20 bg-primary text-base-content-dark'
       ],
@@ -30,23 +30,20 @@ export const sidebarVariants = cva({
     open: {
       unset: null,
       true: ''
+    },
+    sticky: {
+      unset: null,
+      true: 'sticky top-0 z-20'
     }
   },
   compoundVariants: [
-    {
-      open: true,
-      variant: 'fly',
-      className: 'left-0'
-    },
-    {
-      open: false,
-      variant: 'fly',
-      className: '-left-full'
-    }
+    // 🟦 Fly Variants
+    ...flyCompoundVariant
   ],
   defaultVariants: {
     variant: 'default',
     color: 'base',
-    open: true
+    open: false,
+    sticky: false
   }
 })
