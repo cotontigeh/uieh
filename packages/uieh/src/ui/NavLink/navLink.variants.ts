@@ -1,7 +1,7 @@
 import { cva } from 'cva'
-import { globalsCompoundVariant } from './compoundVariants/globals.compoundVariant'
-import { badgeCompoundVariant } from './compoundVariants/badgeVariant.compoundVariant'
-import { defaultCompoundVariant } from './compoundVariants/defaultVariant.compoundVariant'
+import { globalsCompoundVariant } from './compoundVariants/globals.compound'
+import { badgeCompoundVariant } from './compoundVariants/badgeVariant.compound'
+import { defaultCompoundVariant } from './compoundVariants/defaultVariant.compound'
 
 export const navLinkVariants = cva({
   base: ['select-none cursor-pointer'],

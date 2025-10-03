@@ -1,6 +1,16 @@
 import { NavLinkCompoundVariant } from '../navLink.type'
 
 export const badgeCompoundVariant: NavLinkCompoundVariant[] = [
+  {
+    variant: 'badge',
+    className: ['text-base-300-dark/50 dark:text-base-300/50']
+  },
+  {
+    variant: 'badge',
+    active: true,
+    className: ['text-base-300-dark dark:text-base-300']
+  },
+
   // 🟫 Base color
   {
     variant: 'badge',
