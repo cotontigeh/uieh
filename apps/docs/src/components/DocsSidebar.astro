@@ -1,0 +1,68 @@
+---
+import { Sidebar, NavLink } from "uieh";
+import { routes } from "../config/routes";
+import { cn } from "uieh/utils";
+import { getCollection } from "astro:content";
+import type { UiCollectionType } from "../../content.config";
+
+const uiDocs: UiCollectionType[] = await getCollection("ui");
+const uiDocsSorted = uiDocs.sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+
+const currentPath = Astro.url.pathname;
+const uiChildrenPath = routes.docs.children.ui.children.elements.to;
+---
+
+<Sidebar
+  className="h-[calc(100vh-60px)] max-w-[350px]"
+  sticky
+  color="transparent"
+>
+  <h3 class="text-2xl font-bold">Docs</h3>
+  <hr class="h-1 w-full border-base-300 dark:border-base-300-dark" />
+  <NavLink
+    fullWidth
+    href={routes.docs.to}
+    active={currentPath === routes.docs.to}
+  >
+    Getting Started
+  </NavLink>
+
+  <!-- UI -->
+  <NavLink
+    fullWidth
+    href={routes.docs.children.ui.to}
+    active={currentPath.includes("/docs/ui")}
+  >
+    {routes.docs.children.ui.name}
+  </NavLink>
+
+  <div class="pl-4">
+    <div
+      class="border-l border-base-100-dark/10 dark:border-base-100/10 w-full"
+    >
+      {
+        uiDocsSorted.map((doc) => (
+          <NavLink
+            key={doc.id}
+            fullWidth
+            href={uiChildrenPath.replace(":element", doc.slug)}
+            className={cn(
+              "border-l border-transparent",
+              "hover:border-base-100-dark dark:hover:border-base-100",
+              currentPath === uiChildrenPath.replace(":element", doc.slug)
+                ? "border-base-100-dark dark:border-base-100"
+                : undefined
+            )}
+            active={
+              currentPath === uiChildrenPath.replace(":element", doc.slug)
+            }
+          >
+            {doc.data.title}
+          </NavLink>
+        ))
+      }
+    </div>
+  </div>
+</Sidebar>

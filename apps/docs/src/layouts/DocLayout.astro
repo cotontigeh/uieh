@@ -1,8 +1,10 @@
 ---
-import DocsNav from "../components/DocsNav/DocsNav.astro";
+import DocsSidebar from "../components/DocsSidebar.astro";
 ---
 
 <div class="flex gap-2">
-  <DocsNav />
+  <div class="hidden lg:block w-full">
+    <DocsSidebar />
+  </div>
   <slot />
 </div>

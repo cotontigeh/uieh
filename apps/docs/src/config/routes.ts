@@ -11,9 +11,9 @@ export const routes = {
         name: "UI",
         to: "/docs/ui",
         children: {
-          button: {
-            name: "Button",
-            to: "/docs/ui/button",
+          elements: {
+            name: "Elements",
+            to: "/docs/ui/:element",
           },
         },
       },

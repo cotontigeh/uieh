@@ -1,5 +1,15 @@
 import { defineCollection, z } from "astro:content";
-import { glob } from "astro/loaders";
+
+export type UiCollectionType = {
+  id: string;
+  slug: string;
+  data: {
+    title: string;
+    author: string;
+    pubDate: Date;
+    updatedDate?: Date;
+  };
+};
 
 const ui = defineCollection({
   type: "content",
