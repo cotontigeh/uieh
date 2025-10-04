@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 import type { UiCollectionType } from "../../../../content.config";
 
 export async function getStaticPaths() {
-  const uiDocs: UiCollectionType[] = await getCollection("ui");
+  const uiDocs = (await getCollection("ui")) as unknown as UiCollectionType[];
   return uiDocs.map((doc) => ({ params: { element: doc.slug } }));
 }
 

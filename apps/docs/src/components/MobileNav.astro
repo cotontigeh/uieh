@@ -6,7 +6,7 @@ import { cn } from "uieh/utils";
 import type { UiCollectionType } from "../../content.config";
 import { getCollection } from "astro:content";
 
-const uiDocs: UiCollectionType[] = await getCollection("ui");
+const uiDocs = (await getCollection("ui")) as unknown as UiCollectionType[];
 const uiChildrenPath = routes.docs.children.ui.children.elements.to;
 const currentPath = Astro.url.pathname;
 ---
@@ -40,51 +40,68 @@ const currentPath = Astro.url.pathname;
 </NavUIEH>
 
 <Sidebar variant="fly" id="mobile-sidebar">
-  <h3 class="text-2xl font-bold">Docs</h3>
-  <hr class="h-1 w-full border-base-300 dark:border-base-300-dark" />
   <NavLink
     fullWidth
+    variant="badge"
+    active={Astro.url.pathname === routes.home.to}
+    href={routes.home.to}
+  >
+    {routes.home.name}
+  </NavLink>
+  <NavLink
+    fullWidth
+    variant="badge"
+    color="secondary"
+    active={Astro.url.pathname.includes(routes.docs.to)}
     href={routes.docs.to}
-    active={Astro.url.pathname === routes.docs.to}
   >
-    Getting Started
+    {routes.docs.name}
   </NavLink>
 
-  <NavLink
-    fullWidth
-    href={routes.docs.children.ui.to}
-    active={Astro.url.pathname.includes("/docs/ui")}
-  >
-    {routes.docs.children.ui.name}
-  </NavLink>
+  {
+    Astro.url.pathname === routes.docs.to ? (
+      <>
+        <NavLink
+          fullWidth
+          href={routes.docs.to}
+          active={Astro.url.pathname === routes.docs.to}
+        >
+          Getting Started
+        </NavLink>
 
-  <div class="pl-4">
-    <div
-      class="border-l border-base-100-dark/10 dark:border-base-100/10 w-full"
-    >
-      {
-        uiDocs?.map((doc) => (
-          <NavLink
-            key={doc.id}
-            fullWidth
-            href={uiChildrenPath.replace(":element", doc.slug)}
-            className={cn(
-              "border-l border-transparent",
-              "hover:border-base-100-dark dark:hover:border-base-100",
-              currentPath === uiChildrenPath.replace(":element", doc.slug)
-                ? "border-base-100-dark dark:border-base-100"
-                : undefined
-            )}
-            active={
-              currentPath === uiChildrenPath.replace(":element", doc.slug)
-            }
-          >
-            {doc.data.title}
-          </NavLink>
-        ))
-      }
-    </div>
-  </div>
+        <NavLink
+          fullWidth
+          href={routes.docs.children.ui.to}
+          active={Astro.url.pathname.includes("/docs/ui")}
+        >
+          {routes.docs.children.ui.name}
+        </NavLink>
+        <div class="pl-4">
+          <div class="border-l border-base-100-dark/10 dark:border-base-100/10 w-full">
+            {uiDocs?.map((doc) => (
+              <NavLink
+                key={doc.id}
+                fullWidth
+                href={uiChildrenPath.replace(":element", doc.slug)}
+                className={cn(
+                  "border-l border-transparent",
+                  "hover:border-base-100-dark dark:hover:border-base-100",
+                  currentPath === uiChildrenPath.replace(":element", doc.slug)
+                    ? "border-base-100-dark dark:border-base-100"
+                    : undefined
+                )}
+                active={
+                  currentPath === uiChildrenPath.replace(":element", doc.slug)
+                }
+              >
+                {doc.data.title}
+              </NavLink>
+            ))}
+          </div>
+        </div>
+      </>
+    ) : null
+  }
 </Sidebar>
 
 <Backdrop className="lg:hidden" id="mobile-backdrop" />

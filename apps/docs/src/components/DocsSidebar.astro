@@ -5,7 +5,10 @@ import { cn } from "uieh/utils";
 import { getCollection } from "astro:content";
 import type { UiCollectionType } from "../../content.config";
 
-const uiDocs: UiCollectionType[] = await getCollection("ui");
+const uiDocs = (await getCollection("ui")) as unknown as UiCollectionType[];
+
+console.log(uiDocs);
+
 const uiDocsSorted = uiDocs.sort((a, b) =>
   a.data.title.localeCompare(b.data.title)
 );

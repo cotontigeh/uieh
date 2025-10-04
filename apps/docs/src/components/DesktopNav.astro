@@ -20,6 +20,7 @@ import { BiMoon, BiSun } from "react-icons/bi";
     >
       UIEH
     </NavLink>
+
     <!-- Links -->
     <NavLink
       active={Astro.url.pathname === routes.home.to}
@@ -37,7 +38,7 @@ import { BiMoon, BiSun } from "react-icons/bi";
     </NavLink>
 
     <!-- Theme toggle -->
-    <div id="themeToggleMobile" class="ml-auto cursor-pointer select-none">
+    <div id="themeToggle" class="ml-auto cursor-pointer select-none">
       <BiMoon className="dark:hidden" size={20} />
       <BiSun className="hidden dark:block" size={20} />
     </div>
