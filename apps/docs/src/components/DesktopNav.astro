@@ -7,45 +7,44 @@ import { BiMoon, BiSun } from "react-icons/bi";
 ---
 
 <!-- 🖥️ Desktop nav -->
-<NavUIEH size="small" color="base" className="h-[60px] hidden lg:flex" sticky>
-  <NavContainer className="hidden lg:flex">
-    <!-- Logo -->
-    <NavLink
-      variant="badge"
-      className={cn(
-        "text-xl font-bold mr-2 text-base-300-dark dark:text-base-300",
-        "border-1 border-base-300 dark:border-base-300-dark"
-      )}
-      href={routes.home.to}
-    >
-      UIEH
-    </NavLink>
+<NavUIEH
+  size="small"
+  color="base"
+  className="h-[60px] hidden lg:flex px-8"
+  sticky
+>
+  <!-- Logo -->
+  <NavLink
+    variant="badge"
+    className={cn(
+      "text-xl font-bold mr-2 text-base-300-dark dark:text-base-300",
+      "border-1 border-base-300 dark:border-base-300-dark"
+    )}
+    href={routes.home.to}
+  >
+    UIEH
+  </NavLink>
 
-    <!-- Links -->
-    <NavLink
-      active={Astro.url.pathname === routes.home.to}
-      href={routes.home.to}
-    >
-      {routes.home.name}
-    </NavLink>
-    <NavLink
-      variant="badge"
-      color="secondary"
-      active={Astro.url.pathname.includes(routes.docs.to)}
-      href={routes.docs.to}
-    >
-      {routes.docs.name}
-    </NavLink>
+  <!-- Links -->
+  <NavLink active={Astro.url.pathname === routes.home.to} href={routes.home.to}>
+    {routes.home.name}
+  </NavLink>
+  <NavLink
+    variant="badge"
+    color="secondary"
+    active={Astro.url.pathname.includes(routes.docs.to)}
+    href={routes.docs.to}
+  >
+    {routes.docs.name}
+  </NavLink>
 
-    <!-- Theme toggle -->
-    <div id="themeToggle" class="ml-auto cursor-pointer select-none">
-      <BiMoon className="dark:hidden" size={20} />
-      <BiSun className="hidden dark:block" size={20} />
-    </div>
+  <!-- Theme toggle -->
+  <div id="themeToggle" class="ml-auto cursor-pointer select-none">
+    <BiMoon className="dark:hidden" size={20} />
+    <BiSun className="hidden dark:block" size={20} />
+  </div>
 
-    <!-- Socials buttons -->
-    <a href="https://github.com/cotontigeh/uieh" target="_blank"><SiGithub /></a
-    >
-    <a href="https://discord.gg/uieh" target="_blank"><SiDiscord /></a>
-  </NavContainer>
+  <!-- Socials buttons -->
+  <a href="https://github.com/cotontigeh/uieh" target="_blank"><SiGithub /></a>
+  <a href="https://discord.gg/uieh" target="_blank"><SiDiscord /></a>
 </NavUIEH>

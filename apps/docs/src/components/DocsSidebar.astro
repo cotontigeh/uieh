@@ -7,8 +7,6 @@ import type { UiCollectionType } from "../../content.config";
 
 const uiDocs = (await getCollection("ui")) as unknown as UiCollectionType[];
 
-console.log(uiDocs);
-
 const uiDocsSorted = uiDocs.sort((a, b) =>
   a.data.title.localeCompare(b.data.title)
 );
@@ -18,7 +16,7 @@ const uiChildrenPath = routes.docs.children.ui.children.elements.to;
 ---
 
 <Sidebar
-  className="h-[calc(100vh-60px)] max-w-[350px]"
+  className="hidden lg:block h-[calc(100vh-90px)] max-w-[350px] pt-0"
   sticky
   color="transparent"
 >

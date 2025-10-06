@@ -1,10 +1,13 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import DocLayout from '../../../layouts/DocLayout.astro';
+import Layout from "../../../layouts/Layout.astro";
+import DocLayout from "../../../layouts/DocLayout.astro";
+import { getContentBySlug } from "../../../utils/content.utils";
+
+const Content = await getContentBySlug("ui", "docs");
 ---
 
 <Layout>
   <DocLayout>
-    <h1>UI</h1>
+    <Content />
   </DocLayout>
 </Layout>

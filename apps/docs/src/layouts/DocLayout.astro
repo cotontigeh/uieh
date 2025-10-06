@@ -3,8 +3,8 @@ import DocsSidebar from "../components/DocsSidebar.astro";
 ---
 
 <div class="flex gap-2">
-  <div class="hidden lg:block w-full">
-    <DocsSidebar />
+  <DocsSidebar />
+  <div class="flex-1 pl-8">
+    <slot />
   </div>
-  <slot />
 </div>

@@ -59,7 +59,7 @@ const currentPath = Astro.url.pathname;
   </NavLink>
 
   {
-    Astro.url.pathname === routes.docs.to ? (
+    Astro.url.pathname.includes(routes.docs.to) ? (
       <>
         <NavLink
           fullWidth
