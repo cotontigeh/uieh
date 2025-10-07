@@ -8,7 +8,7 @@ export const navLinkVariants = cva({
   variants: {
     variant: {
       badge: ['p-2 px-4 rounded-lg'],
-      default: ['p-2 px-4']
+      default: []
     },
     color: {
       base: [],
