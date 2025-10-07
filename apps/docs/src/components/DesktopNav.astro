@@ -26,7 +26,11 @@ import { BiMoon, BiSun } from "react-icons/bi";
   </NavLink>
 
   <!-- Links -->
-  <NavLink active={Astro.url.pathname === routes.home.to} href={routes.home.to}>
+  <NavLink
+    active={Astro.url.pathname === routes.home.to}
+    href={routes.home.to}
+    className="p-2 px-4"
+  >
     {routes.home.name}
   </NavLink>
   <NavLink

@@ -16,54 +16,61 @@ const uiChildrenPath = routes.docs.children.ui.children.elements.to;
 ---
 
 <Sidebar
-  className="hidden lg:block h-[calc(100vh-90px)] max-w-[350px] pt-0"
+  className={cn(
+    "hidden lg:block h-[calc(100vh-60px)] max-w-[350px] pt-[30px]",
+    "border-r border-base-300 dark:border-base-300-dark"
+  )}
   sticky
   color="transparent"
 >
-  <h3 class="text-2xl font-bold">Docs</h3>
-  <hr class="h-1 w-full border-base-300 dark:border-base-300-dark" />
-  <NavLink
-    fullWidth
-    href={routes.docs.to}
-    active={currentPath === routes.docs.to}
-  >
-    Getting Started
-  </NavLink>
-
-  <!-- UI -->
-  <NavLink
-    fullWidth
-    href={routes.docs.children.ui.to}
-    active={currentPath.includes("/docs/ui")}
-  >
-    {routes.docs.children.ui.name}
-  </NavLink>
-
-  <div class="pl-4">
-    <div
-      class="border-l border-base-100-dark/10 dark:border-base-100/10 w-full"
+  <div class="flex flex-col gap-4">
+    <h3 class="text-lg font-bold">Docs</h3>
+    <NavLink
+      fullWidth
+      href={routes.docs.to}
+      active={currentPath === routes.docs.to}
     >
-      {
-        uiDocsSorted.map((doc) => (
-          <NavLink
-            key={doc.id}
-            fullWidth
-            href={uiChildrenPath.replace(":element", doc.slug)}
-            className={cn(
-              "border-l border-transparent",
-              "hover:border-base-100-dark dark:hover:border-base-100",
-              currentPath === uiChildrenPath.replace(":element", doc.slug)
-                ? "border-base-100-dark dark:border-base-100"
-                : undefined
-            )}
-            active={
-              currentPath === uiChildrenPath.replace(":element", doc.slug)
-            }
-          >
-            {doc.data.title}
-          </NavLink>
-        ))
-      }
+      Getting Started
+    </NavLink>
+
+    <!-- UI -->
+    <NavLink
+      fullWidth
+      href={routes.docs.children.ui.to}
+      active={currentPath.includes("/docs/ui")}
+    >
+      {routes.docs.children.ui.name}
+    </NavLink>
+
+    <div class="pl-2">
+      <div
+        class={cn(
+          "flex flex-col gap-2",
+          "border-l border-base-100-dark/10 dark:border-base-100/10 w-full"
+        )}
+      >
+        {
+          uiDocsSorted.map((doc) => (
+            <NavLink
+              key={doc.id}
+              fullWidth
+              href={uiChildrenPath.replace(":element", doc.slug)}
+              className={cn(
+                "pl-3 border-l border-transparent",
+                "hover:border-base-100-dark dark:hover:border-base-100",
+                currentPath === uiChildrenPath.replace(":element", doc.slug)
+                  ? "border-base-100-dark dark:border-base-100"
+                  : undefined
+              )}
+              active={
+                currentPath === uiChildrenPath.replace(":element", doc.slug)
+              }
+            >
+              {doc.data.title}
+            </NavLink>
+          ))
+        }
+      </div>
     </div>
   </div>
 </Sidebar>
