@@ -1,0 +1,20 @@
+---
+import { SiGithub } from "react-icons/si";
+import { cn } from "uieh/utils";
+
+const { collection, slug } = Astro.props;
+---
+
+<div class="flex gap-2 py-2 text-xs">
+  <a
+    target="_blank"
+    class={cn(
+      "ml-auto",
+      "flex items-center gap-2",
+      "text-base-content/80 dark:text-base-content-dark/80"
+    )}
+    href={`https://github.com/cotontigeh/uieh/edit/main/apps/docs/src/content/${collection}/${slug}.mdx`}
+  >
+    <SiGithub /> Edit on github
+  </a>
+</div>
