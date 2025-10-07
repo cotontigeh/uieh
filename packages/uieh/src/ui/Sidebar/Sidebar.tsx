@@ -18,6 +18,7 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
       open,
       color,
       variant,
+      sticky,
       className,
       hideScrollWhenOpened = false,
       children,
@@ -38,7 +39,10 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
     return (
       <div
         ref={ref}
-        className={cn(sidebarVariants({ open, color, variant }), className)}
+        className={cn(
+          sidebarVariants({ open, color, variant, sticky }),
+          className
+        )}
         {...props}
       >
         {children}
