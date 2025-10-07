@@ -1,0 +1,87 @@
+@reference "./global.css";
+
+header {
+  @apply pb-2;
+}
+
+section {
+  @apply pt-2;
+  @apply flex flex-col gap-4;
+  @apply text-base-content/90 dark:text-base-content-dark/90;
+}
+
+h1 {
+  @apply text-4xl font-bold;
+  @apply pb-2;
+  @apply border-b border-base-300 dark:border-base-300/20;
+}
+
+h2 {
+  @apply text-2xl font-bold;
+  @apply py-4;
+  @apply border-b border-base-300 dark:border-base-300/20;
+}
+
+h3 {
+  @apply text-xl font-bold;
+}
+
+h4 {
+  @apply text-lg font-bold;
+}
+
+h5 {
+  @apply text-base font-bold;
+}
+
+h6 {
+  @apply text-sm font-bold;
+}
+
+a.doc-link {
+  @apply text-accent/90;
+}
+
+a.doc-link:hover {
+  @apply text-accent;
+}
+
+/** 📜 Blockquotes **/
+
+blockquote {
+  @apply bg-base-100 dark:bg-base-100-dark;
+  @apply border-l-4 border-base-300 dark:border-base-300-dark;
+  @apply p-4 rounded-xs;
+}
+
+blockquote.warning {
+  @apply border-warning;
+}
+
+blockquote.error {
+  @apply border-error;
+}
+
+blockquote.success {
+  @apply border-success;
+}
+
+blockquote.secondary {
+  @apply border-secondary;
+}
+
+blockquote.accent {
+  @apply border-accent;
+}
+
+blockquote.info {
+  @apply border-info;
+}
+
+blockquote.neutral {
+  @apply border-neutral;
+}
+
+blockquote.transparent {
+  @apply border-transparent;
+}

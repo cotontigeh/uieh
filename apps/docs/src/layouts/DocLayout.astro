@@ -1,10 +1,11 @@
 ---
 import DocsSidebar from "../components/DocsSidebar.astro";
+import "../styles/mdx.css";
 ---
 
-<div class="flex gap-2">
+<div class="lg:flex lg:gap-2">
   <DocsSidebar />
-  <div class="flex-1 px-8 mt-[30px]">
+  <div class="flex-1 px-8 my-[30px]">
     <slot />
   </div>
 </div>
