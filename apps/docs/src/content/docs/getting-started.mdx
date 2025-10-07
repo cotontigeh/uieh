@@ -4,12 +4,93 @@ author: Cotontigeh
 pubDate: 2025-10-06
 ---
 
-# Hello there
+import UnderTitle from "../../components/MDX/UnderTitle.astro";
+import { DocTabs, DocTabsItem } from "../../components/MDX/DocTabs";
 
-```tsx
-import { Button } from 'uieh';
+<header>
 
-function App() {
-  return <Button>Click me</Button>;
-}
-```
+  # Getting Started
+  <UnderTitle collection="docs" slug="getting-started" />
+
+</header>
+
+<section>
+
+  UIEH is a modern, customizable, and responsive React UI library built with Tailwind CSS 4.0 and custom CSS variables. 
+  It provides a set of pre-styled components that can be easily integrated into your project.
+
+  This project is a fun endeavor, and everyone is welcome to join and test their skills in open source participation. 
+
+  <blockquote className="warning">
+    **Warning:** This documentation is a work in progress. Features and APIs are subject to change as the library evolves. Please ensure you are using the latest version of the library and refer to the official documentation for the most accurate information.
+  </blockquote>
+
+  ## Installation
+
+  To use the UIEH library, it is necessary to have React 19 installed in your project 
+  along with the <a class="doc-link" href="https://headlessui.com/">headlessui</a> and <a class="doc-link" href="https://tailwindcss.com/">tailwindcss</a> version 4 dependencies.
+
+  These libraries provide the essential features and styles needed to effectively integrate UIEH into your React application.
+
+  <DocTabs 
+    client:only
+    id="installation-cli"
+  >
+
+    <DocTabsItem label="npm">
+      ```bash
+      npm install uieh @headlessui/react tailwindcss
+      ```
+    </DocTabsItem>
+
+    <DocTabsItem label="yarn">
+      ```bash
+      yarn add uieh @headlessui/react tailwindcss
+      ```
+    </DocTabsItem>
+
+    <DocTabsItem label="bun">
+      ```bash
+      bun add uieh @headlessui/react tailwindcss
+      ```
+    </DocTabsItem>
+
+  </DocTabs>
+
+  Next, you need to import the CSS theme into your project main css file.
+
+  ```css showLineNumbers
+  /* global.css */
+  @import "tailwindcss";
+  @import "uieh/theme/colors.theme.css";
+  @source "./node_modules/uieh/";
+  ```
+
+  This **3rd** line is important to tell tailwindcss to detect the classes used inside the uieh library.
+  The path to `node_modules` depends on your project structure.
+
+  As an example, the path for the directory structure shown would be:
+
+  ```
+  📁 vite-react-app/
+  ├── 📄 index.html
+  ├── 📄 package.json
+  ├── 📄 vite.config.ts
+  ├── 📁 public/
+  ├── 📁 node_modules/
+  └── 📁 src/
+      ├── 📄 main.tsx
+      ├── 📄 App.tsx
+      ├── 📁 styles/
+      │   └── 📄 global.css
+      ├── 📄 index.css
+  ```
+
+  ```css showLineNumbers
+  /* global.css */
+  @import "tailwindcss";
+  @import "uieh/theme/colors.theme.css";
+  @source "../../node_modules/uieh/";
+  ```
+
+</section>

@@ -2,7 +2,7 @@ import { cva } from 'cva'
 
 export const tabLinkVariants = cva({
   base: [
-    'flex gap-2 items-center font-medium cursor-pointer py-4 px-1.5 border-transparent select-none',
+    'flex gap-2 items-center font-medium cursor-pointer pb-4 px-1.5 border-transparent select-none',
     'text-base-content hover:border-base-300-dark',
     'dark:text-base-content-dark'
   ],
@@ -36,8 +36,8 @@ export const tabLinkVariants = cva({
       color: 'base',
       active: true,
       className: [
-        'border-base-300-dark hover:border-base-content-dark hover:bg-base-300-dark',
-        'dark:border-base-300 dark:hover:border-base-300 dark:hover:bg-base-300-dark'
+        'border-base-300-dark hover:border-base-content-dark',
+        'dark:border-base-300 dark:hover:border-base-300'
       ]
     },
     {
