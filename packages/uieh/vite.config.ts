@@ -28,7 +28,7 @@ export default defineConfig({
         hooks: path.resolve(__dirname, 'src/hooks/index.ts')
       },
       name: 'uieh',
-      formats: ['es']
+      formats: ['es', 'cjs']
     },
     rollupOptions: {
       external: ['react', '@headlessui/react'],

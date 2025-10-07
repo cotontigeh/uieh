@@ -8,12 +8,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/uieh.umd.cjs",
+  "main": "./dist/uieh.cjs",
   "module": "./dist/uieh.js",
   "exports": {
     ".": {
       "import": "./dist/uieh.js",
-      "require": "./dist/uieh.umd.cjs"
+      "require": "./dist/uieh.cjs"
     },
     "./utils": {
       "import": "./dist/utils.js",
